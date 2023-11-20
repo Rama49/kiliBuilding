@@ -1,5 +1,9 @@
 import 'package:flutter/material.dart';
+<<<<<<< HEAD
 import 'package:kiliwebsite/Component/sectionEntrepreneurs/Entrepreneur.dart';
+=======
+import 'package:kiliwebsite/Component/SectionFonctionnalite/Fonctionnalite.dart';
+>>>>>>> 86241c3d60c925459d8c5483a2ac673952d625e1
 
 void main() {
   runApp(const MyApp());
@@ -19,6 +23,8 @@ class MyApp extends StatelessWidget {
         useMaterial3: true,
       ),
       home: const Entrepreneur(),
+      home: const Entrepreneur(),
+
     );
   }
 }
