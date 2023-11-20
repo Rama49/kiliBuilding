@@ -1,9 +1,6 @@
 import 'package:flutter/material.dart';
-<<<<<<< HEAD
 import 'package:kiliwebsite/Component/sectionEntrepreneurs/Entrepreneur.dart';
-=======
-import 'package:kiliwebsite/Component/SectionFonctionnalite/Fonctionnalite.dart';
->>>>>>> 86241c3d60c925459d8c5483a2ac673952d625e1
+import 'package:kiliwebsite/pages/home.dart';
 
 void main() {
   runApp(const MyApp());
@@ -22,9 +19,7 @@ class MyApp extends StatelessWidget {
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
         useMaterial3: true,
       ),
-      home: const Entrepreneur(),
-      home: const Entrepreneur(),
-
+      home: const HomePage(),
     );
   }
 }
