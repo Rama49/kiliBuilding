@@ -23,7 +23,7 @@ class Entrepreneur extends StatelessWidget {
                     width: 300,
                   ),
                   imageText(
-                      image: Image.asset('ngirane.png', width: 50),
+                      image: Image.asset('assets/ngirane.png', width: 50),
                       titre: "NGUIRANE At Tidiani ",
                       sousTitre: "Fondateur de Kalam",
                       texte:
@@ -41,7 +41,7 @@ class Entrepreneur extends StatelessWidget {
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: [
                       imageText(
-                          image: Image.asset('ngirane.png', width: 50),
+                          image: Image.asset('assets/ngirane.png', width: 50),
                           titre: "NGUIRANE At Tidiani ",
                           sousTitre: "Fondateur de Kalam",
                           texte:

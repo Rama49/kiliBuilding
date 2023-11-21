@@ -3,8 +3,8 @@ import 'dart:html';
 
 import 'package:flutter/material.dart';
 
-class CustomNavBar extends StatelessWidget {
-  const CustomNavBar({Key? key});
+class NavbarMenu extends StatelessWidget {
+  const NavbarMenu({Key? key});
 
   @override
   Widget build(BuildContext context) {
