@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:kiliwebsite/Component/SectionBlog/card_list.dart';
 import 'package:kiliwebsite/Component/SectionFonctionnalite/Fonctionnalite.dart';
 import 'package:kiliwebsite/Component/SectionNavbar/NavbarMenu.dart';
+import 'package:kiliwebsite/Component/SectionNavbar/Navbare.dart';
 import 'package:kiliwebsite/Component/SectionSecurite/Securite.dart';
  import 'package:kiliwebsite/Component/sectionEntrepreneurs/Entrepreneur.dart';
 // ignore: unused_import
