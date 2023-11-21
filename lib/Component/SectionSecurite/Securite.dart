@@ -17,13 +17,8 @@ class Security extends StatelessWidget {
           children: [
             Text(
               'Sécurité',
-              style: TextStyle(
-                fontSize: 34,
-                fontWeight: FontWeight.w700,
-                color: Color(0xFFf44336),
-                decoration: TextDecoration.none,
-              ),
-              textAlign: TextAlign.center,
+             
+             
               
               // Ajoutez d'autres styles ici
             ),

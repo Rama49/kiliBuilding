@@ -1,7 +1,15 @@
 import 'package:flutter/material.dart';
 
 class Bouton extends StatelessWidget {
-  const Bouton({Key? key});
+
+  final String Title;
+
+
+  const Bouton({
+    Key? key,
+    required this.Title
+  });
+
 
   @override
   Widget build(BuildContext context) {
@@ -20,8 +28,8 @@ class Bouton extends StatelessWidget {
                 borderRadius: BorderRadius.circular(8.0),
               ),
             ),
-            child: const Text(
-              'Voir plus',
+            child: Text(
+              Title,
               style: TextStyle(
                 color: Color(0xFFF44336),
                 fontSize: 16.0,
