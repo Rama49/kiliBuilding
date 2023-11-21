@@ -3,8 +3,8 @@ import 'dart:html';
 
 import 'package:flutter/material.dart';
 
-class CustomNavBar extends StatelessWidget {
-  const CustomNavBar({Key? key});
+class NavbarMenu extends StatelessWidget {
+  const NavbarMenu({Key? key});
 
   @override
   Widget build(BuildContext context) {
@@ -66,13 +66,13 @@ class CustomNavBar extends StatelessWidget {
                       },
                       child: Container(
                         decoration: BoxDecoration(
-                          color: Colors.black,
+                          color: Colors.white,
                           borderRadius: BorderRadius.circular(8.0),
                         ),
                         padding: const EdgeInsets.all(5.0),
                         child: const Text(
                           'Nous contacter',
-                          style: TextStyle(color: Colors.white),
+                          style: TextStyle(color: Colors.red),
                         ),
                       ),
                     ),
