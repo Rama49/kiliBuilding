@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:kiliwebsite/pages/test.dart';
+import 'package:kiliwebsite/Component/sectionEntrepreneurs/Entrepreneur.dart';
 
 class HomePage extends StatelessWidget {
   const HomePage({super.key});
@@ -10,7 +10,8 @@ class HomePage extends StatelessWidget {
       body: SingleChildScrollView(
         child: Column(
           children: [
-            Test()          ],
+            Entrepreneur(),
+          ],
         ),
       ),
     );
