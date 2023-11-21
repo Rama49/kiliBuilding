@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:kiliwebsite/Component/sectionEntrepreneurs/Entrepreneur.dart';
 import 'package:kiliwebsite/pages/home.dart';
+
 
 void main() {
   runApp(const MyApp());

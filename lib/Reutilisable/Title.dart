@@ -16,7 +16,7 @@ class TitleReu extends StatelessWidget {
       children: [
         Text(
           titre,
-          style: TextStyle(color: Colors.red, fontSize: 20),
+          style: TextStyle(color: Colors.red),
         ),
         Text (soustexte)
       ],
