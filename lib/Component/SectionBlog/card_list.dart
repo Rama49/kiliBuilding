@@ -23,6 +23,7 @@ class CardList extends StatelessWidget {
           children: [
             SizedBox(
               height: 250,
+              width: 330,
               child: CardExample(
                 image: "assets/rectangle.png",
                 img: "assets/Ellipse1.png",
@@ -33,6 +34,7 @@ class CardList extends StatelessWidget {
             ),
             SizedBox(
               height: 250,
+              width: 330,
               child: CardExample(
                 image: "assets/rectangle.png",
                 img: "assets/Ellipse1.png",
@@ -43,6 +45,7 @@ class CardList extends StatelessWidget {
             ),
             SizedBox(
               height: 250,
+              width: 330,
               child: CardExample(
                 image: "assets/rectangle.png",
                 img: "assets/Ellipse1.png",
@@ -59,29 +62,32 @@ class CardList extends StatelessWidget {
           children: [
             SizedBox(
               height: 250,
+              width: 330,
               child: CardExample(
                 image: "assets/rectangle.png",
                 img: "assets/Ellipse1.png",
                 title: 'Another Title',
-                subTitle: 'Another subtitle here.',
+                subTitle: 'Lorem ipsum dolor sit amet consectetur.\n Turpis a et elit luctus tincidunt orci in sed.',
               ),
             ),
             SizedBox(
               height: 250,
+              width: 330,
               child: CardExample(
                 image: "assets/rectangle.png",
                 img: "assets/Ellipse1.png",
                 title: 'Yet Another Title',
-                subTitle: 'Yet another subtitle here.',
+                subTitle: 'Lorem ipsum dolor sit amet consectetur.\n Turpis a et elit luctus tincidunt orci in sed.',
               ),
             ),
             SizedBox(
               height: 250,
+              width: 330,
               child: CardExample(
                 image: "assets/rectangle.png",
                 img: "assets/Ellipse1.png",
                 title: 'And Another Title',
-                subTitle: 'And another subtitle here.',
+                subTitle: 'Lorem ipsum dolor sit amet consectetur.\n Turpis a et elit luctus tincidunt orci in sed.',
               ),
             ),
           ],

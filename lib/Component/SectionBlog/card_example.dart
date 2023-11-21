@@ -61,13 +61,18 @@ class CustomCard extends StatelessWidget {
             padding: const EdgeInsets.symmetric(horizontal: 8.0),
             child: Row(
               children: [
-                ClipRRect(
-                  borderRadius: BorderRadius.circular(15.0),
-                  child: Image.asset(
-                    img,
-                    width: 40.0,
-                    height: 40.0,
-                    fit: BoxFit.cover,
+                Padding(
+                  padding: const EdgeInsets.only(
+                      top: 10.0,
+                      left: 10.0), // Ajustez les valeurs selon vos besoins
+                  child: ClipRRect(
+                    borderRadius: BorderRadius.circular(15.0),
+                    child: Image.asset(
+                      img,
+                      width: 40.0,
+                      height: 40.0,
+                      fit: BoxFit.cover,
+                    ),
                   ),
                 ),
                 SizedBox(width: 8.0),
@@ -76,9 +81,9 @@ class CustomCard extends StatelessWidget {
             ),
           ),
           Padding(
-            padding: const EdgeInsets.symmetric(horizontal: 8.0),
-            child: Text(subTitle),
-          ),
+         padding: const EdgeInsets.only(top: 1, left: 20), // Ajustez les valeurs selon vos besoins
+        child: Text(subTitle),
+        ),
         ],
       ),
     );
