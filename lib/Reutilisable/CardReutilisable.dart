@@ -1,11 +1,22 @@
 import 'package:flutter/material.dart';
 
-class MyWidget extends StatelessWidget {
-  const MyWidget({super.key});
+class CardReutilisable extends StatelessWidget {
+  final String title;
+  final String paragraph;
+
+  const CardReutilisable({
+    super.key,
+    required this.title,
+    required this.paragraph,
+  });
 
   @override
   Widget build(BuildContext context) {
-    return const Placeholder();
-    
+    return  Row(
+      children: [
+        Text(title),
+        Text(paragraph),
+      ],
+    );
   }
 }

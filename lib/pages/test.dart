@@ -1,12 +1,30 @@
 import 'package:flutter/material.dart';
 
 class Test extends StatelessWidget {
-  const Test({super.key});
+  final double hauteur;
+  final double largeur;
+  final Color couleur;
+  final String text;
+  const Test({
+    super.key,
+    required this.hauteur,
+    required this.largeur,
+    required this.couleur,
+    required this.text,
+  });
 
   @override
   Widget build(BuildContext context) {
-    return Container(
-        
+    return Column(
+      children: [
+        Container(
+          height: hauteur,
+          width: largeur,
+          color: couleur,
+          
+          
+        ),
+      ],
     );
   }
 }

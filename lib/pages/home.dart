@@ -1,8 +1,15 @@
 import 'package:flutter/material.dart';
+import 'package:kiliwebsite/Component/SectionBlog/card_list.dart';
 import 'package:kiliwebsite/Component/SectionFonctionnalite/Fonctionnalite.dart';
+import 'package:kiliwebsite/Component/SectionNavbar/NavbarMenu.dart';
+import 'package:kiliwebsite/Component/SectionSecurite/Securite.dart';
+ import 'package:kiliwebsite/Component/sectionEntrepreneurs/Entrepreneur.dart';
+ import 'package:kiliwebsite/Component/SectionTemplate/Templatebase.dart';
+
+// ignore: unused_import
 
 class HomePage extends StatelessWidget {
-  const HomePage({super.key});
+  const HomePage({Key? key});
 
   @override
   Widget build(BuildContext context) {
@@ -10,7 +17,13 @@ class HomePage extends StatelessWidget {
       body: SingleChildScrollView(
         child: Column(
           children: [
-            Fonctionnalite()          ],
+            NavbarMenu(), 
+             Entrepreneur(),
+            Fonctionnalite(),// Affichez le composant Navbar séparément
+            Security(), // Affichez le composant Security séparément
+            CardList(),
+            Templatebase(),
+          ],
         ),
       ),
     );
