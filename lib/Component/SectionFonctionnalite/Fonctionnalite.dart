@@ -41,7 +41,7 @@ class Fonctionnalite extends StatelessWidget {
                   SizedBox(width: 10),
                   Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
-                    children: [
+                    children: const [
                       Text(
                         'Nom de domaine',
                         style: TextStyle(
