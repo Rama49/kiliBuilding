@@ -9,7 +9,8 @@ class Security extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      color: const Color(0xFFfff7f5),
+      margin: const EdgeInsets.symmetric(vertical: 50.0),
+      // color: const Color(0xFFfff7f5),
       child: const Center(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,

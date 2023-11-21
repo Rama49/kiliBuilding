@@ -20,63 +20,93 @@ class NavbarMenu extends StatelessWidget {
             children: [
               Expanded(
                 child: Row(
-                  mainAxisAlignment: MainAxisAlignment.center,
+                  mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                   children: [
-                    const Spacer(),
                     Image.asset(
                       '../../../assets/Logo.png', // Remplacez par le chemin de votre logo
-                      height: 30, // Ajustez la hauteur du logo selon vos besoins
+                      height:
+                          30, // Ajustez la hauteur du logo selon vos besoins
                     ),
-                    SizedBox(width: screenSize.width / 20),
-                    InkWell(
-                      onTap: () {},
-                      child: const Text(
-                        'Domaine',
-                        style: TextStyle(color: Colors.white),
-                      ),
+                    Row(
+                      children: [
+                        InkWell(
+                          onTap: () {},
+                          child: const Text(
+                            'Domaine',
+                            style: TextStyle(
+                              color: Colors.white,
+                              fontSize: 19.753,
+                              fontWeight: FontWeight.w600,
+                            ),
+                          ),
+                        ),
+                        SizedBox(
+                          width: 20,
+                        ),
+                        InkWell(
+                          onTap: () {},
+                          child: const Text(
+                            'Sécurité',
+                            style: TextStyle(
+                              color: Colors.white,
+                              fontSize: 19.753,
+                              fontWeight: FontWeight.w600,
+                            ),
+                          ),
+                        ),
+                        SizedBox(
+                          width: 20,
+                        ),
+                        InkWell(
+                          onTap: () {},
+                          child: const Text(
+                            'Fonctionnalités',
+                            style: TextStyle(
+                              color: Colors.white,
+                              fontSize: 19.753,
+                              fontWeight: FontWeight.w600,
+                            ),
+                          ),
+                        ),
+                        SizedBox(
+                          width: 20,
+                        ),
+                        InkWell(
+                          onTap: () {},
+                          child: const Text(
+                            'Blog',
+                            style: TextStyle(
+                              color: Colors.white,
+                              fontSize: 19.753,
+                              fontWeight: FontWeight.w600,
+                            ),
+                          ),
+                        ),
+                        SizedBox(
+                          width: 20,
+                        ),
+                      ],
                     ),
-                    const Spacer(), // Utilisation de Spacer pour remplir l'espace disponible
-                    InkWell(
-                      onTap: () {},
-                      child: const Text(
-                        'Sécurité',
-                        style: TextStyle(color: Colors.white),
-                      ),
-                    ),
-                    const Spacer(),
-                    InkWell(
-                      onTap: () {},
-                      child: const Text(
-                        'Fonctionnalités',
-                        style: TextStyle(color: Colors.white),
-                      ),
-                    ),
-                    const Spacer(),
-                    InkWell(
-                      onTap: () {},
-                      child: const Text(
-                        'Blog',
-                        style: TextStyle(color: Colors.white),
-                      ),
-                    ),
-                    const Spacer(),
+
                     InkWell(
                       onTap: () {
                         Navigator.pushNamed(context, '/contactpage');
                       },
                       child: Container(
                         decoration: BoxDecoration(
-                          color: Colors.black,
+                          color: Colors.white,
                           borderRadius: BorderRadius.circular(8.0),
                         ),
-                        padding: const EdgeInsets.all(5.0),
+                        padding: const EdgeInsets.all(6.0),
                         child: const Text(
                           'Nous contacter',
-                          style: TextStyle(color: Colors.white),
+                          style: TextStyle(color: Color(0xFFF44336),
+                            fontSize: 15,
+                        fontWeight: FontWeight.w700,
+                        ),
                         ),
                       ),
                     ),
-                    const Spacer(),
                     // Ajoutez d'autres éléments ici avec Spacer pour l'espacement
                   ],
                 ),

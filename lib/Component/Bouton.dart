@@ -24,7 +24,8 @@ class Bouton extends StatelessWidget {
               'Voir plus',
               style: TextStyle(
                 color: Color(0xFFF44336),
-                fontSize: 16.0,
+                fontSize: 15,
+                fontWeight: FontWeight.w700,
               ),
             ),
           ),

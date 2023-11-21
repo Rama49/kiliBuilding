@@ -6,178 +6,176 @@ class Fonctionnalite extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Center(
-      child: Column(
-        crossAxisAlignment: CrossAxisAlignment.start,
-        children: [
-          Padding(
-            padding: EdgeInsets.only(bottom: 100.0),
-            child: Row(
-              mainAxisAlignment: MainAxisAlignment.center,
-              children: [
-                // Image.asset('img1.png'),
-                SizedBox(width: 10),
-                Text(
-                  'Tous les fonctionnalités disponibles',
-                  style: TextStyle(
-                    color: Colors.red,
-                    fontFamily: 'Montserrat',
-                    fontSize: 34,
-                    fontStyle: FontStyle.normal,
-                    fontWeight: FontWeight.w700,
+      child: Container(
+        margin: const EdgeInsets.symmetric(vertical: 50.0), // Ajout de la marge
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            const Padding(
+              padding: EdgeInsets.only(bottom: 100.0),
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  // Image.asset('img1.png'),
+                  SizedBox(width: 10),
+                  Text(
+                    'Tous les fonctionnalités disponibles',
+                    style: TextStyle(
+                      fontSize: 34,
+                      fontWeight: FontWeight.w700,
+                      color: Color(0xFFf44336),
+                      decoration: TextDecoration.none,
+                    ),
                   ),
-                ),
-                SizedBox(width: 10),
-              ],
+                  SizedBox(width: 10),
+                ],
+              ),
             ),
-          ),
-          Padding(
-            padding: EdgeInsets.only(bottom: 20.0),
-            child: Row(
-              mainAxisAlignment: MainAxisAlignment.center,
-              children: [
-                Image.asset('img1.png'),
-                SizedBox(width: 10),
-                Column(
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  children: [
-                    Text(
-                      'Nom de domaine',
-                      style: TextStyle(
-                        color: Colors.red,
-                        fontFamily: 'Montserrat',
-                        fontSize: 15,
-                        fontStyle: FontStyle.normal,
-                        fontWeight: FontWeight.w800,
-                        letterSpacing: 0.3,
+            Padding(
+              padding: const EdgeInsets.only(bottom: 20.0),
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  Image.asset('img1.png'),
+                  const SizedBox(width: 10),
+                  const Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      Text(
+                        'Nom de domaine',
+                        style: TextStyle(
+                          color: Color(0xFFf44336),
+                          fontSize: 15,
+                          fontStyle: FontStyle.normal,
+                          fontWeight: FontWeight.w800,
+                          letterSpacing: 0.3,
+                        ),
                       ),
-                    ),
-                    SizedBox(height: 10),
-                    Text(
-                      'Lorem ipsum dolor sit amet consectetur . Mauris etiam id \n volutpat ut sed hac. Vel donec mauris turpis venenatis sed \n  faucibus.  Lorem ipsum dolor sit amet consectetur. Mauris \n etiam id volutpat ut sed hac. Vel donec mauris turpis \n venenatis sed faucibus.',
-                      style: TextStyle(
-                        color: Colors.black,
-                        fontFamily: 'Montserrat',
-                        fontSize: 17,
-                        fontStyle: FontStyle.normal,
-                        fontWeight: FontWeight.w400,
-                        letterSpacing: 0.3,
+                      SizedBox(height: 10),
+                      Text(
+                        'Lorem ipsum dolor sit amet consectetur.R\nMauris etiam id  volutpat ut sed hac.\n Vel donec mauris  turpis venenatis sed. \n   Lorem ipsum dolor sit amet consectetur.  \n Mauris etiam id volutpat ut sed hac.',
+                        style: TextStyle(
+                          color: Colors.black,
+                          fontSize: 17,
+                          fontStyle: FontStyle.normal,
+                          fontWeight: FontWeight.w400,
+                          letterSpacing: 0.3,
+                        ),
+                        textAlign: TextAlign.justify,
                       ),
-                    ),
-                  ],
-                ),
-                SizedBox(width: 10),
-                Image.asset('blog.png'),
-                SizedBox(width: 10),
-                Column(
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  children: [
-                    Text(
-                      'Blog',
-                      style: TextStyle(
-                        color: Colors.red,
-                        fontFamily: 'Montserrat',
-                        fontSize: 15,
-                        fontStyle: FontStyle.normal,
-                        fontWeight: FontWeight.w800,
-                        letterSpacing: 0.3,
+                    ],
+                  ),
+                  const SizedBox(width: 10),
+                  Image.asset('blog.png'),
+                  const SizedBox(width: 10),
+                  const Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      Text(
+                        'Blog',
+                        style: TextStyle(
+                          color: Color(0xFFf44336),
+                          fontSize: 15,
+                          fontStyle: FontStyle.normal,
+                          fontWeight: FontWeight.w800,
+                          letterSpacing: 0.3,
+                        ),
                       ),
-                    ),
-                    SizedBox(height: 10),
-                    Text(
-                      'Lorem ipsum dolor sit amet consectetur . Mauris etiam id \n volutpat ut sed hac. Vel donec mauris turpis venenatis sed \n  faucibus.  Lorem ipsum dolor sit amet consectetur. Mauris \n etiam id volutpat ut sed hac. Vel donec mauris turpis \n venenatis sed faucibus.',
-                      style: TextStyle(
-                        color: Colors.black,
-                        fontFamily: 'Montserrat',
-                        fontSize: 17,
-                        fontStyle: FontStyle.normal,
-                        fontWeight: FontWeight.w400,
-                        letterSpacing: 0.3,
+                      SizedBox(height: 10),
+                      Text(
+                        'Lorem ipsum dolor sit amet consectetur.\n Mauris etiam id  volutpat ut sed hac.\n Vel donec mauris  turpis venenatis sed. \n   Lorem ipsum dolor sit amet consectetur.  \n Mauris etiam id volutpat ut sed hac.',
+                        style: TextStyle(
+                          color: Colors.black,
+                          fontSize: 17,
+                          fontStyle: FontStyle.normal,
+                          fontWeight: FontWeight.w400,
+                          letterSpacing: 0.3,
+                        ),
+                        textAlign: TextAlign.justify,
                       ),
-                    ),
-                  ],
-                ),
-              ],
+                    ],
+                  ),
+                ],
+              ),
             ),
-          ),
-          Padding(
-            padding: EdgeInsets.only(bottom: 100.0),
-            child: Row(
-              mainAxisAlignment: MainAxisAlignment.center,
-              children: [
-                SizedBox(width: 10),
-              ],
+            const Padding(
+              padding: EdgeInsets.only(bottom: 100.0),
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  SizedBox(width: 10),
+                ],
+              ),
             ),
-          ),
-          Padding(
-            padding: EdgeInsets.only(bottom: 20.0),
-            child: Row(
-              mainAxisAlignment: MainAxisAlignment.center,
-              children: [
-                Image.asset('img3.png'),
-                SizedBox(width: 10),
-                Column(
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  children: [
-                    Text(
-                      'Formulaire',
-                      style: TextStyle(
-                        color: Colors.red,
-                        fontFamily: 'Montserrat',
-                        fontSize: 15,
-                        fontStyle: FontStyle.normal,
-                        fontWeight: FontWeight.w800,
-                        letterSpacing: 0.3,
+            Padding(
+              padding: const EdgeInsets.only(bottom: 20.0),
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  Image.asset('img3.png'),
+                  const SizedBox(width: 10),
+                  const Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      Text(
+                        'Formulaire',
+                        style: TextStyle(
+                          color: Color(0xFFf44336),
+                          fontSize: 15,
+                          fontStyle: FontStyle.normal,
+                          fontWeight: FontWeight.w800,
+                          letterSpacing: 0.3,
+                        ),
                       ),
-                    ),
-                    SizedBox(height: 10),
-                    Text(
-                      'Lorem ipsum dolor sit amet consectetur . Mauris etiam id \n volutpat ut sed hac. Vel donec mauris turpis venenatis sed \n  faucibus.  Lorem ipsum dolor sit amet consectetur. Mauris \n etiam id volutpat ut sed hac. Vel donec mauris turpis \n venenatis sed faucibus.',
-                      style: TextStyle(
-                        color: Colors.black,
-                        fontFamily: 'Montserrat',
-                        fontSize: 17,
-                        fontStyle: FontStyle.normal,
-                        fontWeight: FontWeight.w400,
-                        letterSpacing: 0.3,
+                      SizedBox(height: 10),
+                      Text(
+                        'Lorem ipsum dolor sit amet consectetur.\n Mauris etiam id  volutpat ut sed hac.\n Vel donec mauris  turpis venenatis sed. \n   Lorem ipsum dolor sit amet consectetur.  \n Mauris etiam id volutpat ut sed hac.',
+                        style: TextStyle(
+                          color: Colors.black,
+                          fontSize: 17,
+                          fontStyle: FontStyle.normal,
+                          fontWeight: FontWeight.w400,
+                          letterSpacing: 0.3,
+                        ),
+                        textAlign: TextAlign.justify,
                       ),
-                    ),
-                  ],
-                ),
-                SizedBox(width: 10),
-                Image.asset('analyse.png'),
-                SizedBox(width: 10),
-                Column(
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  children: [
-                    Text(
-                      'Analyste d’audience côté admin',
-                      style: TextStyle(
-                        color: Colors.red,
-                        fontFamily: 'Montserrat',
-                        fontSize: 15,
-                        fontStyle: FontStyle.normal,
-                        fontWeight: FontWeight.w800,
-                        letterSpacing: 0.3,
+                    ],
+                  ),
+                  const SizedBox(width: 10),
+                  Image.asset('analyse.png'),
+                  const SizedBox(width: 10),
+                  const Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      Text(
+                        'Analyste d’audience côté admin',
+                        style: TextStyle(
+                          color: Color(0xFFf44336),
+                          fontSize: 15,
+                          fontStyle: FontStyle.normal,
+                          fontWeight: FontWeight.w800,
+                          letterSpacing: 0.3,
+                        ),
                       ),
-                    ),
-                    SizedBox(height: 10),
-                    Text(
-                      'Lorem ipsum dolor sit amet consectetur . Mauris etiam id \n volutpat ut sed hac. Vel donec mauris turpis venenatis sed \n  faucibus.  Lorem ipsum dolor sit amet consectetur. Mauris \n etiam id volutpat ut sed hac. Vel donec mauris turpis \n venenatis sed faucibus.',
-                      style: TextStyle(
-                        color: Colors.black,
-                        fontFamily: 'Montserrat',
-                        fontSize: 17,
-                        fontStyle: FontStyle.normal,
-                        fontWeight: FontWeight.w400,
-                        letterSpacing: 0.3,
+                      SizedBox(height: 10),
+                      Text(
+                        'Lorem ipsum dolor sit amet consectetur.\n Mauris etiam id  volutpat ut sed hac.\n Vel donec mauris  turpis venenatis sed. \n   Lorem ipsum dolor sit amet consectetur.  \n Mauris etiam id volutpat ut sed hac.',
+                        style: TextStyle(
+                          color: Colors.black,
+                          fontSize: 17,
+                          fontStyle: FontStyle.normal,
+                          fontWeight: FontWeight.w400,
+                          letterSpacing: 0.3,
+                        ),
+                        textAlign: TextAlign.justify,
                       ),
-                    ),
-                  ],
-                ),
-              ],
+                    ],
+                  ),
+                ],
+              ),
             ),
-          ),
-        ],
+          ],
+        ),
       ),
     );
   }
