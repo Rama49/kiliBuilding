@@ -32,7 +32,7 @@ class NavbarMenu extends StatelessWidget {
                         InkWell(
                           onTap: () {},
                           child: const Text(
-                            'Domaine',
+                            'Produit',
                             style: TextStyle(
                               color: Colors.white,
                               fontSize: 19.753,
@@ -46,7 +46,7 @@ class NavbarMenu extends StatelessWidget {
                         InkWell(
                           onTap: () {},
                           child: const Text(
-                            'Sécurité',
+                            'Solution',
                             style: TextStyle(
                               color: Colors.white,
                               fontSize: 19.753,
@@ -60,7 +60,7 @@ class NavbarMenu extends StatelessWidget {
                         InkWell(
                           onTap: () {},
                           child: const Text(
-                            'Fonctionnalités',
+                            'Template',
                             style: TextStyle(
                               color: Colors.white,
                               fontSize: 19.753,
