@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:kiliwebsite/Reutilisable/Title.dart';
 import 'card_example.dart';
 
 class CardList extends StatelessWidget {
@@ -9,14 +10,8 @@ class CardList extends StatelessWidget {
     return const Column(
       mainAxisAlignment: MainAxisAlignment.center,
       children: [
-        Text(
-          'Blog ',  // Replace this with your actual blog text
-           style: TextStyle(
-              color: Colors.red, // Set your desired text color
-              fontSize: 35,
-              fontWeight: FontWeight.w700, // Use FontWeight.w700 for bold
-            ),
-        ),
+         SizedBox(height: 20),
+        TitleReu(titre: "Solution"),
         SizedBox(height: 20),  // Add some spacing between the blog text and cards
         Row(
           mainAxisAlignment: MainAxisAlignment.center,

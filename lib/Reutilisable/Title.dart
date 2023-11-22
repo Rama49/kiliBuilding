@@ -1,13 +1,12 @@
 import 'package:flutter/material.dart';
+import 'package:kiliwebsite/Component/Bouton.dart';
 
 class TitleReu extends StatelessWidget {
   final String titre;
-  final String soustexte;
 
   const TitleReu({
     super.key,
     required this.titre,
-    required this.soustexte
   });
 
   @override
@@ -16,16 +15,8 @@ class TitleReu extends StatelessWidget {
       children: [
         Text(
           titre,
-          style: TextStyle(
-                    color: Colors.red,
-                    fontFamily: 'Montserrat',
-                    fontSize: 34,
-                    fontStyle: FontStyle.normal,
-                    fontWeight: FontWeight.w700,
-                    
-                  ),
+          style: TextStyle(color: Colors.red, fontSize: 50),
         ),
-        Text (soustexte)
       ],
     );
   }
