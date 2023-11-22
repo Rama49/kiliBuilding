@@ -11,7 +11,7 @@ class CardList extends StatelessWidget {
       mainAxisAlignment: MainAxisAlignment.center,
       children: [
          SizedBox(height: 20),
-        TitleReu(titre: "Solution"),
+        TitleReu(titre: "Solution", soustexte: '',),
         SizedBox(height: 20),  // Add some spacing between the blog text and cards
         Row(
           mainAxisAlignment: MainAxisAlignment.center,

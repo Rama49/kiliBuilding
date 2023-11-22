@@ -6,7 +6,7 @@ class TitleReu extends StatelessWidget {
 
   const TitleReu({
     super.key,
-    required this.titre,
+    required this.titre, required String soustexte,
   });
 
   @override

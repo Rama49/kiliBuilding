@@ -12,7 +12,7 @@ class Footers extends StatelessWidget {
       padding: const EdgeInsets.only(bottom: 50),
       margin: const EdgeInsets.only(top: 50),
       child: const Column(children: [
-        TitleReu(titre: "S'abonner a notre Newsletter"),
+        TitleReu(titre: "S'abonner a notre Newsletter", soustexte: '',),
         Row(
           mainAxisAlignment: MainAxisAlignment.spaceEvenly,
           children: [
