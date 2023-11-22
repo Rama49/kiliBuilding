@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 import 'package:kiliwebsite/Reutilisable/FooterElement.dart';
+import 'package:kiliwebsite/Reutilisable/Input.dart';
 import 'package:kiliwebsite/Reutilisable/Title.dart';
 
 class Footers extends StatelessWidget {
@@ -12,7 +14,11 @@ class Footers extends StatelessWidget {
       padding: const EdgeInsets.only(bottom: 50),
       margin: const EdgeInsets.only(top: 50),
       child: const Column(children: [
-        TitleReu(titre: "S'abonner a notre Newsletter"),
+        SizedBox(height: 25),
+        Text("S'abonner a notre Newsletter",
+            style: TextStyle(color: Colors.white, fontSize: 25)),
+        SizedBox(height: 25),
+        MyInput(textInput: "E-mail"),
         Row(
           mainAxisAlignment: MainAxisAlignment.spaceEvenly,
           children: [
