@@ -1,20 +1,21 @@
 import 'package:flutter/material.dart';
-import 'package:kiliwebsite/Component/Bouton.dart';
 import 'package:kiliwebsite/Component/SectionBlog/card_list.dart';
-import 'package:kiliwebsite/Component/SectionNavbar/NavbarMenu.dart';
 import 'package:kiliwebsite/Reutilisable/Cartsimple.dart';
+import 'package:kiliwebsite/Reutilisable/Title.dart';
 
-class Simpleprop extends StatelessWidget {
-  const Simpleprop({Key? key});
+class Component extends StatelessWidget {
+  const Component({Key? key});
 
   @override
   Widget build(BuildContext context) {
     return 
+     
     Padding(
       padding: EdgeInsets.only(top: 90),
       child: Column(
         children: [
-          
+           SizedBox(height: 20),
+          TitleReu(titre: "Composants"),
           buildRow(
             context,
             [
@@ -81,7 +82,6 @@ class Simpleprop extends StatelessWidget {
         );
       },
       child: Padding(
-       
         padding: EdgeInsets.all(25),
         child: Card(
           color: Colors.white,
@@ -109,14 +109,4 @@ class CardNavigationData {
   CardNavigationData(this.title, this.subTitle, this.icon, this.iconColor, this.route);
 }
 
-// class YourSecondScreen extends StatelessWidget {
-//   // Implement your second screen widget here
-// }
 
-// class YourThirdScreen extends StatelessWidget {
-//   // Implement your third screen widget here
-// }
-
-// class YourFourthScreen extends StatelessWidget {
-//   // Implement your fourth screen widget here
-// }
