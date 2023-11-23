@@ -11,60 +11,58 @@ class LeftComponent extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Expanded(
-      child: Container(
-        color: Colors.white,
-        padding: const EdgeInsets.all(16.0),
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.start,
-          children: [
-            // En-tête réutilisable
-            Header(),
-            const SizedBox(height: 20.0),
-            // Contenu avec la carte déplaçable
-            Column(
-              crossAxisAlignment: CrossAxisAlignment.start,
-              children: [
-                ClickableCard(
-                  text: '1',
-                  onCardTap: () {
-                    // Gérer l'action de clic sur la carte déplaçable
-                    print('Carte déplaçable cliquée: 1');
-                  }, largeur: 280,
-                ),
-                const SizedBox(height: 15.0),
-                // Autres éléments de contenu ici...
-                ClickableCard(
-                  text: '2',
-                  onCardTap: () {
-                    // Gérer l'action de clic sur la carte déplaçable
-                    print('Carte déplaçable cliquée: 2');
-                  }, largeur: 310,
-                ),
-                const SizedBox(height: 15.0),
-                ClickableCard(
-                  text: '3',
-                  onCardTap: () {
-                    // Gérer l'action de clic sur la carte déplaçable
-                    print('Carte déplaçable cliquée: 3');
-                  }, largeur: 300,
-                ),
-                const SizedBox(height: 15.0),
-              ],
-            ),
-            // Espacement entre les cartes et les paragraphes
-            const SizedBox(height: 16.0),
-            // Paragraphes réutilisables
-            Column(
-              children: [
-                BlackBoxWithText(text: 'Paragraphe 1'),
-                BlackBoxWithText(text: 'Paragraphe 2'),
-              ],
-            ),
-            // Pied de page
-            _buildFooter(),
-          ],
-        ),
+    return Container(
+      color: Colors.white,
+      padding: const EdgeInsets.all(16.0),
+      child: Column(
+        mainAxisAlignment: MainAxisAlignment.start,
+        children: [
+          // En-tête réutilisable
+          Header(),
+          const SizedBox(height: 20.0),
+          // Contenu avec la carte déplaçable
+          Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              ClickableCard(
+                text: '1',
+                onCardTap: () {
+                  // Gérer l'action de clic sur la carte déplaçable
+                  print('Carte déplaçable cliquée: 1');
+                }, largeur: 280,
+              ),
+              const SizedBox(height: 15.0),
+              // Autres éléments de contenu ici...
+              ClickableCard(
+                text: '2',
+                onCardTap: () {
+                  // Gérer l'action de clic sur la carte déplaçable
+                  print('Carte déplaçable cliquée: 2');
+                }, largeur: 310,
+              ),
+              const SizedBox(height: 15.0),
+              ClickableCard(
+                text: '3',
+                onCardTap: () {
+                  // Gérer l'action de clic sur la carte déplaçable
+                  print('Carte déplaçable cliquée: 3');
+                }, largeur: 300,
+              ),
+              const SizedBox(height: 15.0),
+            ],
+          ),
+          // Espacement entre les cartes et les paragraphes
+          const SizedBox(height: 16.0),
+          // Paragraphes réutilisables
+          Column(
+            children: [
+              BlackBoxWithText(text: 'Paragraphe 1'),
+              BlackBoxWithText(text: 'Paragraphe 2'),
+            ],
+          ),
+          // Pied de page
+          _buildFooter(),
+        ],
       ),
     );
   }
@@ -72,13 +70,11 @@ class LeftComponent extends StatelessWidget {
   // Reste du code...
 
   Widget _buildFooter() {
-    return Container(
-      child: const Text(
-        'Pied de page',
-        style: TextStyle(
-          color: Colors.white,
-          fontWeight: FontWeight.bold,
-        ),
+    return const Text(
+      'Pied de page',
+      style: TextStyle(
+        color: Colors.white,
+        fontWeight: FontWeight.bold,
       ),
     );
   }
