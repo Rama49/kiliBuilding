@@ -1,6 +1,9 @@
+// ignore_for_file: file_names
+
 import 'package:flutter/material.dart';
 
 class Fonctionnalite extends StatelessWidget {
+  // ignore: use_key_in_widget_constructors
   const Fonctionnalite({Key? key});
 
   @override
