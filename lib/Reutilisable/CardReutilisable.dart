@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:kiliwebsite/Component/Bouton.dart';
+import 'package:kiliwebsite/Reutilisable/BouttonOrang.dart';
 
 class CardReutilisable extends StatelessWidget {
   final Image image;
@@ -32,7 +33,7 @@ class CardReutilisable extends StatelessWidget {
           Container(padding: EdgeInsets.only(left: 20), child: Text(paragraph)),
           SizedBox(height: 20),
           Container(padding: EdgeInsets.only(left: 20), child: Text(texte)),
-          Bouton(Title: "Voir Projet")
+          BouttonOrange(Title: "Voir Projet")
         ],
       ),
     );

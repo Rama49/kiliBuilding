@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:kiliwebsite/Component/PageLogin/Conexion.dart';
 import 'package:kiliwebsite/Component/SectionBibliotheque/Bilbliotheque.dart';
 import 'package:kiliwebsite/Component/SectionNavbar/NavbarMenu.dart';
 import 'package:kiliwebsite/Component/SectionSecurite/Securite.dart';
@@ -22,7 +23,7 @@ class HomePage extends StatelessWidget {
               Bibliotheque(),
               Security(),
               Chiffres(),
-              Footers()
+              Footers(),
             ],
           ),
         ),

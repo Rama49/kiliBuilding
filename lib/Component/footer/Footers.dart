@@ -12,7 +12,7 @@ class Footers extends StatelessWidget {
     return Container(
       color: Color(0xFFF44336),
       padding: const EdgeInsets.only(bottom: 50),
-      margin: const EdgeInsets.only(top: 50),
+      margin: const EdgeInsets.only(top: 50, bottom: 10),
       child: const Column(children: [
         SizedBox(height: 25),
         Text("S'abonner a notre Newsletter",

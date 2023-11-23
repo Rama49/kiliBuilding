@@ -30,7 +30,9 @@ class NavbarMenu extends StatelessWidget {
                     Row(
                       children: [
                         InkWell(
-                          onTap: () {},
+                           onTap: () {
+                              Navigator.pushNamed(context, '/Security');
+                            },
                           child: const Text(
                             'Projet',
                             style: TextStyle(
@@ -93,7 +95,7 @@ class NavbarMenu extends StatelessWidget {
                           margin: const EdgeInsets.only(left: 10),
                           child: InkWell(
                             onTap: () {
-                              Navigator.pushNamed(context, '/contactpage');
+                              Navigator.pushNamed(context, '/Conexion');
                             },
                             child: Container(
                               decoration: BoxDecoration(
@@ -115,7 +117,7 @@ class NavbarMenu extends StatelessWidget {
                         // Ajoutez d'autres éléments ici avec Spacer pour l'espacement
                         InkWell(
                           onTap: () {
-                            Navigator.pushNamed(context, '/contactpage');
+                            Navigator.pushNamed(context, '/Inscription');
                           },
                           child: Container(
                             margin: const EdgeInsets.only(left: 30),
