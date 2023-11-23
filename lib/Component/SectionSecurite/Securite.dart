@@ -19,7 +19,7 @@ class Security extends StatelessWidget {
           children: [
             TitleReu(titre: "Projects"),
             SizedBox(
-                height: 20), // Ajoutez un espace entre le titre et les cartes
+                height: 20),
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceEvenly,
               children: [
