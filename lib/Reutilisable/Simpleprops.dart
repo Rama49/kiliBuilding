@@ -10,10 +10,12 @@ class Simpleprop extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Padding(
+    return 
+    Padding(
       padding: EdgeInsets.only(top: 90),
       child: Column(
         children: [
+          
           buildRow(
             context,
             [
@@ -90,6 +92,7 @@ class Simpleprop extends StatelessWidget {
         );
       },
       child: Padding(
+       
         padding: EdgeInsets.all(25),
         child: Card(
           color: Colors.white,
