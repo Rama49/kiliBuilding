@@ -14,7 +14,6 @@ class Security extends StatelessWidget {
     return screen.width > 768
     ?Container(
       margin: const EdgeInsets.symmetric(vertical: 50.0),
-      // color: const Color(0xFFfff7f5),
       child: const Center(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,

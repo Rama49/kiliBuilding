@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:kiliwebsite/Component/SectionDomaine/Domaine.dart';
 import 'package:kiliwebsite/Component/Vitesse/Chiffretext.dart';
 import 'package:kiliwebsite/Reutilisable/BouttonOrang.dart';
 
@@ -37,7 +38,7 @@ class CardReutilisable extends StatelessWidget {
             title: "Voir Projet",
             onPress: () {
               Navigator.push(
-                  context, MaterialPageRoute(builder: (context) => Chiffres()));
+                  context, MaterialPageRoute(builder: (context) => Domaine()));
             },
           )
         ],
