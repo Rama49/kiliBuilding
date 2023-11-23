@@ -1,6 +1,7 @@
 // ignore: file_names
 import 'package:flutter/material.dart';
 import 'package:kiliwebsite/Component/CardSecurity/CardSecurity.dart';
+import 'package:kiliwebsite/Reutilisable/Title.dart';
 
 class Security extends StatelessWidget {
   // ignore: use_key_in_widget_constructors
@@ -15,18 +16,7 @@ class Security extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.center,
           crossAxisAlignment: CrossAxisAlignment.center,
           children: [
-            Text(
-              'Sécurité',
-              style: TextStyle(
-                fontSize: 34,
-                fontWeight: FontWeight.w700,
-                color: Color(0xFFf44336),
-                decoration: TextDecoration.none,
-              ),
-              textAlign: TextAlign.center,
-              
-              // Ajoutez d'autres styles ici
-            ),
+            TitleReu(titre: "Projects"),
             SizedBox(
                 height: 20), // Ajoutez un espace entre le titre et les cartes
             Row(

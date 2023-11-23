@@ -1,10 +1,40 @@
-// import 'package:flutter/material.dart';
+import 'package:flutter/material.dart';
+import 'package:kiliwebsite/Component/Bouton.dart';
 
-// class MyWidget extends StatelessWidget {
-//   const MyWidget({super.key});
+class CardReutilisable extends StatelessWidget {
+  final Image image;
+  final String title;
+  final String paragraph;
+  final String texte;
 
-//   @override
-//   Widget build(BuildContext context) {
-//     return const Placeholder();
-//   }
-// }
+  const CardReutilisable(
+      {super.key,
+      required this.image,
+      required this.title,
+      required this.paragraph,
+      required this.texte});
+
+  @override
+  Widget build(BuildContext context) {
+    return Container(
+      color: Colors.white,
+      width: 300,
+      margin: EdgeInsets.all(10),
+      child: Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: [
+          image,
+          SizedBox(height: 20),
+          Container(
+            padding: EdgeInsets.only(left: 20),
+            child: Text(title, style: TextStyle(fontWeight: FontWeight.w700)),
+          ),
+          Container(padding: EdgeInsets.only(left: 20), child: Text(paragraph)),
+          SizedBox(height: 20),
+          Container(padding: EdgeInsets.only(left: 20), child: Text(texte)),
+          Bouton(Title: "Voir Projet")
+        ],
+      ),
+    );
+  }
+}
