@@ -1,9 +1,11 @@
 import 'package:flutter/material.dart';
-import 'package:kiliwebsite/Component/SectionFonctionnalite/Fonctionnalite.dart';
+import 'package:kiliwebsite/Component/SectionBibliotheque/Bilbliotheque.dart';
 import 'package:kiliwebsite/Component/SectionNavbar/NavbarMenu.dart';
-// ignore: unused_import
 import 'package:kiliwebsite/Component/SectionSecurite/Securite.dart';
-// import 'package:kiliwebsite/Component/sectionEntrepreneurs/Entrepreneur.dart';
+import 'package:kiliwebsite/Component/Vitesse/Chiffretext.dart';
+import 'package:kiliwebsite/Component/footer/Footers.dart';
+
+// ignore: unused_import
 
 class HomePage extends StatelessWidget {
   const HomePage({Key? key});
@@ -11,14 +13,18 @@ class HomePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: SingleChildScrollView(
-        child: Column(
-          children: [
-            NavbarMenu(), 
-            // Entrepreneur(),
-            Fonctionnalite(),// Affichez le composant Navbar séparément
-            Security(), // Affichez le composant Security séparément
-          ],
+      body: Container(
+        color: Color(0xFFF1F1F1),
+        child: SingleChildScrollView(
+          child: Column(
+            children: [
+              NavbarMenu(),
+              Bibliotheque(),
+              Security(),
+              Chiffres(),
+              Footers()
+            ],
+          ),
         ),
       ),
     );
