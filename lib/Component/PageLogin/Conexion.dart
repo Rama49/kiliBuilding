@@ -6,6 +6,8 @@ class Conexion extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Column(children: [LoginSignUp(text1: "Se connecter avec:", text2: "Pas de compte:")]);
+    return Scaffold(
+      body: LoginSignUp(text1: "Se connecter avec:", text2: "Pas de compte:"),
+    );
   }
 }

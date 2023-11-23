@@ -20,19 +20,45 @@ class CardReutilisable extends StatelessWidget {
     return Container(
       color: Colors.white,
       width: 300,
-      margin: EdgeInsets.all(10),
+      margin: const EdgeInsets.all(10),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           image,
-          SizedBox(height: 20),
+          const SizedBox(height: 20),
           Container(
-            padding: EdgeInsets.only(left: 20),
-            child: Text(title, style: TextStyle(fontWeight: FontWeight.w700)),
+            padding: const EdgeInsets.only(left: 20),
+            child: Text(title,
+                style: TextStyle(
+                  fontWeight: FontWeight.w700,
+                  fontSize: 25,
+                  color: Color(0xFFF44336),
+                  decoration: TextDecoration.none,
+                )),
           ),
-          Container(padding: EdgeInsets.only(left: 20), child: Text(paragraph)),
-          SizedBox(height: 20),
-          Container(padding: EdgeInsets.only(left: 20), child: Text(texte)),
+          Container(
+              padding: const EdgeInsets.only(left: 20),
+              child: Text(
+                paragraph,
+                style: TextStyle(
+                  fontWeight: FontWeight.normal,
+                  fontSize: 20,
+                  color: Colors.black,
+                  decoration: TextDecoration.none,
+                ),
+              )),
+          const SizedBox(height: 20),
+          Container(
+              padding: const EdgeInsets.only(left: 20),
+              child: Text(
+                texte,
+                style: TextStyle(
+                  fontWeight: FontWeight.normal,
+                  fontSize: 20,
+                  color: Colors.black,
+                  decoration: TextDecoration.none,
+                ),
+              )),
           BouttonOrange(Title: "Voir Projet")
         ],
       ),
