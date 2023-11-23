@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:kiliwebsite/Component/PageLogin/Conexion.dart';
 import 'package:kiliwebsite/Component/SectionBibliotheque/Bilbliotheque.dart';
+import 'package:kiliwebsite/Component/SectionBuilding/Building.dart';
 import 'package:kiliwebsite/Component/SectionNavbar/NavbarMenu.dart';
 import 'package:kiliwebsite/Component/SectionSecurite/Securite.dart';
 import 'package:kiliwebsite/Component/SectionTemplate/Template.dart';
@@ -21,11 +22,12 @@ class HomePage extends StatelessWidget {
           child: Column(
             children: [
               NavbarMenu(),
-              Bibliotheque(),
-              Security(),
-              Chiffres(),
-              Template(),
-              Footers()
+              // Bibliotheque(),
+              // Security(),
+              // Chiffres(),
+              // Template(),
+              BuildingComponent(),
+              // Footers()
             ],
           ),
         ),
