@@ -20,12 +20,13 @@ class HomePage extends StatelessWidget {
         child: SingleChildScrollView(
           child: Column(
             children: [
-              NavbarMenu(),
-              Bibliotheque(),
-              Security(),
-              Chiffres(),
-               Component(),
-              Footers()
+              // NavbarMenu(),
+              // Bibliotheque(),
+              // Security(),
+              // Chiffres(),
+              //  Component(),
+              // Footers()
+              Domaine()
               // Cartsimple()
             ],
           ),
