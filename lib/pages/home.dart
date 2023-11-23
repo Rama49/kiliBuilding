@@ -3,6 +3,7 @@ import 'package:kiliwebsite/Component/PageLogin/Conexion.dart';
 import 'package:kiliwebsite/Component/SectionBibliotheque/Bilbliotheque.dart';
 import 'package:kiliwebsite/Component/SectionNavbar/NavbarMenu.dart';
 import 'package:kiliwebsite/Component/SectionSecurite/Securite.dart';
+import 'package:kiliwebsite/Component/SectionTemplate/Template.dart';
 import 'package:kiliwebsite/Component/Vitesse/Chiffretext.dart';
 import 'package:kiliwebsite/Component/footer/Footers.dart';
 
@@ -23,7 +24,8 @@ class HomePage extends StatelessWidget {
               Bibliotheque(),
               Security(),
               Chiffres(),
-              Footers(),
+              Template(),
+              Footers()
             ],
           ),
         ),
