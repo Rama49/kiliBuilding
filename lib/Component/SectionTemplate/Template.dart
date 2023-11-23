@@ -7,21 +7,110 @@ class Template extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Center(
+    var screen = MediaQuery.of(context).size;
+    return screen.width > 768
+    ?Container(
       child: Column (
       mainAxisAlignment: MainAxisAlignment.center,
-      crossAxisAlignment: CrossAxisAlignment.center,
       children: [
         SizedBox(height: 20),
-        TitleReu(titre: "Templates"),
+        TitleReu(titre: "Templates", soustexte: '',),
             SizedBox(
                 height: 20),
         Row(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
+            Container(
+              child: CardTemplate(
+                image: Image.asset(
+                  "template.png"
+                ),
+                title: "lorem ipsum",
+                paragraph: "Developpeur React Native",
+                 texte: "Lorem ipsum dolor sit amet consectetur.\nArcu consectetur fringilla gravida mauris.",
+              ),
+            ),
+          CardTemplate(
+              image: Image.asset(
+                "template.png",
+              ),
+              title: "lorem ipsum",
+              paragraph: "Developpeur React Native",
+               texte: "Lorem ipsum dolor sit amet consectetur.\nArcu consectetur fringilla gravida mauris.",
+            ),
             CardTemplate(
               image: Image.asset(
                 "template.png",
+              ),
+              title: "lorem ipsum",
+              paragraph: "Developpeur React Native",
+               texte: "Lorem ipsum dolor sit amet consectetur.\nArcu consectetur fringilla gravida mauris.",
+            ),
+            CardTemplate(
+              image: Image.asset(
+                "template.png"
+              ),
+              title: "lorem ipsum",
+              paragraph: "Developpeur React Native",
+               texte: "Lorem ipsum dolor sit amet consectetur.\nArcu consectetur fringilla gravida mauris.",
+            ),
+          ],
+        ),
+         Row(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            CardTemplate(
+              image: Image.asset(
+                "template.png",
+              ),
+              title: "lorem ipsum",
+              paragraph: "Developpeur React Native",
+               texte: "Lorem ipsum dolor sit amet consectetur.\nArcu consectetur fringilla gravida mauris.",
+            ),
+            CardTemplate(
+              image: Image.asset(
+                "template.png",
+              ),
+              title: "lorem ipsum",
+              paragraph: "Developpeur React Native",
+              texte: "Lorem ipsum dolor sit amet consectetur.\nArcu consectetur fringilla gravida mauris.",
+            ),
+            CardTemplate(
+              image: Image.asset(
+                "template.png",
+              ),
+              title: "lorem ipsum",
+              paragraph: "Developpeur React Native",
+               texte: "Lorem ipsum dolor sit amet consectetur.\nArcu consectetur fringilla gravida mauris.",
+            ),
+            CardTemplate(
+              image: Image.asset(
+                "template.png",
+              ),
+              title: "lorem ipsum",
+              paragraph: "Developpeur React Native",
+               texte: "Lorem ipsum dolor sit amet consectetur.\nArcu consectetur fringilla gravida mauris.",
+            ),
+          ],
+        ),
+      ],
+      ),
+    )
+    :Container(
+      child: Column (
+      mainAxisAlignment: MainAxisAlignment.center,
+      crossAxisAlignment: CrossAxisAlignment.center,
+      children: [
+        SizedBox(height: 20),
+        TitleReu(titre: "Templates", soustexte: '',),
+            SizedBox(
+                height: 20),
+        Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            CardTemplate(
+              image: Image.asset(
+                "template.png"
               ),
               title: "lorem ipsum",
               paragraph: "Developpeur React Native",
@@ -53,7 +142,7 @@ class Template extends StatelessWidget {
             ),
           ],
         ),
-         Row(
+         Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
             CardTemplate(

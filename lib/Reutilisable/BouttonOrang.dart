@@ -2,12 +2,14 @@ import 'package:flutter/material.dart';
 
 class BouttonOrange extends StatelessWidget {
 
-  final String Title;
+  final String title;
+  final VoidCallback onPress;
 
 
   const BouttonOrange({
     Key? key,
-    required this.Title
+    required this.title, 
+    required this.onPress,
   });
 
 
@@ -20,7 +22,7 @@ class BouttonOrange extends StatelessWidget {
         Padding(
           padding: const EdgeInsets.all(25.0),
           child: ElevatedButton(
-            onPressed: () {},
+            onPressed: onPress,
             style: ElevatedButton.styleFrom(
               backgroundColor: const Color(0xFFF44336),
               // side: const BorderSide(color: Color(0xFFfff7f5), width: 2),
@@ -29,7 +31,7 @@ class BouttonOrange extends StatelessWidget {
               ),
             ),
             child: Text(
-              Title,
+              title,
               style: TextStyle(
                 color: Colors.white,
                 fontSize: 15,

@@ -28,14 +28,14 @@ class LoginSignUp extends StatelessWidget {
             ],
           ),
         ),
-        TitleReu(titre: "Bienvenue"),
+        TitleReu(titre: "Bienvenue", soustexte: '',),
         Text(text1),
         Row(children: [Icon(Icons.facebook), Icon(Icons.facebook)]),
         Text("Ou"),
         InputForm(placeholder: "Email"),
         Bouton(Title: "Se connecter"),
         Row(
-          children: [Text(text2), BouttonOrange(Title: "S'inscrire")],
+          children: [Text(text2), BouttonOrange(title: "S'inscrire", onPress: () {  },)],
         ),
         Container(
             color: Color(0xFFF44336),

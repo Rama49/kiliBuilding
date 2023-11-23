@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:kiliwebsite/Component/Bouton.dart';
+import 'package:kiliwebsite/Component/Vitesse/Chiffretext.dart';
 import 'package:kiliwebsite/Reutilisable/BouttonOrang.dart';
 
 class CardReutilisable extends StatelessWidget {
@@ -33,7 +33,13 @@ class CardReutilisable extends StatelessWidget {
           Container(padding: EdgeInsets.only(left: 20), child: Text(paragraph)),
           SizedBox(height: 20),
           Container(padding: EdgeInsets.only(left: 20), child: Text(texte)),
-          BouttonOrange(Title: "Voir Projet")
+          BouttonOrange(
+            title: "Voir Projet",
+            onPress: () {
+              Navigator.push(
+                  context, MaterialPageRoute(builder: (context) => Chiffres()));
+            },
+          )
         ],
       ),
     );

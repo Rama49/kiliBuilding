@@ -1,6 +1,7 @@
 // ignore: file_names
 import 'package:flutter/material.dart';
 import 'package:kiliwebsite/Component/CardSecurity/CardSecurity.dart';
+import 'package:kiliwebsite/Reutilisable/CardReutilisable.dart';
 import 'package:kiliwebsite/Reutilisable/Title.dart';
 
 class Security extends StatelessWidget {
@@ -9,7 +10,9 @@ class Security extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Container(
+    var screen = MediaQuery.of(context).size;
+    return screen.width > 768
+    ?Container(
       margin: const EdgeInsets.symmetric(vertical: 50.0),
       // color: const Color(0xFFfff7f5),
       child: const Center(
@@ -17,7 +20,7 @@ class Security extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.center,
           crossAxisAlignment: CrossAxisAlignment.center,
           children: [
-            TitleReu(titre: "Projects"),
+            TitleReu(titre: "Projects", soustexte: '',),
             SizedBox(
                 height: 20),
             Row(
@@ -30,6 +33,67 @@ class Security extends StatelessWidget {
           ],
         ),
       ),
+    )
+    :  Column (
+      crossAxisAlignment: CrossAxisAlignment.start,
+      children: [
+        Column(
+          children: [
+            CardReutilisable(
+              image: Image.asset(
+                "securite.png",
+              ),
+              title: "lorem ipsum",
+              paragraph: "Developpeur React Native",
+               texte: "Lorem ipsum dolor sit amet consectetur.\nArcu consectetur fringilla gravida mauris.",
+            ),
+            CardReutilisable(
+              image: Image.asset(
+                "securite.png",
+              ),
+              title: "lorem ipsum",
+              paragraph: "Developpeur React Native",
+               texte: "Lorem ipsum dolor sit amet consectetur.\nArcu consectetur fringilla gravida mauris.",
+            ),
+            CardReutilisable(
+              image: Image.asset(
+                "securite.png",
+              ),
+              title: "lorem ipsum",
+              paragraph: "Developpeur React Native",
+               texte: "Lorem ipsum dolor sit amet consectetur.\nArcu consectetur fringilla gravida mauris.",
+            ),
+          ],
+        ),
+         Column(
+          children: [
+            CardReutilisable(
+              image: Image.asset(
+                "securite.png",
+              ),
+              title: "lorem ipsum",
+              paragraph: "Developpeur React Native",
+               texte: "Lorem ipsum dolor sit amet consectetur.\nArcu consectetur fringilla gravida mauris.",
+            ),
+            CardReutilisable(
+              image: Image.asset(
+                "securite.png",
+              ),
+              title: "lorem ipsum",
+              paragraph: "Developpeur React Native",
+              texte: "Lorem ipsum dolor sit amet consectetur.\nArcu consectetur fringilla gravida mauris.",
+            ),
+            CardReutilisable(
+              image: Image.asset(
+                "securite.png",
+              ),
+              title: "lorem ipsum",
+              paragraph: "Developpeur React Native",
+               texte: "Lorem ipsum dolor sit amet consectetur.\nArcu consectetur fringilla gravida mauris.",
+            ),
+          ],
+        ),
+      ],
     );
   }
 }
