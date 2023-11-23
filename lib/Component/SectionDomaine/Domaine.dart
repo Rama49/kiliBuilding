@@ -8,8 +8,9 @@ class Domaine extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return 
-    Column(
+    return Padding(
+      padding: const EdgeInsets.all(60),
+      child:Column(
 
       crossAxisAlignment: CrossAxisAlignment.start,
       
@@ -39,7 +40,7 @@ class Domaine extends StatelessWidget {
                   SizedBox(
                       height: 10), // Add spacing between the title and subtitle
                   Padding(
-                    padding: EdgeInsets.only(left: 120),
+                    padding: EdgeInsets.only(left: 110),
                     child: Text(
                       'Tailwind CSS est un framework de développeurs',
                       style: TextStyle(
@@ -70,7 +71,7 @@ class Domaine extends StatelessWidget {
                 child: Image.asset(
                   'assets/MacBook.png', // Replace with the path to your image asset
                   height: 225, // Adjust the height of the image as needed
-                  width: 600, // Adjust the width of the image as needed
+                  width: 450, // Adjust the width of the image as needed
                 ),
               ),
               
@@ -83,6 +84,7 @@ class Domaine extends StatelessWidget {
             Simpleprop()
       ],
       
+    ),
     );
   }
 }
