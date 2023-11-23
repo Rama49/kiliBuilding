@@ -1,7 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:kiliwebsite/Component/SectionBlog/card_list.dart';
+import 'package:kiliwebsite/Component/SectionSecurite/Securite.dart';
 import 'package:kiliwebsite/Reutilisable/Cartsimple.dart';
 import 'package:kiliwebsite/Reutilisable/Title.dart';
+import 'package:kiliwebsite/Reutilisable/TitleReu.dart';
+
 
 class Component extends StatelessWidget {
   const Component({Key? key});
@@ -15,14 +18,14 @@ class Component extends StatelessWidget {
       child: Column(
         children: [
            SizedBox(height: 20),
-          TitleReu(titre: "Composants"),
+          TitleReu(titre: "Composants", soustexte: '',),
           buildRow(
             context,
             [
-              CardNavigationData('Button', '5 Components', Icons.back_hand, Colors.red, CardList()),
-              CardNavigationData('Input', '2 Components', Icons.input_outlined, Colors.red, CardList()),
-              CardNavigationData('Card', '4 Components', Icons.card_giftcard, Colors.red, CardList()),
-              CardNavigationData('Header', '4 Components', Icons.headset_rounded, Colors.red,CardList()),
+              CardNavigationData('Button', '5 Components', Icons.back_hand, Colors.red, Security()),
+              CardNavigationData('Input', '2 Components', Icons.input_outlined, Colors.red, Security()),
+              CardNavigationData('Card', '4 Components', Icons.card_giftcard, Colors.red, Security()),
+              CardNavigationData('Header', '4 Components', Icons.headset_rounded, Colors.red,Security()),
             ],
             
           ),
@@ -30,30 +33,30 @@ class Component extends StatelessWidget {
            buildRow(
             context,
             [
-              CardNavigationData('Grids', '5 Components', Icons.grid_goldenratio, Colors.red, CardList()),
-              CardNavigationData('Selects', '2 Components', Icons.select_all, Colors.red, CardList()),
-              CardNavigationData('Route', '4 Components', Icons.route_outlined, Colors.red, CardList()),
-              CardNavigationData('Border', '4 Components', Icons.border_bottom_outlined, Colors.red,CardList()),
+              CardNavigationData('Grids', '5 Components', Icons.grid_goldenratio, Colors.red, Security()),
+              CardNavigationData('Selects', '2 Components', Icons.select_all, Colors.red, Security()),
+              CardNavigationData('Route', '4 Components', Icons.route_outlined, Colors.red, Security()),
+              CardNavigationData('Border', '4 Components', Icons.border_bottom_outlined, Colors.red,Security()),
             ],
             
           ),
            buildRow(
             context,
             [
-              CardNavigationData('Pagination', '5 Components', Icons.pages_outlined, Colors.red, CardList()),
-              CardNavigationData('Sidebar', '2 Components', Icons.view_sidebar, Colors.red, CardList()),
-              CardNavigationData('Toggles', '4 Components', Icons.toggle_off_outlined, Colors.red, CardList()),
-              CardNavigationData('Navigation', '4 Components', Icons.navigate_before_outlined, Colors.red,CardList()),
+              CardNavigationData('Pagination', '5 Components', Icons.pages_outlined, Colors.red, Security()),
+              CardNavigationData('Sidebar', '2 Components', Icons.view_sidebar, Colors.red, Security()),
+              CardNavigationData('Toggles', '4 Components', Icons.toggle_off_outlined, Colors.red, Security()),
+              CardNavigationData('Navigation', '4 Components', Icons.navigate_before_outlined, Colors.red,Security()),
             ],
             
           ),
            buildRow(
             context,
             [
-              CardNavigationData('Button', '5 Components', Icons.bolt_outlined, Colors.red, CardList()),
-              CardNavigationData('Input', '2 Components', Icons.input_rounded, Colors.red, CardList()),
-              CardNavigationData('Text', '4 Components', Icons.text_format_outlined, Colors.red, CardList()),
-              CardNavigationData('Table', '4 Components', Icons.tab_outlined, Colors.red,CardList()),
+              CardNavigationData('Button', '5 Components', Icons.bolt_outlined, Colors.red, Security()),
+              CardNavigationData('Input', '2 Components', Icons.input_rounded, Colors.red, Security()),
+              CardNavigationData('Text', '4 Components', Icons.text_format_outlined, Colors.red, Security()),
+              CardNavigationData('Table', '4 Components', Icons.tab_outlined, Colors.red,Security()),
             ],
             
           ),
