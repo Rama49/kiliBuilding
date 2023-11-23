@@ -28,7 +28,7 @@ class Bibliotheque extends StatelessWidget {
             padding: EdgeInsets.only(bottom: 20, top: 40),
             color: Color.fromARGB(1, 210, 152, 207),
             child: Text(
-                "Créer votre site web ou application\n fois plus rapide avec Kili APP builder",
+                "Créer votre site web ou application\n 10 fois plus rapide avec Kili APP builder",
                 style: TextStyle(
                   color: Colors.white,
                   fontSize: 20,
