@@ -40,26 +40,6 @@ class Component extends StatelessWidget {
             ],
             
           ),
-           buildRow(
-            context,
-            [
-              CardNavigationData('Pagination', '5 Components', Icons.pages_outlined, Colors.red, Security()),
-              CardNavigationData('Sidebar', '2 Components', Icons.view_sidebar, Colors.red, Security()),
-              CardNavigationData('Toggles', '4 Components', Icons.toggle_off_outlined, Colors.red, Security()),
-              CardNavigationData('Navigation', '4 Components', Icons.navigate_before_outlined, Colors.red,Security()),
-            ],
-            
-          ),
-           buildRow(
-            context,
-            [
-              CardNavigationData('Button', '5 Components', Icons.bolt_outlined, Colors.red, Security()),
-              CardNavigationData('Input', '2 Components', Icons.input_rounded, Colors.red, Security()),
-              CardNavigationData('Text', '4 Components', Icons.text_format_outlined, Colors.red, Security()),
-              CardNavigationData('Table', '4 Components', Icons.tab_outlined, Colors.red,Security()),
-            ],
-            
-          ),
         ],
         
       ),
