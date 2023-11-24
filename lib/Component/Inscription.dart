@@ -6,7 +6,10 @@ class Inscription extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-  return  Scaffold(body: Container(child: LoginSignUp(text1: "S'inscrire avec:", text2: "Vous avez deja un compte:"))
-);
+    return Scaffold(
+        body: Container(
+            child: LoginSignUp(
+                text1: "S'inscrire avec:",
+                text2: "Vous avez deja un compte:")));
   }
 }
