@@ -14,11 +14,11 @@ class Component extends StatelessWidget {
     return 
      
     Padding(
-      padding: EdgeInsets.only(top: 90),
+      padding: EdgeInsets.only(top: 30),
       child: Column(
         children: [
            SizedBox(height: 20),
-          TitleReu(titre: "Composants", soustexte: '',),
+          TitleReu(titre: "Composants", soustexte: ''),
           buildRow(
             context,
             [
@@ -37,26 +37,6 @@ class Component extends StatelessWidget {
               CardNavigationData('Selects', '2 Components', Icons.select_all, Colors.red, Security()),
               CardNavigationData('Route', '4 Components', Icons.route_outlined, Colors.red, Security()),
               CardNavigationData('Border', '4 Components', Icons.border_bottom_outlined, Colors.red,Security()),
-            ],
-            
-          ),
-           buildRow(
-            context,
-            [
-              CardNavigationData('Pagination', '5 Components', Icons.pages_outlined, Colors.red, Security()),
-              CardNavigationData('Sidebar', '2 Components', Icons.view_sidebar, Colors.red, Security()),
-              CardNavigationData('Toggles', '4 Components', Icons.toggle_off_outlined, Colors.red, Security()),
-              CardNavigationData('Navigation', '4 Components', Icons.navigate_before_outlined, Colors.red,Security()),
-            ],
-            
-          ),
-           buildRow(
-            context,
-            [
-              CardNavigationData('Button', '5 Components', Icons.bolt_outlined, Colors.red, Security()),
-              CardNavigationData('Input', '2 Components', Icons.input_rounded, Colors.red, Security()),
-              CardNavigationData('Text', '4 Components', Icons.text_format_outlined, Colors.red, Security()),
-              CardNavigationData('Table', '4 Components', Icons.tab_outlined, Colors.red,Security()),
             ],
             
           ),

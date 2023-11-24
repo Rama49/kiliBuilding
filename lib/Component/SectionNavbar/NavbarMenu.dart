@@ -17,16 +17,17 @@ class NavbarMenu extends StatelessWidget {
               color: const Color.fromRGBO(244, 67, 54, 1),
               child: Padding(
                 padding: const EdgeInsets.all(20),
-                child: Expanded(
-                  child: Row(
-                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                    children: [
-                      Image.asset(
-                        '../../../assets/Logo.png', // Remplacez par le chemin de votre logo
-                        height:
-                            30, // Ajustez la hauteur du logo selon vos besoins
-                      ),
-                      Row(
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                    Image.asset(
+                      '../../../assets/Logo.png', // Remplacez par le chemin de votre logo
+                      width:
+                          100, // Ajustez la hauteur du logo selon vos besoins
+                    ),
+                    Padding(
+                      padding: const EdgeInsets.only(left: 250, right: 80),
+                      child: Row(
                         children: [
                           InkWell(
                             onTap: () {
@@ -77,7 +78,10 @@ class NavbarMenu extends StatelessWidget {
                           ),
                         ],
                       ),
-                      Row(
+                    ),
+                    Padding(
+                      padding: const EdgeInsets.only(left: 50),
+                      child: Row(
                         children: [
                           Container(
                             margin: const EdgeInsets.only(left: 10),
@@ -87,14 +91,14 @@ class NavbarMenu extends StatelessWidget {
                               },
                               child: Container(
                                 decoration: BoxDecoration(
-                                  color: Colors.white,
+                                  color: Colors.green,
                                   borderRadius: BorderRadius.circular(8.0),
                                 ),
                                 padding: const EdgeInsets.all(9.0),
                                 child: const Text(
                                   'Se Connecter',
                                   style: TextStyle(
-                                    color: Color(0xFFF44336),
+                                    color: Colors.white,
                                     fontSize: 15,
                                     fontWeight: FontWeight.w700,
                                   ),
@@ -125,9 +129,9 @@ class NavbarMenu extends StatelessWidget {
                             ),
                           ),
                         ],
-                      )
-                    ],
-                  ),
+                      ),
+                    )
+                  ],
                 ),
               ),
             ),
