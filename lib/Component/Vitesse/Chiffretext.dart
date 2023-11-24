@@ -11,6 +11,7 @@ class Chiffres extends StatelessWidget {
         ? Container(
       color: Color(0xFFF44336),
       padding: const EdgeInsets.all(40),
+      margin: const EdgeInsets.only(bottom: 50),
       child: const Row(
         mainAxisAlignment: MainAxisAlignment.spaceEvenly,
         children: [

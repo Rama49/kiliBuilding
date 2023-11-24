@@ -26,7 +26,7 @@ class Domaine extends StatelessWidget {
                 Padding(
                   padding: EdgeInsets.only(left: 200),
                   child: Text(
-                    'Tailwind CSS', // Replace this with your actual blog title
+                    'React jS', // Replace this with your actual blog title
                     style: TextStyle(
                       color:
                           Colors.red, // Set your desired title text color
@@ -44,7 +44,7 @@ class Domaine extends StatelessWidget {
                 Padding(
                   padding: EdgeInsets.only(left: 110),
                   child: Text(
-                    'Tailwind CSS est un framework de développeurs',
+                    'React jS est un framework de développeurs',
                     style: TextStyle(
                       color: Colors.black,
                       fontSize: 16,

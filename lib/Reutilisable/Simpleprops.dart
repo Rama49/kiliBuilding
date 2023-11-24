@@ -76,7 +76,6 @@ class Simpleprop extends StatelessWidget {
 
   Widget buildRow(BuildContext context, List<CardNavigationData> cardDataList) {
     return Row(
-      mainAxisAlignment: MainAxisAlignment.spaceEvenly,
       children: cardDataList.map((cardData) {
         return buildCard(context, cardData);
       }).toList(),

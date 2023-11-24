@@ -14,11 +14,11 @@ class Component extends StatelessWidget {
     return 
      
     Padding(
-      padding: EdgeInsets.only(top: 90),
+      padding: EdgeInsets.only(top: 30),
       child: Column(
         children: [
            SizedBox(height: 20),
-          TitleReu(titre: "Composants", soustexte: '',),
+          TitleReu(titre: "Composants", soustexte: ''),
           buildRow(
             context,
             [
