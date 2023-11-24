@@ -1,42 +1,15 @@
-// ignore: file_names
 import 'package:flutter/material.dart';
-import 'package:kiliwebsite/Component/CardSecurity/CardSecurity.dart';
 import 'package:kiliwebsite/Reutilisable/CardReutilisable.dart';
-import 'package:kiliwebsite/Reutilisable/Title.dart';
 
-class Security extends StatelessWidget {
-  // ignore: use_key_in_widget_constructors
-  const Security({Key? key});
+class CardSecurity extends StatelessWidget {
+  const CardSecurity({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
-    var screen = MediaQuery.of(context).size;
-    return screen.width > 768
-    ?Container(
-      margin: const EdgeInsets.symmetric(vertical: 50.0),
-      child: const Center(
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          crossAxisAlignment: CrossAxisAlignment.center,
-          children: [
-            TitleReu(titre: "Projects", soustexte: '',),
-            SizedBox(
-                height: 20),
-            Row(
-              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-              children: [
-                CardSecurity(),
-              ],
-            ),
-            // Ajoutez d'autres widgets ici
-          ],
-        ),
-      ),
-    )
-    :  Column (
+    return Column (
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
-        Column(
+        Row(
           children: [
             CardReutilisable(
               image: Image.asset(
@@ -64,7 +37,7 @@ class Security extends StatelessWidget {
             ),
           ],
         ),
-         Column(
+         Row(
           children: [
             CardReutilisable(
               image: Image.asset(
