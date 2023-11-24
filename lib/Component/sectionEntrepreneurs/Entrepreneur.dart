@@ -9,7 +9,7 @@ class Entrepreneur extends StatelessWidget {
   Widget build(BuildContext context) {
     return Column(
       children: [
-        TitleReu(
+        const TitleReu(
             titre:
                 "Des entrepreneurs et des particulier nous font deja confiance",
             soustexte: "Faire un site web n'a jamais été aussi simple"),

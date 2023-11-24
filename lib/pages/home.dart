@@ -1,13 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:kiliwebsite/Component/SectionBibliotheque/Bilbliotheque.dart';
-import 'package:kiliwebsite/Component/SectionDomaine/Domaine.dart';
 import 'package:kiliwebsite/Component/SectionNavbar/NavbarMenu.dart';
 import 'package:kiliwebsite/Component/SectionSecurite/Securite.dart';
+import 'package:kiliwebsite/Component/SectionTemplate/Template.dart';
 import 'package:kiliwebsite/Component/Sectioncompon/Component.dart';
 import 'package:kiliwebsite/Component/Vitesse/Chiffretext.dart';
 import 'package:kiliwebsite/Component/footer/Footers.dart';
-import 'package:kiliwebsite/Reutilisable/Cartsimple.dart';
-
+ 
 // ignore: unused_import
 class HomePage extends StatelessWidget {
   const HomePage({Key? key});
@@ -20,14 +19,13 @@ class HomePage extends StatelessWidget {
         child: SingleChildScrollView(
           child: Column(
             children: [
-              // NavbarMenu(),
-              // Bibliotheque(),
-              // Security(),
-              // Chiffres(),
-              //  Component(),
-              // Footers()
-              Domaine()
-              // Cartsimple()
+              NavbarMenu(),
+              Bibliotheque(),
+              Security(),
+              Chiffres(),
+              Template(),
+              Component(),
+              Footers()
             ],
           ),
         ),
