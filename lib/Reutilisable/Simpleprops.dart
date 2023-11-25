@@ -92,7 +92,7 @@ class Simpleprop extends StatelessWidget {
       },
       child: Padding(
        
-        padding: EdgeInsets.all(25),
+        padding: EdgeInsets.all(10),
         child: Card(
           color: Colors.white,
           child: Cartsimple(

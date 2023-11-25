@@ -13,7 +13,7 @@ class BuildingComponent extends StatelessWidget {
     return  Scaffold(body: Container(
       child: TwoComponentsRow(
       leftComponent: LeftComponent(),
-      rightComponent: List(),
+      rightComponent: ListView(),
       
     ),
     ));

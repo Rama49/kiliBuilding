@@ -1,95 +1,114 @@
 import 'package:flutter/material.dart';
 
-class List extends StatelessWidget {
-  const List({super.key});
-
+class MyPageContent extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return ListView(
       children: [
-        Container(
-          child: Text("""
-Another exception was thrown: Assertion failed:
-file:///C:/dev/flutter/flutter/packages/flutter/lib/src/rendering/box.dart:1972:12
-Another exception was thrown: Assertion failed:
-file:///C:/dev/flutter/flutter/packages/flutter/lib/src/rendering/box.dart:1972:12
-Another exception was thrown: Assertion failed:
-file:///C:/dev/flutter/flutter/packages/flutter/lib/src/rendering/box.dart:1972:12
-Another exception was thrown: Assertion failed:
-file:///C:/dev/flutter/flutter/packages/flutter/lib/src/rendering/box.dart:1972:12
-Another exception was thrown: Assertion failed:
-file:///C:/dev/flutter/flutter/packages/flutter/lib/src/rendering/box.dart:1972:12
-Another exception was thrown: Assertion failed:
-file:///C:/dev/flutter/flutter/packages/flutter/lib/src/rendering/box.dart:1972:12
-Another exception was thrown: Assertion failed:
-file:///C:/dev/flutter/flutter/packages/flutter/lib/src/rendering/box.dart:1972:12
-Another exception was thrown: Assertion failed:
-file:///C:/dev/flutter/flutter/packages/flutter/lib/src/rendering/box.dart:1972:12
-Another exception was thrown: Assertion failed:
-file:///C:/dev/flutter/flutter/packages/flutter/lib/src/rendering/box.dart:1972:12
-Another exception was thrown: Assertion failed:
-file:///C:/dev/flutter/flutter/packages/flutter/lib/src/rendering/box.dart:1972:12
-Another exception was thrown: Assertion failed:
-file:///C:/dev/flutter/flutter/packages/flutter/lib/src/rendering/box.dart:1972:12
-Another exception was thrown: Assertion failed:
-file:///C:/dev/flutter/flutter/packages/flutter/lib/src/rendering/box.dart:1972:12
-Another exception was thrown: Assertion failed:
-file:///C:/dev/flutter/flutter/packages/flutter/lib/src/rendering/box.dart:1972:12
-Another exception was thrown: Assertion failed:
-file:///C:/dev/flutter/flutter/packages/flutter/lib/src/rendering/box.dart:1972:12
-Another exception was thrown: Assertion failed:
-file:///C:/dev/flutter/flutter/packages/flutter/lib/src/rendering/box.dart:1972:12
-Another exception was thrown: Assertion failed:
-file:///C:/dev/flutter/flutter/packages/flutter/lib/src/rendering/box.dart:1972:12
-Another exception was thrown: Assertion failed:
-file:///C:/dev/flutter/flutter/packages/flutter/lib/src/rendering/box.dart:1972:12
-Another exception was thrown: Assertion failed:
-file:///C:/dev/flutter/flutter/packages/flutter/lib/src/rendering/box.dart:1972:12
-Another exception was thrown: Cannot hit test a render box that has never been laid out.
-Another exception was thrown: Cannot hit test a render box that has never been laid out.
-Another exception was thrown: Assertion failed:
-file:///C:/dev/flutter/flutter/packages/flutter/lib/src/rendering/mouse_tracker.dart:205:12
-Another exception was thrown: Cannot hit test a render box that has never been laid out.
-Another exception was thrown: Cannot hit test a render box that has never been laid out.
-Another exception was thrown: Cannot hit test a render box that has never been laid out.
-Another exception was thrown: Cannot hit test a render box that has never been laid out.
-Another exception was thrown: Cannot hit test a render box that has never been laid out.
-Another exception was thrown: Cannot hit test a render box that has never been laid out.
-Another exception was thrown: Cannot hit test a render box that has never been laid out.
-Another exception was thrown: Cannot hit test a render box that has never been laid out.
-Another exception was thrown: Cannot hit test a render box that has never been laid out.
-Another exception was thrown: Cannot hit test a render box that has never been laid out.
-Another exception was thrown: Cannot hit test a render box that has never been laid out.
-Another exception was thrown: Cannot hit test a render box that has never been laid out.
-Another exception was thrown: Cannot hit test a render box that has never been laid out.
-Another exception was thrown: Cannot hit test a render box that has never been laid out.
-Another exception was thrown: Cannot hit test a render box that has never been laid out.
-Another exception was thrown: Cannot hit test a render box that has never been laid out.
-Another exception was thrown: Cannot hit test a render box that has never been laid out.
-Another exception was thrown: Cannot hit test a render box that has never been laid out.
-Another exception was thrown: Cannot hit test a render box that has never been laid out.
-Another exception was thrown: Cannot hit test a render box that has never been laid out.
-Another exception was thrown: Cannot hit test a render box that has never been laid out.
-Another exception was thrown: Cannot hit test a render box that has never been laid out.
-Another exception was thrown: Cannot hit test a render box that has never been laid out.
-Another exception was thrown: Cannot hit test a render box that has never been laid out.
-Another exception was thrown: Cannot hit test a render box that has never been laid out.
-Another exception was thrown: Cannot hit test a render box that has never been laid out.
-Another exception was thrown: Cannot hit test a render box that has never been laid out.
-Another exception was thrown: Cannot hit test a render box that has never been laid out.
-Another exception was thrown: Cannot hit test a render box that has never been laid out.
-Another exception was thrown: Cannot hit test a render box that has never been laid out.
-Another exception was thrown: Cannot hit test a render box that has never been laid out.
-Another exception was thrown: Cannot hit test a render box that has never been laid out.
-Another exception was thrown: Cannot hit test a render box that has never been laid out.
-Another exception was thrown: Cannot hit test a render box that has never been laid out.
-Another exception was thrown: Cannot hit test a render box that has never been laid out.
-Another exception was thrown: Cannot hit test a render box that has never been laid out.
-Another exception was thrown: Cannot hit test a render box that has never been laid out.
-Another exception was thrown: Cannot hit test a render box that has never been laid out.
-Another exception was thrown: Cannot hit test a render box that has never been laid out. """),
-        )
+        ListWithSourceCode(),
+        // Ajoutez d'autres widgets ici si nécessaire
       ],
     );
   }
+}
+
+class ListWithSourceCode extends StatefulWidget {
+  const ListWithSourceCode({Key? key}) : super(key: key);
+
+  @override
+  _ListWithSourceCodeState createState() => _ListWithSourceCodeState();
+}
+
+class _ListWithSourceCodeState extends State<ListWithSourceCode> {
+  bool showSourceCode = false;
+
+  @override
+  Widget build(BuildContext context) {
+    return Container(
+      child: Column(
+        mainAxisAlignment: MainAxisAlignment.center,
+        children: [
+          ElevatedButton(
+            onPressed: () {
+              setState(() {
+                showSourceCode = !showSourceCode;
+              });
+            },
+            child: Text('Afficher le code source'),
+          ),
+          Visibility(
+            visible: showSourceCode,
+            child: Container(
+              margin: EdgeInsets.all(16.0),
+              padding: EdgeInsets.all(16.0),
+              decoration: BoxDecoration(
+                border: Border.all(color: Colors.blue),
+                borderRadius: BorderRadius.circular(8.0),
+              ),
+              child: SingleChildScrollView(
+                child: Text(
+                  '''
+                  // Votre code source ici
+                  import 'package:flutter/material.dart';
+
+                  class ListWithSourceCode extends StatefulWidget {
+                    const ListWithSourceCode({Key? key}) : super(key: key);
+
+                    @override
+                    _ListWithSourceCodeState createState() => _ListWithSourceCodeState();
+                  }
+
+                  class _ListWithSourceCodeState extends State<ListWithSourceCode> {
+                    bool showSourceCode = false;
+
+                    @override
+                    Widget build(BuildContext context) {
+                      return Container(
+                        child: Column(
+                          mainAxisAlignment: MainAxisAlignment.center,
+                          children: [
+                            ElevatedButton(
+                              onPressed: () {
+                                setState(() {
+                                  showSourceCode = !showSourceCode;
+                                });
+                              },
+                              child: Text('Afficher le code source'),
+                            ),
+                            Visibility(
+                              visible: showSourceCode,
+                              child: Container(
+                                margin: EdgeInsets.all(16.0),
+                                padding: EdgeInsets.all(16.0),
+                                decoration: BoxDecoration(
+                                  border: Border.all(color: Colors.blue),
+                                  borderRadius: BorderRadius.circular(8.0),
+                                ),
+                                child: SingleChildScrollView(
+                                  child: Text(
+                                    'Le code source de votre composant Flutter sera affiché ici.',
+                                  ),
+                                ),
+                              ),
+                            ),
+                          ],
+                        ),
+                      );
+                    }
+                  }
+                  ''',
+                ),
+              ),
+            ),
+          ),
+        ],
+      ),
+    );
+  }
+}
+
+void main() {
+  runApp(MaterialApp(
+    home: MyPageContent(),
+  ));
 }

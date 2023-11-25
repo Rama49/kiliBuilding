@@ -32,7 +32,7 @@ class Cartsimple extends StatelessWidget {
       width: 250,
       height: 150,
       child: Padding(
-        padding: const EdgeInsets.all(15),
+        padding: const EdgeInsets.all(10),
         child: Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
           Icon(
             icon,

@@ -3,31 +3,29 @@ import 'dart:html';
 
 import 'package:flutter/material.dart';
 
-class NavbarMenu extends StatelessWidget {
-  const NavbarMenu({Key? key});
+class SidebarMenu extends StatelessWidget {
+  const SidebarMenu({Key? key});
 
   @override
   Widget build(BuildContext context) {
     var screenSize = MediaQuery.of(context).size;
 
-    return PreferredSize(
-      preferredSize: Size(screenSize.width, 80),
+    return Drawer(
+      backgroundColor: Colors.green,
       child: Container(
-        color: const Color.fromRGBO(244, 67, 54, 1),
+        color: Colors.green,
         child: Padding(
           padding: const EdgeInsets.all(20),
-          child: Row(
+          child: Column(
             children: [
               Expanded(
-                child: Row(
-                  mainAxisAlignment: MainAxisAlignment.center,
+                child: Column(
                   children: [
-                    const Spacer(),
                     Image.asset(
                       '../../../assets/Logo.png', // Remplacez par le chemin de votre logo
                       height: 30, // Ajustez la hauteur du logo selon vos besoins
                     ),
-                    SizedBox(width: screenSize.width / 20),
+                    // SizedBox(width: screenSize.width / 20),
                     InkWell(
                       onTap: () {},
                       child: const Text(
@@ -35,7 +33,6 @@ class NavbarMenu extends StatelessWidget {
                         style: TextStyle(color: Colors.white),
                       ),
                     ),
-                    const Spacer(), // Utilisation de Spacer pour remplir l'espace disponible
                     InkWell(
                       onTap: () {},
                       child: const Text(
@@ -43,7 +40,6 @@ class NavbarMenu extends StatelessWidget {
                         style: TextStyle(color: Colors.white),
                       ),
                     ),
-                    const Spacer(),
                     InkWell(
                       onTap: () {},
                       child: const Text(
@@ -51,7 +47,6 @@ class NavbarMenu extends StatelessWidget {
                         style: TextStyle(color: Colors.white),
                       ),
                     ),
-                    const Spacer(),
                     InkWell(
                       onTap: () {},
                       child: const Text(
@@ -59,14 +54,13 @@ class NavbarMenu extends StatelessWidget {
                         style: TextStyle(color: Colors.white),
                       ),
                     ),
-                    const Spacer(),
                     InkWell(
                       onTap: () {
                         Navigator.pushNamed(context, '/contactpage');
                       },
                       child: Container(
                         decoration: BoxDecoration(
-                          color: Colors.black,
+                          color: Colors.green,
                           borderRadius: BorderRadius.circular(8.0),
                         ),
                         padding: const EdgeInsets.all(5.0),
@@ -76,7 +70,6 @@ class NavbarMenu extends StatelessWidget {
                         ),
                       ),
                     ),
-                    const Spacer(),
                     // Ajoutez d'autres éléments ici avec Spacer pour l'espacement
                   ],
                 ),
