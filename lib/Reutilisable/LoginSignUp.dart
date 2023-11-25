@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:kiliwebsite/Component/Bouton.dart';
+import 'package:kiliwebsite/Component/PageLogin/Conexion.dart';
 import 'package:kiliwebsite/Reutilisable/BouttonOrang.dart';
 import 'package:kiliwebsite/Reutilisable/InputForm.dart';
 import 'package:kiliwebsite/Reutilisable/Title.dart';
@@ -23,67 +24,78 @@ class LoginSignUp extends StatelessWidget {
         children: [
           Container(
             color: const Color(0xFFF44336),
-            padding: const EdgeInsets.only(top: 20, bottom: 20),
             child: Row(
               mainAxisAlignment: MainAxisAlignment.center,
-              children: [
-                Image.asset("Logo.png"),
-              ],
+              children: [Image.asset("Logo.png", width: 90)],
             ),
           ),
-          const TitleReu(
-            titre: "Bienvenue",
-            soustexte: '',
+          Padding(
+            padding: const EdgeInsets.only(top: 20, bottom: 20),
+            child: Text("Bienvenue", style: TextStyle(color: const Color(0xFFF44336), fontSize: 20)),
           ),
           Container(
-            margin: EdgeInsets.only(bottom: 20),
-            child: Text(
-              text1,
-              style: TextStyle(
-                fontWeight: FontWeight.w600,
-                fontSize: 14,
-              ),
-            ),
-          ),
-          
-          
-          const Row(
-            mainAxisAlignment: MainAxisAlignment.center,
-            crossAxisAlignment: CrossAxisAlignment.center,
-            children: [Icon(Icons.facebook), Icon(Icons.facebook)],
-          ),
-          const Text("Ou"),
-          SizedBox(
             width: 700,
-            child: Column(
-              children: [
-                InputForm(placeholder: "Email"),
-                const SizedBox(height: 20),
-                InputForm(placeholder: "Mot de Passe"),
-              ],
-            ),
-          ),
-          const Bouton(Title: "Se connecter"),
-          Row(
-            mainAxisAlignment: MainAxisAlignment.center,
-            crossAxisAlignment: CrossAxisAlignment.center,
-            children: [
-              Text(
-                text2,
-                style: TextStyle(
-                  fontWeight: FontWeight.w600,
-                  fontSize: 14,
+            color: Colors.white,
+            child: Column(children: [
+              Container(
+                // margin: EdgeInsets.only(bottom: 5),
+                child: Text(
+                  text1,
+                  style: TextStyle(
+                    fontWeight: FontWeight.w600,
+                    fontSize: 14,
+                  ),
                 ),
               ),
-              BouttonOrange(
-                title: "S'inscrire",
-                onPress: () {},
-              )
-            ],
+             Row(
+  mainAxisAlignment: MainAxisAlignment.center,
+  children: [
+     Image.asset(
+      "assets/google.png", // Assurez-vous que le chemin est correct
+      width: 100, // Ajustez la largeur selon vos besoins
+      height: 40, // Ajustez la hauteur selon vos besoins
+    ),
+    Icon(Icons.facebook),
+    SizedBox(width: 16.0), // Espace entre les icônes, ajustez selon vos besoins
+   
+  ],
+),SizedBox(height: 10),
+              const Text("Ou"),
+              SizedBox(
+                width: 400,
+                child: Column(
+                  children: [
+                    InputForm(placeholder: "Nom Complet"),
+                    InputForm(placeholder: "Email"),
+                    InputForm(placeholder: "Mot de Passe"),
+                    InputForm(placeholder: "Confirmer Mot de Passe"),
+                  ],
+                ),
+              ),
+              const Bouton(Title: "S'inscrire"),
+              Row(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  Text(
+                    text2,
+                    style: TextStyle(
+                      fontWeight: FontWeight.w600,
+                      fontSize: 14,
+                    ),
+                  ),
+                  BouttonOrange(
+                    title: "S'inscrire",
+                   onPress: () {
+              Navigator.push(
+                  context, MaterialPageRoute(builder: (context) => Conexion()));
+            },
+                  )
+                ],
+              ),
+            ]),
           ),
           Container(
             color: const Color(0xFFF44336),
-            padding: const EdgeInsets.only(top: 20, bottom: 20),
             child: const Row(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
@@ -111,14 +123,16 @@ class InputForm extends StatelessWidget {
       width: double.infinity,
       margin: const EdgeInsets.only(bottom: 10),
       child: TextField(
-        decoration: InputDecoration(
-          hintText: placeholder,
-          border: const OutlineInputBorder(
-            borderSide: BorderSide(width: 1, color: Colors.black),
-          ),
-          contentPadding: const EdgeInsets.all(10),
-        ),
-      ),
+  decoration: InputDecoration(
+    labelText: placeholder,
+    floatingLabelBehavior: FloatingLabelBehavior.auto,
+    border: OutlineInputBorder(
+      borderSide: BorderSide(width: 1, color: Colors.black),
+    ),
+    // contentPadding: const EdgeInsets.all(10),
+  ),
+),
+
     );
   }
 }
