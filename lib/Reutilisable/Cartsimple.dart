@@ -29,7 +29,7 @@ class Cartsimple extends StatelessWidget {
           width: 2,
         ),
       ),
-      width: 250,
+      width: 230,
       height: 150,
       child: Padding(
         padding: const EdgeInsets.all(15),
@@ -50,4 +50,15 @@ class Cartsimple extends StatelessWidget {
       ),
     );
   }
+}
+
+class CardNavigationData {
+  final String title;
+  final String subTitle;
+  final IconData icon;
+  final Color iconColor;
+  final Widget route;
+
+  CardNavigationData(
+      this.title, this.subTitle, this.icon, this.iconColor, this.route);
 }
