@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:kiliwebsite/Component/DetailComposant/DetailComposant.dart';
 import 'package:kiliwebsite/Component/SectionBlog/card_list.dart';
 import 'package:kiliwebsite/Component/SectionSecurite/Securite.dart';
 import 'package:kiliwebsite/Reutilisable/Cartsimple.dart';
@@ -45,6 +46,7 @@ class Component extends StatelessWidget {
       ),
     );
     
+  
   }
 
   Widget buildRow(BuildContext context, List<CardNavigationData> cardDataList) {
@@ -61,7 +63,7 @@ class Component extends StatelessWidget {
       onTap: () {
         Navigator.push(
           context,
-          MaterialPageRoute(builder: (context) => cardData.route),
+          MaterialPageRoute(builder: (context) => const DetailComposant()),
         );
       },
       child: Padding(
