@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:kiliwebsite/Component/SectionBibliotheque/Bilbliotheque.dart';
+import 'package:kiliwebsite/Component/SectionDomaine/Domaine.dart';
 import 'package:kiliwebsite/Component/SectionNavbar/NavbarMenu.dart';
 import 'package:kiliwebsite/Component/SectionSecurite/Securite.dart';
 import 'package:kiliwebsite/Component/SectionTemplate/Template.dart';
@@ -26,6 +27,7 @@ class HomePage extends StatelessWidget {
               Template(),
               Component(),
               Footers()
+             
             ],
           ),
         ),
