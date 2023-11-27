@@ -27,7 +27,7 @@ class Cartsimple extends StatelessWidget {
           width: 2,
         ),
       ),
-      width: 250,
+      width: 230,
       height: 150,
       child: Padding(
         padding: const EdgeInsets.all(15),

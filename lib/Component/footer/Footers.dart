@@ -118,6 +118,7 @@ class Footers extends StatelessWidget {
                         mainAxisAlignment: MainAxisAlignment.center,
                         children: [
                           Icon(Icons.facebook),
+                           Icon(Icons.facebook),
                         ],
                       )
                     ],
@@ -127,4 +128,5 @@ class Footers extends StatelessWidget {
             ]),
           );
   }
+
 }
