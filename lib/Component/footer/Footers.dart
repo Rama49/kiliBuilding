@@ -22,7 +22,10 @@ class Footers extends StatelessWidget {
               Text("S'abonner a notre Newsletter",
                   style: TextStyle(color: Colors.white, fontSize: 25)),
               SizedBox(height: 25),
-              MyInput(textInput: "E-mail"),
+              Padding(
+                padding: EdgeInsets.only(right: 20),
+                child: MyInput(textInput: "E-mail"),
+              ),
               Row(
                 mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                 children: [
