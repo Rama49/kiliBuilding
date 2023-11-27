@@ -71,7 +71,7 @@ class Conexion extends StatelessWidget {
                 ),
               ),
               Row(mainAxisAlignment: MainAxisAlignment.spaceEvenly, children: [
-                const Bouton(Title: "S'inscrire"),
+                const Bouton(Title: "Se connecter"),
                 Text("Mot de passe oublier?")
               ]),
               Row(

@@ -40,7 +40,7 @@ class CardTemplate extends StatelessWidget {
             child: Padding(
               padding: EdgeInsets.only(bottom: 16.0), // Ajouter un padding en bas du bouton
               child: BouttonOrange(
-                title: "S'inscrire",
+                title: "Voir template",
                 onPress: () {    Navigator.push(
                   context, MaterialPageRoute(builder: (context) => BuildingComponent())); },
               ),

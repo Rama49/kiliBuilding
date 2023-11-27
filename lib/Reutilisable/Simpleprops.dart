@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:kiliwebsite/Component/Bouton.dart';
 import 'package:kiliwebsite/Component/DetailComposant/DetailComposant.dart';
+import 'package:kiliwebsite/Component/DetailComposant/Htmlcssjs.dart';
 import 'package:kiliwebsite/Component/SectionBlog/card_list.dart';
 import 'package:kiliwebsite/Component/SectionNavbar/NavbarMenu.dart';
 import 'package:kiliwebsite/Component/SectionSecurite/Securite.dart';
@@ -22,13 +23,13 @@ class Simpleprop extends StatelessWidget {
                   context,
                   [
                     CardNavigationData('Button', '5 Components', Icons.back_hand,
-                        Colors.red, DetailComposant()),
+                        Colors.red, htmlcssjs()),
                     CardNavigationData('Input', '2 Components', Icons.input_outlined,
-                        Colors.red, DetailComposant()),
+                        Colors.red, htmlcssjs()),
                     CardNavigationData('Card', '4 Components', Icons.card_giftcard,
-                        Colors.red, DetailComposant()),
+                        Colors.red, htmlcssjs()),
                     CardNavigationData('Header', '4 Components',
-                        Icons.headset_rounded, Colors.red, DetailComposant()),
+                        Icons.headset_rounded, Colors.red, htmlcssjs()),
                   ],
                 ),
               ),
@@ -37,18 +38,71 @@ class Simpleprop extends StatelessWidget {
                   context,
                   [
                     CardNavigationData('Navbar', '5 Components', Icons.back_hand,
-                        Colors.red, DetailComposant()),
+                        Colors.red, htmlcssjs()),
                     CardNavigationData('Pagination', '2 Components', Icons.input_outlined,
-                        Colors.red, DetailComposant()),
+                        Colors.red, htmlcssjs()),
                     CardNavigationData('Table', '4 Components', Icons.card_giftcard,
-                        Colors.red, DetailComposant()),
+                        Colors.red, htmlcssjs()),
                     CardNavigationData('Header', '4 Components',
-                        Icons.headset_rounded, Colors.red, DetailComposant()),
+                        Icons.headset_rounded, Colors.red, htmlcssjs()),
                     // Ajoutez vos données de carte pour la deuxième ligne ici
                   ],
+                  
                 ),
               ),
-              // Ajoutez des lignes supplémentaires au besoin
+               Center(
+                child: buildRow(
+                  context,
+                  [
+                    CardNavigationData('Navbar', '5 Components', Icons.back_hand,
+                        Colors.red, htmlcssjs()),
+                    CardNavigationData('Pagination', '2 Components', Icons.input_outlined,
+                        Colors.red, htmlcssjs()),
+                    CardNavigationData('Table', '4 Components', Icons.card_giftcard,
+                        Colors.red, htmlcssjs()),
+                    CardNavigationData('Header', '4 Components',
+                        Icons.headset_rounded, Colors.red, htmlcssjs()),
+                    // Ajoutez vos données de carte pour la deuxième ligne ici
+                  ],
+                  
+                ),
+              ),
+               Center(
+                child: buildRow(
+                  context,
+                  [
+                    CardNavigationData('Navbar', '5 Components', Icons.back_hand,
+                        Colors.red, htmlcssjs()),
+                    CardNavigationData('Pagination', '2 Components', Icons.input_outlined,
+                        Colors.red, htmlcssjs()),
+                    CardNavigationData('Table', '4 Components', Icons.card_giftcard,
+                        Colors.red, htmlcssjs()),
+                    CardNavigationData('Header', '4 Components',
+                        Icons.headset_rounded, Colors.red, htmlcssjs()),
+                    // Ajoutez vos données de carte pour la deuxième ligne ici
+                  ],
+                  
+                ),
+              ),
+               Center(
+                child: buildRow(
+                  context,
+                  [
+                    CardNavigationData('Navbar', '5 Components', Icons.back_hand,
+                        Colors.red, htmlcssjs()),
+                    CardNavigationData('Pagination', '2 Components', Icons.input_outlined,
+                        Colors.red, htmlcssjs()),
+                    CardNavigationData('Table', '4 Components', Icons.card_giftcard,
+                        Colors.red, htmlcssjs()),
+                    CardNavigationData('Header', '4 Components',
+                        Icons.headset_rounded, Colors.red, htmlcssjs()),
+                    // Ajoutez vos données de carte pour la deuxième ligne ici
+                  ],
+                  
+                ),
+              ),
+              // Ajo
+              //utez des lignes supplémentaires au besoin
             ],
           );
         },
