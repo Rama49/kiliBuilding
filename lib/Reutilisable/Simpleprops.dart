@@ -48,6 +48,39 @@ class Simpleprop extends StatelessWidget {
                   ],
                 ),
               ),
+               Center(
+                child: buildRow(
+                  context,
+                  [
+                    CardNavigationData('Navbar', '5 Components', Icons.back_hand,
+                        Colors.red, DetailComposant()),
+                    CardNavigationData('Pagination', '2 Components', Icons.input_outlined,
+                        Colors.red, DetailComposant()),
+                    CardNavigationData('Table', '4 Components', Icons.card_giftcard,
+                        Colors.red, DetailComposant()),
+                    CardNavigationData('Header', '4 Components',
+                        Icons.headset_rounded, Colors.red, DetailComposant()),
+                    // Ajoutez vos données de carte pour la deuxième ligne ici
+                  ],
+                ),
+              ),
+               Center(
+                child: buildRow(
+                  context,
+                  [
+                    CardNavigationData('Navbar', '5 Components', Icons.back_hand,
+                        Colors.red, DetailComposant()),
+                    CardNavigationData('Pagination', '2 Components', Icons.input_outlined,
+                        Colors.red, DetailComposant()),
+                    CardNavigationData('Table', '4 Components', Icons.card_giftcard,
+                        Colors.red, DetailComposant()),
+                    CardNavigationData('Header', '4 Components',
+                        Icons.headset_rounded, Colors.red, DetailComposant()),
+                    // Ajoutez vos données de carte pour la deuxième ligne ici
+                  ],
+                ),
+              ),
+              
               // Ajoutez des lignes supplémentaires au besoin
             ],
           );
