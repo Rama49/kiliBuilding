@@ -4,7 +4,7 @@ import 'package:kiliwebsite/Component/SectionNavbar/NavbarMenu.dart';
 import 'package:kiliwebsite/Component/SectionNavbar/Navbare.dart';
 import 'package:kiliwebsite/Component/SectionSecurite/Securite.dart';
 import 'package:kiliwebsite/Component/SectionTemplate/Template.dart';
-import 'package:kiliwebsite/Component/Sectioncompon/Component.dart';
+// import 'package:kiliwebsite/Component/Sectioncompon/Component.dart';
 import 'package:kiliwebsite/Component/Vitesse/Chiffretext.dart';
 import 'package:kiliwebsite/Component/footer/Footers.dart';
 import 'package:kiliwebsite/screen/responsive.dart';
@@ -45,7 +45,7 @@ class HomePage extends StatelessWidget {
               Security(),
               Chiffres(),
               Template(),
-              Component(),
+              // Component(),
               Footers()
               // Cartsimple()
             ],

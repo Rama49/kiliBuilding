@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:kiliwebsite/Component/Bouton.dart';
+import 'package:kiliwebsite/Component/DetailComposant/DetailComposant.dart';
 import 'package:kiliwebsite/Component/SectionBlog/card_list.dart';
 import 'package:kiliwebsite/Component/SectionNavbar/NavbarMenu.dart';
 import 'package:kiliwebsite/Component/SectionSecurite/Securite.dart';
@@ -15,18 +16,20 @@ class Simpleprop extends StatelessWidget {
       padding: EdgeInsets.only(top: 90),
       child: Column(
         children: [
-          
+        //    AppBar(
+        //   title: const Text('Projets'),
+        // ),
           buildRow(
             context,
             [
               CardNavigationData('Button', '5 Components', Icons.back_hand,
-                  Colors.red, Security()),
+                  Colors.red, DetailComposant()),
               CardNavigationData('Input', '2 Components', Icons.input_outlined,
-                  Colors.red, Security()),
+                  Colors.red, DetailComposant()),
               CardNavigationData('Card', '4 Components', Icons.card_giftcard,
-                  Colors.red, Security()),
+                  Colors.red, DetailComposant()),
               CardNavigationData('Header', '4 Components',
-                  Icons.headset_rounded, Colors.red, Security()),
+                  Icons.headset_rounded, Colors.red, DetailComposant()),
             ],
           ),
           // Les autres rangées vont ici
