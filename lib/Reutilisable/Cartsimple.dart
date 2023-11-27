@@ -17,7 +17,9 @@ class Cartsimple extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return 
+    
     Container(
+      
       decoration: BoxDecoration(
         color: Colors.white,
         borderRadius: BorderRadius.circular(
@@ -30,7 +32,7 @@ class Cartsimple extends StatelessWidget {
       width: 230,
       height: 150,
       child: Padding(
-        padding: const EdgeInsets.all(15),
+        padding: const EdgeInsets.all(10),
         child: Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
           Icon(
             icon,

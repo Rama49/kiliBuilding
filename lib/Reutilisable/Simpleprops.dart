@@ -10,7 +10,8 @@ class Simpleprop extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Padding(
+    return 
+    Padding(
       padding: EdgeInsets.only(top: 90),
       child: LayoutBuilder(
         builder: (context, constraints) {
@@ -53,7 +54,6 @@ class Simpleprop extends StatelessWidget {
 
   Widget buildRow(BuildContext context, List<CardNavigationData> cardDataList) {
     return Row(
-      mainAxisAlignment: MainAxisAlignment.spaceEvenly,
       children: cardDataList.map((cardData) {
         return buildCard(context, cardData);
       }).toList(),

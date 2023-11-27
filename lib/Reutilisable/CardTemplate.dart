@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:kiliwebsite/Component/SectionBuilding/Building.dart';
 import 'package:kiliwebsite/Reutilisable/BoutonTemplate.dart';
+import 'package:kiliwebsite/Reutilisable/BouttonOrang.dart';
 
 class CardTemplate extends StatelessWidget {
   final Image image;
@@ -37,12 +39,10 @@ class CardTemplate extends StatelessWidget {
             alignment: Alignment.center, // Aligner le bouton au centre
             child: Padding(
               padding: EdgeInsets.only(bottom: 16.0), // Ajouter un padding en bas du bouton
-              child: BoutonTemplate(
+              child: BouttonOrange(
                 title: "S'inscrire",
-                onPressed: () {
-                  // Action à effectuer lorsqu'on appuie sur le bouton
-                  print('Bouton "Voir Projet" appuyé');
-                },
+                onPress: () {    Navigator.push(
+                  context, MaterialPageRoute(builder: (context) => BuildingComponent())); },
               ),
             ),
           ),
