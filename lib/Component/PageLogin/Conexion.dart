@@ -7,16 +7,14 @@ import 'package:kiliwebsite/Reutilisable/InputForm.dart';
 import 'package:kiliwebsite/Reutilisable/Title.dart';
 
 class Conexion extends StatelessWidget {
-
-
   const Conexion({
     Key? key,
   }) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
-     return Scaffold( body:     
-    Container(
+    return Scaffold(
+        body: Container(
       color: Color(0xFFf1f1f1),
       child: Column(
         mainAxisAlignment: MainAxisAlignment.center,
@@ -30,7 +28,8 @@ class Conexion extends StatelessWidget {
           ),
           Padding(
             padding: const EdgeInsets.only(top: 20, bottom: 20),
-            child: Text("Bienvenue", style: TextStyle(color: const Color(0xFFF44336), fontSize: 20)),
+            child: Text("Bienvenue",
+                style: TextStyle(color: const Color(0xFFF44336), fontSize: 20)),
           ),
           Container(
             width: 700,
@@ -46,19 +45,21 @@ class Conexion extends StatelessWidget {
                   ),
                 ),
               ),
-             Row(
-  mainAxisAlignment: MainAxisAlignment.center,
-  children: [
-     Image.asset(
-      "assets/google.png", // Assurez-vous que le chemin est correct
-      width: 100, // Ajustez la largeur selon vos besoins
-      height: 40, // Ajustez la hauteur selon vos besoins
-    ),
-    Icon(Icons.facebook),
-    SizedBox(width: 16.0), // Espace entre les icônes, ajustez selon vos besoins
-   
-  ],
-),SizedBox(height: 10),
+              Row(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  Image.asset(
+                    "assets/google.png", // Assurez-vous que le chemin est correct
+                    width: 100, // Ajustez la largeur selon vos besoins
+                    height: 40, // Ajustez la hauteur selon vos besoins
+                  ),
+                  Icon(Icons.facebook),
+                  SizedBox(
+                      width:
+                          16.0), // Espace entre les icônes, ajustez selon vos besoins
+                ],
+              ),
+              SizedBox(height: 10),
               const Text("Ou"),
               SizedBox(
                 width: 400,
@@ -69,7 +70,10 @@ class Conexion extends StatelessWidget {
                   ],
                 ),
               ),
-              const Bouton(Title: "S'inscrire"),
+              Row(mainAxisAlignment: MainAxisAlignment.spaceEvenly, children: [
+                const Bouton(Title: "S'inscrire"),
+                Text("Mot de passe oublier?")
+              ]),
               Row(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
@@ -82,10 +86,12 @@ class Conexion extends StatelessWidget {
                   ),
                   BouttonOrange(
                     title: "S'inscrire",
-                   onPress: () {
-              Navigator.push(
-                  context, MaterialPageRoute(builder: (context) => Inscription()));
-            },
+                    onPress: () {
+                      Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                              builder: (context) => Inscription()));
+                    },
                   )
                 ],
               ),
@@ -106,7 +112,6 @@ class Conexion extends StatelessWidget {
         ],
       ),
     ));
-   
   }
 }
 
@@ -121,16 +126,15 @@ class InputForm extends StatelessWidget {
       width: double.infinity,
       margin: const EdgeInsets.only(bottom: 10),
       child: TextField(
-  decoration: InputDecoration(
-    labelText: placeholder,
-    floatingLabelBehavior: FloatingLabelBehavior.auto,
-    border: OutlineInputBorder(
-      borderSide: BorderSide(width: 1, color: Colors.black),
-    ),
-    // contentPadding: const EdgeInsets.all(10),
-  ),
-),
-
+        decoration: InputDecoration(
+          labelText: placeholder,
+          floatingLabelBehavior: FloatingLabelBehavior.auto,
+          border: OutlineInputBorder(
+            borderSide: BorderSide(width: 1, color: Colors.black),
+          ),
+          // contentPadding: const EdgeInsets.all(10),
+        ),
+      ),
     );
   }
 }
