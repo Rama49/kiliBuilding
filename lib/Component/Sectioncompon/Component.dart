@@ -1,60 +1,97 @@
 import 'package:flutter/material.dart';
-import 'package:kiliwebsite/Component/SectionBlog/card_list.dart';
 import 'package:kiliwebsite/Component/SectionSecurite/Securite.dart';
 import 'package:kiliwebsite/Reutilisable/Cartsimple.dart';
-import 'package:kiliwebsite/Reutilisable/Title.dart';
-import 'package:kiliwebsite/Reutilisable/TitleReu.dart';
-
 
 class Component extends StatelessWidget {
-  const Component({Key? key});
-
   @override
   Widget build(BuildContext context) {
-    return 
-     
-    Padding(
-      padding: EdgeInsets.only(top: 30),
+   
+    return Padding(
+      padding: EdgeInsets.all(10),
+      
       child: Column(
         children: [
-           SizedBox(height: 20),
-          TitleReu(titre: "Composants", soustexte: ''),
-          buildRow(
-            context,
-            [
-              CardNavigationData('Button', '5 Components', Icons.back_hand, Colors.red, Security()),
-              CardNavigationData('Input', '2 Components', Icons.input_outlined, Colors.red, Security()),
-              CardNavigationData('Card', '4 Components', Icons.card_giftcard, Colors.red, Security()),
-              CardNavigationData('Header', '4 Components', Icons.headset_rounded, Colors.red,Security()),
-            ],
-            
+          // Première ligne
+          Text(
+            'Composant',
+            style: TextStyle(
+                fontSize: 20,
+                fontWeight: FontWeight.bold,
+                color: Colors.red,
+                ),
           ),
-          // Les autres rangées vont ici
-           buildRow(
-            context,
-            [
-              CardNavigationData('Grids', '5 Components', Icons.grid_goldenratio, Colors.red, Security()),
-              CardNavigationData('Selects', '2 Components', Icons.select_all, Colors.red, Security()),
-              CardNavigationData('Route', '4 Components', Icons.route_outlined, Colors.red, Security()),
-              CardNavigationData('Border', '4 Components', Icons.border_bottom_outlined, Colors.red,Security()),
+          const Row(
+            children: [
+              // Ajoutez les widgets de la première ligne ici
             ],
-            
+          ),
+
+          // Grille de cartes
+          LayoutBuilder(
+            builder: (context, constraints) {
+              int columnsCount = (constraints.maxWidth / 768).floor();
+              return Wrap(
+                spacing: 0.0,
+                runSpacing: 16.0,
+                children: cardDataList.map((cardData) {
+                  return buildCard(context, cardData);
+                }).toList(),
+              );
+            },
+          ),
+
+          // Deuxième ligne
+          const Row(
+            children: [
+              // Ajoutez les widgets de la deuxième ligne ici
+            ],
+          ),
+          LayoutBuilder(
+            builder: (context, constraints) {
+              int columnsCount = (constraints.maxWidth / 768).floor();
+              return Wrap(
+                spacing: 0.0,
+                runSpacing: 16.0,
+                children: cardDataList.map((cardData) {
+                  return buildCard(context, cardData);
+                }).toList(),
+              );
+            },
+          ),
+          // Troisième ligne
+          const Row(
+            children: [
+              // Ajoutez les widgets de la troisième ligne ici
+            ],
+          ),
+          LayoutBuilder(
+            builder: (context, constraints) {
+              int columnsCount = (constraints.maxWidth / 768).floor();
+              return Wrap(
+                spacing: 0.0,
+                runSpacing: 16.0,
+                children: cardDataList.map((cardData) {
+                  return buildCard(context, cardData);
+                }).toList(),
+              );
+            },
           ),
         ],
-        
       ),
     );
-    
   }
 
-  Widget buildRow(BuildContext context, List<CardNavigationData> cardDataList) {
-    return Row(
-      mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-      children: cardDataList.map((cardData) {
-        return buildCard(context, cardData);
-      }).toList(),
-    );
-  }
+  List<CardNavigationData> cardDataList = [
+    CardNavigationData(
+        'Button', '5 Components', Icons.back_hand, Colors.red, Security()),
+    CardNavigationData(
+        'Input', '2 Components', Icons.input_outlined, Colors.red, Security()),
+    CardNavigationData(
+        'Card', '4 Components', Icons.card_giftcard, Colors.red, Security()),
+    CardNavigationData('Header', '4 Components', Icons.headset_rounded,
+        Colors.red, Security()),
+    // Ajoutez d'autres éléments de votre liste ici
+  ];
 
   Widget buildCard(BuildContext context, CardNavigationData cardData) {
     return InkWell(
@@ -64,10 +101,10 @@ class Component extends StatelessWidget {
           MaterialPageRoute(builder: (context) => cardData.route),
         );
       },
-      child: Padding(
-        padding: EdgeInsets.all(25),
-        child: Card(
-          color: Colors.white,
+      child: Card(
+        color: Colors.white,
+        child: Container(
+          height: 150,
           child: Cartsimple(
             title: cardData.title,
             subTitle: cardData.subTitle,
@@ -89,7 +126,6 @@ class CardNavigationData {
   final Color iconColor;
   final Widget route;
 
-  CardNavigationData(this.title, this.subTitle, this.icon, this.iconColor, this.route);
+  CardNavigationData(
+      this.title, this.subTitle, this.icon, this.iconColor, this.route);
 }
-
-
