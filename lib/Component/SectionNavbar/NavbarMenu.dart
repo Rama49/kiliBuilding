@@ -88,7 +88,7 @@ class NavbarMenu extends StatelessWidget {
                       },
                       child: Container(
                         decoration: BoxDecoration(
-                          color: Colors.green,
+                          color: Color(0xFFF44336),
                           borderRadius: BorderRadius.circular(8.0),
                         ),
                         padding: const EdgeInsets.all(9.0),

@@ -38,7 +38,7 @@ class Bibliotheque extends StatelessWidget {
                         BorderRadius.circular(10.0), // Définissez le rayon ici
                   ),
                   child: Text(
-                      "Créer votre site web ou application\n fois plus rapide avec Kili APP builder",
+                      "Créer votre site web ou application 10\n fois plus rapide avec Kili APP builder",
                       style: TextStyle(
                         color: Colors.white,
                         fontSize: 20,

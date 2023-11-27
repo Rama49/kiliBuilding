@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:kiliwebsite/Component/DetailComposant/DetailComposant.dart';
 import 'package:kiliwebsite/Component/Inscription.dart';
 import 'package:kiliwebsite/Component/PageLogin/Conexion.dart';
 import 'package:kiliwebsite/Component/SectionSecurite/Securite.dart';
@@ -23,7 +24,7 @@ class MyApp extends StatelessWidget {
       routes: {
         '/Conexion': (context) => Conexion(),
         '/Inscription': (context) => Inscription(),
-        '/Security': (context) => Security(),
+        '/DetailComposant': (context) => DetailComposant(),
       },
     );
   }
