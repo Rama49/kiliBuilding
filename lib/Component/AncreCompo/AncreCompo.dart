@@ -2,8 +2,10 @@ import 'package:flutter/material.dart';
 import 'package:kiliwebsite/Component/DetailComposant/DetailComposant.dart';
 import 'package:kiliwebsite/Component/SectionSecurite/Securite.dart';
 import 'package:kiliwebsite/Reutilisable/Cartsimple.dart';
-import 'package:kiliwebsite/Reutilisable/Title.dart';
 
+import '../../Reutilisable/Title.dart';
+
+// ignore: must_be_immutable
 class AncreCompo extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
