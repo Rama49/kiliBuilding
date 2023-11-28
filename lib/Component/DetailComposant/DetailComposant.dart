@@ -26,9 +26,13 @@ class _OngletsState extends State<DetailComposant> {
 
     return screenSize.width > 500 ?
     SingleChildScrollView(
+      
       child: Padding(
+        
         padding: const EdgeInsets.symmetric(vertical: 70),
+        
         child: Column(
+          
           children: [
             Row(
               mainAxisAlignment: MainAxisAlignment.center,
