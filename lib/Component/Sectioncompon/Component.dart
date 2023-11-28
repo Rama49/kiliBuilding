@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:kiliwebsite/Component/DetailComposant/DetailComposant.dart';
 import 'package:kiliwebsite/Component/SectionSecurite/Securite.dart';
 import 'package:kiliwebsite/Reutilisable/Cartsimple.dart';
+import 'package:kiliwebsite/Reutilisable/Title.dart';
 
 class Component extends StatelessWidget {
   @override
@@ -13,14 +14,16 @@ class Component extends StatelessWidget {
       child: Column(
         children: [
           // Première ligne
-          Text(
-            'Composant',
-            style: TextStyle(
-                fontSize: 20,
-                fontWeight: FontWeight.bold,
-                color: Colors.red,
-                ),
-          ),
+          // Text(
+          //   'Composant',
+          //   style: TextStyle(
+          //       fontSize: 20,
+          //       fontWeight: FontWeight.bold,
+          //       color: Colors.red,
+          //       ),
+          // ),
+          TitleReu(titre: "Composants", soustexte: ""),
+          SizedBox(height: 50),
           const Row(
             children: [
               // Ajoutez les widgets de la première ligne ici

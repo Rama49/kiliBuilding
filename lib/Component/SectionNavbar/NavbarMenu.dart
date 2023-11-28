@@ -10,7 +10,7 @@ class NavbarMenu extends StatelessWidget {
   Widget build(BuildContext context) {
     var screenSize = MediaQuery.of(context).size;
 
-    return  Container(
+    return Container(
       color: const Color.fromRGBO(244, 67, 54, 1),
       child: Padding(
         padding: const EdgeInsets.all(20),
@@ -19,8 +19,7 @@ class NavbarMenu extends StatelessWidget {
           children: [
             Image.asset(
               '../../../assets/Logo.png', // Remplacez par le chemin de votre logo
-              width:
-                  100, // Ajustez la hauteur du logo selon vos besoins
+              width: 100, // Ajustez la hauteur du logo selon vos besoins
             ),
             Padding(
               padding: const EdgeInsets.only(left: 250, right: 80),
@@ -28,7 +27,7 @@ class NavbarMenu extends StatelessWidget {
                 children: [
                   InkWell(
                     onTap: () {
-                      Navigator.pushNamed(context, '/Projets');
+                      Navigator.pushNamed(context, '/AncrePRO');
                     },
                     child: const Text(
                       'Projets',
@@ -46,7 +45,9 @@ class NavbarMenu extends StatelessWidget {
                     width: 20,
                   ),
                   InkWell(
-                    onTap: () {},
+                    onTap: () {
+                      Navigator.pushNamed(context, '/Ancretempl');
+                    },
                     child: const Text(
                       'Templates',
                       style: TextStyle(
@@ -60,7 +61,9 @@ class NavbarMenu extends StatelessWidget {
                     width: 20,
                   ),
                   InkWell(
-                    onTap: () {},
+                    onTap: () {
+                      Navigator.pushNamed(context, '/AncreCompo');
+                    },
                     child: const Text(
                       'Composants',
                       style: TextStyle(
@@ -132,6 +135,5 @@ class NavbarMenu extends StatelessWidget {
         ),
       ),
     );
-        
   }
 }

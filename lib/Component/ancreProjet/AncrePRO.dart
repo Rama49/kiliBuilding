@@ -1,35 +1,38 @@
 // ignore: file_names
+import 'dart:html';
+
 import 'package:flutter/material.dart';
 import 'package:kiliwebsite/Component/CardSecurity/CardSecurity.dart';
 import 'package:kiliwebsite/Reutilisable/CardReutilisable.dart';
 import 'package:kiliwebsite/Reutilisable/Title.dart';
 
-class Security extends StatelessWidget {
+class AncrePRO extends StatelessWidget {
   // ignore: use_key_in_widget_constructors
-  const Security({Key? key});
+  const AncrePRO({Key? key});
 
   @override
   Widget build(BuildContext context) {
     var screen = MediaQuery.of(context).size;
     return screen.width > 768
-    ?Container(
-      margin: const EdgeInsets.symmetric(vertical: 50.0),
-      child: const Center(
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          crossAxisAlignment: CrossAxisAlignment.center,
-          children: [
-            TitleReu(titre: "Projets", soustexte: '',),
-            SizedBox(
-                height: 20),
-            Row(
-              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-              children: [
-                CardSecurity(),
-              ],
-            ),
-            // Ajoutez d'autres widgets ici
-          ],
+    ? Scaffold(
+      body:  SingleChildScrollView(
+        child: Center(
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
+            crossAxisAlignment: CrossAxisAlignment.center,
+            children: [
+              TitleReu(titre: "Projets", soustexte: '',),
+              SizedBox(
+                  height: 20),
+              Row(
+                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                children: [
+                  CardSecurity(),
+                ],
+              ),
+              // Ajoutez d'autres widgets ici
+            ],
+          ),
         ),
       ),
     )
