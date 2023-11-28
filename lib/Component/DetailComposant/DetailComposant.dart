@@ -24,13 +24,12 @@ class _OngletsState extends State<DetailComposant> {
   Widget build(BuildContext context) {
    var screenSize = MediaQuery.of(context).size;
 
-    return screenSize.width > 500 ?
+    return screenSize.width > 768 ?
     SingleChildScrollView(
-      
-      child: Padding(
-        
-        padding: const EdgeInsets.symmetric(vertical: 70),
-        
+      child: Container(
+        margin: EdgeInsets.only(top: 50),
+       color: Colors.white, 
+       width: double.infinity,
         child: Column(
           
           children: [
@@ -49,7 +48,7 @@ class _OngletsState extends State<DetailComposant> {
                     elevation: MaterialStateProperty.all(0),
                     padding: MaterialStateProperty.all<EdgeInsetsGeometry>(
                      const EdgeInsets.symmetric(
-                          horizontal: 30,
+                         horizontal: 170,
                           vertical: 20), // Ajustez les valeurs selon vos besoins
                     ),
                     backgroundColor: _selectedTabIndex == 0
@@ -79,7 +78,7 @@ class _OngletsState extends State<DetailComposant> {
                     elevation: MaterialStateProperty.all(0),
                     padding: MaterialStateProperty.all<EdgeInsetsGeometry>(
                       const EdgeInsets.symmetric(
-                          horizontal: 15,
+                          horizontal: 170,
                           vertical: 20), // Ajustez les valeurs selon vos besoins
                     ),
                     backgroundColor: _selectedTabIndex == 1
@@ -109,7 +108,7 @@ class _OngletsState extends State<DetailComposant> {
                     elevation: MaterialStateProperty.all(0),
                     padding: MaterialStateProperty.all<EdgeInsetsGeometry>(
                       const EdgeInsets.symmetric(
-                          horizontal: 15,
+                          horizontal: 170,
                           vertical: 20), // Ajustez les valeurs selon vos besoins
                     ),
                     backgroundColor: _selectedTabIndex == 2
@@ -127,33 +126,33 @@ class _OngletsState extends State<DetailComposant> {
                 const SizedBox(
                   width: 15,
                 ),
-                ElevatedButton(
-                  onPressed: () => _onTabSelected(3),
-                  style: ButtonStyle(
-                    shape: MaterialStateProperty.all<RoundedRectangleBorder>(
-                      RoundedRectangleBorder(
-                        borderRadius: BorderRadius.circular(
-                            0.0), // Border radius à 0 pour enlever le coin arrondi
-                      ),
-                    ),
-                    elevation: MaterialStateProperty.all(0),
-                    padding: MaterialStateProperty.all<EdgeInsetsGeometry>(
-                      const EdgeInsets.symmetric(
-                          horizontal: 15,
-                          vertical: 20), // Ajustez les valeurs selon vos besoins
-                    ),
-                    backgroundColor: _selectedTabIndex == 3
-                        ? MaterialStateProperty.all(const Color(0xFFFF3147))
-                        : MaterialStateProperty.all(const Color(0xFFF2F6F9)),
-                  ),
-                  child: Text(
-                    'Html',
-                    style: TextStyle(
-                        color:
-                            _selectedTabIndex == 3 ? Colors.white : Colors.black,
-                        fontWeight: FontWeight.bold),
-                  ),
-                ),
+                // ElevatedButton(
+                //   onPressed: () => _onTabSelected(3),
+                //   style: ButtonStyle(
+                //     shape: MaterialStateProperty.all<RoundedRectangleBorder>(
+                //       RoundedRectangleBorder(
+                //         borderRadius: BorderRadius.circular(
+                //             0.0), // Border radius à 0 pour enlever le coin arrondi
+                //       ),
+                //     ),
+                //     elevation: MaterialStateProperty.all(0),
+                //     padding: MaterialStateProperty.all<EdgeInsetsGeometry>(
+                //       const EdgeInsets.symmetric(
+                //          horizontal: 150,
+                //           vertical: 20), // Ajustez les valeurs selon vos besoins
+                //     ),
+                //     backgroundColor: _selectedTabIndex == 3
+                //         ? MaterialStateProperty.all(const Color(0xFFFF3147))
+                //         : MaterialStateProperty.all(const Color(0xFFF2F6F9)),
+                //   ),
+                //   child: Text(
+                //     'Html',
+                //     style: TextStyle(
+                //         color:
+                //             _selectedTabIndex == 3 ? Colors.white : Colors.black,
+                //         fontWeight: FontWeight.bold),
+                //   ),
+                // ),
               ],
             ),
             Container(
