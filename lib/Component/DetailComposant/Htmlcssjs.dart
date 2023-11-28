@@ -12,10 +12,8 @@ class htmlcssjs extends StatelessWidget {
     Column(
       children: [
         Scaffold(
-        
           appBar: AppBar(
             title: const Padding(
-              
               padding: const EdgeInsets.only(left: 30),
               child: Text(
                 'Détails composants',
