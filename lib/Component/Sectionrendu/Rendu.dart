@@ -15,10 +15,7 @@ class Rendu extends StatelessWidget {
             fontWeight: FontWeight.bold, // Changer le style du texte du titre si nécessaire
           ),
         ),
-        Container(
-          color: Colors.white,
-          child: Text('fgdgdhfhfhhfh'),
-        ),
+        Image.asset('assets/detailcomposant.png'),
       ],
     );
   }
