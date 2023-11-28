@@ -6,17 +6,19 @@ class Html extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return
-      Column( crossAxisAlignment: CrossAxisAlignment.start,
-      
-        children: [
-          SingleChildScrollView(
-            
-            child: Text('''  
-        <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN">
-            <html>
-            <head>
-        <title>Ma première page avec du style</title>
-            </head>
+      Padding(
+        padding: const EdgeInsets.symmetric(horizontal: 100),
+        child: Column(
+        
+          children: [
+            SingleChildScrollView(
+              
+              child: Text('''  
+      <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN">
+          <html>
+          <head>
+      <title>Ma première page avec du style</title>
+          </head>
           
           <body>
           
@@ -44,9 +46,10 @@ class Html extends StatelessWidget {
           
           </body>
           </html> '''),
-          
-              ),
-        ],
+            
+                ),
+          ],
+        ),
       );
   }
 }
