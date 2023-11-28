@@ -270,33 +270,6 @@ class _OngletsState extends State<DetailComposant> {
                 const SizedBox(
                 width: 15,
               ),
-                  ElevatedButton(
-                    onPressed: () => _onTabSelected(3),
-                    style: ButtonStyle(
-                      shape: MaterialStateProperty.all<RoundedRectangleBorder>(
-                        RoundedRectangleBorder(
-                          borderRadius: BorderRadius.circular(
-                              0.0), // Border radius à 0 pour enlever le coin arrondi
-                        ),
-                      ),
-                      elevation: MaterialStateProperty.all(0),
-                      padding: MaterialStateProperty.all<EdgeInsetsGeometry>(
-                        const EdgeInsets.symmetric(
-                            horizontal: 8,
-                            vertical: 15), // Ajustez les valeurs selon vos besoins
-                      ),
-                      backgroundColor: _selectedTabIndex == 3
-                          ? MaterialStateProperty.all(const Color(0xFFFF3147))
-                          : MaterialStateProperty.all(const Color(0xFFF2F6F9)),
-                    ),
-                    child: Text(
-                      'Html',
-                      style: TextStyle(
-                          color:
-                              _selectedTabIndex == 3 ? Colors.white : Colors.black,
-                          fontWeight: FontWeight.bold),
-                    ),
-                  ),
                 ],
               ),
             ),
