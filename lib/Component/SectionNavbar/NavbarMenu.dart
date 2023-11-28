@@ -18,7 +18,7 @@ class NavbarMenu extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
             Image.asset(
-              '../../../assets/Logo.png', // Remplacez par le chemin de votre logo
+              "../../../assets/Logo.png", // Remplacez par le chemin de votre logo
               width: 100, // Ajustez la hauteur du logo selon vos besoins
             ),
             Padding(
