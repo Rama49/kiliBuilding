@@ -3,17 +3,17 @@
 <plist version="1.0">
 <dict>
 	<key>API_KEY</key>
-	<string>AIzaSyBXhVJQ7oA-5jhiv-Fyg8cT-IQnXCj-zic</string>
+	<string>AIzaSyAXwCzaoY1FBulfDWQaxoqD475Cn1U3rPI</string>
 	<key>GCM_SENDER_ID</key>
-	<string>234349841282</string>
+	<string>472122855308</string>
 	<key>PLIST_VERSION</key>
 	<string>1</string>
 	<key>BUNDLE_ID</key>
 	<string>com.example.kiliwebsite</string>
 	<key>PROJECT_ID</key>
-	<string>kili-app-builder-b8ece</string>
+	<string>kili-app-builder-d24ef</string>
 	<key>STORAGE_BUCKET</key>
-	<string>kili-app-builder-b8ece.appspot.com</string>
+	<string>kili-app-builder-d24ef.appspot.com</string>
 	<key>IS_ADS_ENABLED</key>
 	<false></false>
 	<key>IS_ANALYTICS_ENABLED</key>
@@ -25,6 +25,6 @@
 	<key>IS_SIGNIN_ENABLED</key>
 	<true></true>
 	<key>GOOGLE_APP_ID</key>
-	<string>1:234349841282:ios:54627e7fbd7bd813449d9b</string>
+	<string>1:472122855308:ios:478d502f4d99d978e650a9</string>
 </dict>
 </plist>

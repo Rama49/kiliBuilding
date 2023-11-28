@@ -11,18 +11,16 @@ import 'package:kiliwebsite/Component/ancreTemplate/Ancretempl.dart';
 import 'package:kiliwebsite/Reutilisable/LoginSignUp.dart';
 import 'package:kiliwebsite/pages/home.dart';
 
-Future<void> main() async {
-  WidgetsFlutterBinding.ensureInitialized();
+Future main() async {
   if (kIsWeb) {
+    WidgetsFlutterBinding.ensureInitialized();
     await Firebase.initializeApp(
-      options: FirebaseOptions(
-          apiKey: "AIzaSyBiOFKqyLJxWiqVTFtoI4SLlML33kCqpW8",
-          appId: "1:234349841282:web:5971b44e35a19f00449d9b",
-          messagingSenderId: "234349841282",
-          projectId: "kili-app-builder-b8ece"),
-    );
+        options: FirebaseOptions(
+            apiKey: "AIzaSyAVqcTR9BQwLNf3PNc1Z_RBtHFycVPTGYk",
+            appId: "1:472122855308:web:456b03650d040f63e650a9",
+            messagingSenderId: "472122855308",
+            projectId: "kili-app-builder-d24ef"));
   }
-  await Firebase.initializeApp();
   runApp(const MyApp());
 }
 

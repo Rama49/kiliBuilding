@@ -1,13 +1,13 @@
 {
   "project_info": {
-    "project_number": "234349841282",
-    "project_id": "kili-app-builder-b8ece",
-    "storage_bucket": "kili-app-builder-b8ece.appspot.com"
+    "project_number": "472122855308",
+    "project_id": "kili-app-builder-d24ef",
+    "storage_bucket": "kili-app-builder-d24ef.appspot.com"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:234349841282:android:6c6eda1508ee76ec449d9b",
+        "mobilesdk_app_id": "1:472122855308:android:3fbc66d3b5003f8ee650a9",
         "android_client_info": {
           "package_name": "com.example.kiliwebsite"
         }
@@ -15,7 +15,7 @@
       "oauth_client": [],
       "api_key": [
         {
-          "current_key": "AIzaSyBLo--ppDVtwAe4w4xbC8l58oDs6YFDF6w"
+          "current_key": "AIzaSyBmsFrEiVMLI7QJoy9Z4TeOc4Ltr7jKJug"
         }
       ],
       "services": {
