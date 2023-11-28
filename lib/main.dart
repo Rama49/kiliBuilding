@@ -1,3 +1,5 @@
+import 'package:firebase_core/firebase_core.dart';
+import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:kiliwebsite/Component/AncreCompo/AncreCompo.dart';
 import 'package:kiliwebsite/Component/DetailComposant/DetailComposant.dart';
@@ -9,7 +11,18 @@ import 'package:kiliwebsite/Component/ancreTemplate/Ancretempl.dart';
 import 'package:kiliwebsite/Reutilisable/LoginSignUp.dart';
 import 'package:kiliwebsite/pages/home.dart';
 
-void main() => runApp(const MyApp());
+Future main() async {
+  if (kIsWeb) {
+    WidgetsFlutterBinding.ensureInitialized();
+    await Firebase.initializeApp(
+        options: FirebaseOptions(
+            apiKey: "AIzaSyAVqcTR9BQwLNf3PNc1Z_RBtHFycVPTGYk",
+            appId: "1:472122855308:web:456b03650d040f63e650a9",
+            messagingSenderId: "472122855308",
+            projectId: "kili-app-builder-d24ef"));
+  }
+  runApp(const MyApp());
+}
 
 class MyApp extends StatelessWidget {
   const MyApp({Key? key}) : super(key: key);
@@ -30,7 +43,7 @@ class MyApp extends StatelessWidget {
         '/DetailComposant': (context) => DetailComposant(),
         '/AncrePRO': (context) => AncrePRO(),
         '/Ancretempl': (context) => Ancretempl(),
-            '/AncreCompo': (context) => AncreCompo(),
+        '/AncreCompo': (context) => AncreCompo(),
       },
     );
   }
