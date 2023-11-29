@@ -21,9 +21,8 @@ class Rendu extends StatelessWidget {
         ),
         SizedBox(height: 20),
         Container(
-          height: 520,
-         width: double.infinity,
-          child: Image.asset('assets/detailcomposant.png')),
+         
+          child: Image.asset('assets/MacBook.png',width: double.infinity,height: 400,)),
       ],
     );
   }

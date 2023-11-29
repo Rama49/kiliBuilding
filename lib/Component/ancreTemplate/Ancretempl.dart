@@ -181,7 +181,7 @@ class Ancretempl extends StatelessWidget {
                texte: "Lorem ipsum dolor sit amet consectetur.\nArcu consectetur fringilla gravida mauris.",
             ),
           ],
-        ),
+                 ),
       ],
       ),
     );
