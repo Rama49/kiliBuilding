@@ -91,14 +91,14 @@ class NavbarMenu extends StatelessWidget {
                       },
                       child: Container(
                         decoration: BoxDecoration(
-                          color: Color(0xFFF44336),
+                          color: Colors.white,
                           borderRadius: BorderRadius.circular(8.0),
                         ),
                         padding: const EdgeInsets.all(9.0),
                         child: const Text(
                           'Se Connecter',
                           style: TextStyle(
-                            color: Colors.white,
+                            color: Color(0xFFF44336),
                             fontSize: 15,
                             fontWeight: FontWeight.w700,
                           ),
