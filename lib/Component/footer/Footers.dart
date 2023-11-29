@@ -75,7 +75,7 @@ class Footers extends StatelessWidget {
             color: const Color(0xFFF44336),
             padding: const EdgeInsets.only(bottom: 20),
             margin: const EdgeInsets.only(top: 50, bottom: 10),
-            child: const Column(children: [
+            child:  Column(children: [
               SizedBox(height: 25),
               Text("S'abonner a notre Newsletter",
                   style: TextStyle(color: Colors.white, fontSize: 18)),
@@ -117,17 +117,25 @@ class Footers extends StatelessWidget {
                       style: TextStyle(color: Colors.white, fontSize: 17)),
                   Text("generer des prospects",
                       style: TextStyle(color: Colors.white, fontSize: 17)),
-                  SizedBox(height: 30),
-                  Column(
+                 Column(
                     children: [
-                      Text(
+                      Image.asset('assets/Logo.png', width: 100),
+                      SizedBox(height: 10),
+                      const Text(
                         "Copyright 2022",
                         style: TextStyle(color: Colors.white),
                       ),
+                      SizedBox(height: 20),
                       Row(
                         mainAxisAlignment: MainAxisAlignment.center,
                         children: [
-                          Icon(Icons.facebook),
+                          Image.asset('assets/facebook.png'),
+                          SizedBox(width: 20),
+                          Image.asset('assets/Twitter.png'),
+                           SizedBox(width: 20),
+                          Image.asset('assets/Instagram.png'),
+                           SizedBox(width: 20),
+                          Image.asset('assets/Linkedin.png'),
                         ],
                       )
                     ],

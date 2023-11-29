@@ -15,7 +15,7 @@ class Rendu extends StatelessWidget {
             fontWeight: FontWeight.bold, // Changer le style du texte du titre si nécessaire
           ),
         ),
-        Image.asset('assets/detailcomposant.png'),
+        Image.asset('assets/detailcomposant.png', height: 350),
       ],
     );
   }
