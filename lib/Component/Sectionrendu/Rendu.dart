@@ -8,14 +8,22 @@ class Rendu extends StatelessWidget {
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
-        Text(
-          'Titre du Rendu',
-          style: TextStyle(
-            fontSize: 18, // Changer la taille du texte du titre si nécessaire
-            fontWeight: FontWeight.bold, // Changer le style du texte du titre si nécessaire
+        Padding(
+          padding: const EdgeInsets.all(20),
+          child: Text(
+            'Rendu',
+            style: TextStyle(
+              color: Colors.red,
+              fontSize: 18, // Changer la taille du texte du titre si nécessaire
+              fontWeight: FontWeight.bold, // Changer le style du texte du titre si nécessaire
+            ),
           ),
         ),
-        Image.asset('assets/detailcomposant.png'),
+        SizedBox(height: 20),
+        Container(
+          height: 520,
+         width: double.infinity,
+          child: Image.asset('assets/detailcomposant.png')),
       ],
     );
   }

@@ -9,7 +9,7 @@ class htmlcssjs extends StatelessWidget {
   Widget build(BuildContext context) {
     
     return Scaffold(
-    
+       backgroundColor: Color.fromARGB(204, 253, 252, 252),
       appBar: AppBar(
         title: const Padding(
           padding: const EdgeInsets.only(left: 30),
