@@ -31,6 +31,7 @@ class _OngletsState extends State<DetailComposant> {
        color: Colors.white, 
        width: double.infinity,
         child: Column(
+          
           children: [
             Row(
               mainAxisAlignment: MainAxisAlignment.center,
