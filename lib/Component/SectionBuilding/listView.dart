@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:kiliwebsite/Component/Wysiwyg.dart';
+import 'package:kiliwebsite/Reutilisable/Webview.dart';
 
 class CustomImage extends StatelessWidget {
   @override
@@ -7,11 +7,12 @@ class CustomImage extends StatelessWidget {
     return SingleChildScrollView(
       scrollDirection: Axis.horizontal,
       child: 
-      Image.network(
-        '../../../assets/details.png',
-        width: 800, // Ajustez la largeur selon vos besoins
-        fit: BoxFit.fitWidth,
-      ),
+      Webview()
+      // Image.network(
+      //   '../../../assets/details.png',
+      //   width: 800, // Ajustez la largeur selon vos besoins
+      //   fit: BoxFit.fitWidth,
+      // ),
       
     );
   }

@@ -58,7 +58,7 @@ class CardTemplate extends StatelessWidget {
       width: 390,
       margin: EdgeInsets.all(10),
       child: Column(
-        crossAxisAlignment: CrossAxisAlignment.start,
+        crossAxisAlignment: CrossAxisAlignment.center,
         children: [
           image,
           SizedBox(height: 20),
