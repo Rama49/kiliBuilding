@@ -54,6 +54,8 @@ class CardTemplate extends StatelessWidget {
       ),
     )
     : Container(
+                  alignment: Alignment.center, // Aligner le bouton au centre
+
       color: Colors.white,
       width: 390,
       margin: EdgeInsets.all(10),
