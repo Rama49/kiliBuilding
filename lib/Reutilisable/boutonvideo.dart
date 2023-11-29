@@ -30,7 +30,7 @@ class _boutonvideoState extends State<boutonvideo> {
             String url = 'https://youtu.be/tLk3hzI_rbk?si=SvEymblUmN7h7bdZ'; // Remplacez par votre URL
             _launchURL(url);
           },
-          child: Text('Creer votre app',  style: TextStyle(
+          child: Text('lien vers notre site',  style: TextStyle(
                 color: Color(0xFFF44336),
                 fontSize: 15,
                 fontWeight: FontWeight.w700,
