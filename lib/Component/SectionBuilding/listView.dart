@@ -1,114 +1,186 @@
 import 'package:flutter/material.dart';
 
-class MyPageContent extends StatelessWidget {
+class CustomImage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return ListView(
-      children: [
-        ListWithSourceCode(),
-        // Ajoutez d'autres widgets ici si nécessaire
-      ],
-    );
-  }
-}
-
-class ListWithSourceCode extends StatefulWidget {
-  const ListWithSourceCode({Key? key}) : super(key: key);
-
-  @override
-  _ListWithSourceCodeState createState() => _ListWithSourceCodeState();
-}
-
-class _ListWithSourceCodeState extends State<ListWithSourceCode> {
-  bool showSourceCode = false;
-
-  @override
-  Widget build(BuildContext context) {
-    return Container(
-      child: Column(
-        mainAxisAlignment: MainAxisAlignment.center,
-        children: [
-          ElevatedButton(
-            onPressed: () {
-              setState(() {
-                showSourceCode = !showSourceCode;
-              });
-            },
-            child: Text('Afficher le code source'),
-          ),
-          Visibility(
-            visible: showSourceCode,
-            child: Container(
-              margin: EdgeInsets.all(16.0),
-              padding: EdgeInsets.all(16.0),
-              decoration: BoxDecoration(
-                border: Border.all(color: Colors.blue),
-                borderRadius: BorderRadius.circular(8.0),
-              ),
-              child: SingleChildScrollView(
-                child: Text(
-                  '''
-                  // Votre code source ici
-                  import 'package:flutter/material.dart';
-
-                  class ListWithSourceCode extends StatefulWidget {
-                    const ListWithSourceCode({Key? key}) : super(key: key);
-
-                    @override
-                    _ListWithSourceCodeState createState() => _ListWithSourceCodeState();
-                  }
-
-                  class _ListWithSourceCodeState extends State<ListWithSourceCode> {
-                    bool showSourceCode = false;
-
-                    @override
-                    Widget build(BuildContext context) {
-                      return Container(
-                        child: Column(
-                          mainAxisAlignment: MainAxisAlignment.center,
-                          children: [
-                            ElevatedButton(
-                              onPressed: () {
-                                setState(() {
-                                  showSourceCode = !showSourceCode;
-                                });
-                              },
-                              child: Text('Afficher le code source'),
-                            ),
-                            Visibility(
-                              visible: showSourceCode,
-                              child: Container(
-                                margin: EdgeInsets.all(16.0),
-                                padding: EdgeInsets.all(16.0),
-                                decoration: BoxDecoration(
-                                  border: Border.all(color: Colors.blue),
-                                  borderRadius: BorderRadius.circular(8.0),
-                                ),
-                                child: SingleChildScrollView(
-                                  child: Text(
-                                    'Le code source de votre composant Flutter sera affiché ici.',
-                                  ),
-                                ),
-                              ),
-                            ),
-                          ],
-                        ),
-                      );
-                    }
-                  }
-                  ''',
-                ),
-              ),
-            ),
-          ),
-        ],
+    return SingleChildScrollView(
+      scrollDirection: Axis.horizontal,
+      child: Image.network(
+        '../../../assets/details.png',
+        width: 800, // Ajustez la largeur selon vos besoins
+        fit: BoxFit.fitWidth,
       ),
     );
   }
+
 }
 
-void main() {
-  runApp(MaterialApp(
-    home: MyPageContent(),
-  ));
+class MyList extends StatefulWidget {
+  @override
+  _MyListState createState() => _MyListState();
+}
+
+class _MyListState extends State<MyList> {
+  String selectedOption = "Home";
+  TextEditingController searchController = TextEditingController();
+  List<String> options = ["Home", "Contact", "Galerie", "Nos activtes"];
+  bool isDropdownOpen = false;
+
+  @override
+  Widget build(BuildContext context) {
+    return Column(
+      children: [
+        // Custom Header
+        Container(
+          decoration: BoxDecoration(
+            color: Colors.white,
+            border: Border(
+              bottom: BorderSide(
+                color: Colors.black, // Ajustez la couleur selon vos besoins
+                width: 1.0,
+              ),
+            ),
+          ),
+          child: Row(
+            crossAxisAlignment: CrossAxisAlignment.center,
+            children: [
+              Container(
+                width: 300, // Augmentez la largeur du champ de recherche
+                child: Padding(
+                  padding: const EdgeInsets.all(8.0),
+                  child: Container(
+                    decoration: BoxDecoration(
+                      color: Colors.white, // Couleur du fond
+                      border: Border.all(
+                        color: Colors.black, // Couleur des bordures
+                        width: 1.0,
+                      ),
+                      borderRadius: BorderRadius.circular(6.0),
+                    ),
+                    child: Autocomplete<String>(
+                      optionsBuilder: (TextEditingValue textEditingValue) {
+                        return options
+                            .where((String option) => option
+                            .toLowerCase()
+                            .contains(textEditingValue.text.toLowerCase()))
+                            .toList();
+                      },
+                      onSelected: (String value) {
+                        setState(() {
+                          selectedOption = value;
+                        });
+                      },
+                      fieldViewBuilder: (BuildContext context,
+                          TextEditingController fieldTextEditingController,
+                          FocusNode fieldFocusNode,
+                          VoidCallback onFieldSubmitted) {
+                        return TextField(
+                          controller: fieldTextEditingController,
+                          focusNode: fieldFocusNode,
+                          decoration: InputDecoration(
+                            border: InputBorder.none,
+                          ),
+                          style: TextStyle(color: Colors.black),
+                          onChanged: (String value) {
+                            onFieldSubmitted();
+                          },
+                        );
+                      },
+                      optionsViewBuilder: (BuildContext context,
+                          AutocompleteOnSelected<String> onSelected,
+                          Iterable<String> options) {
+                        return Align(
+                          alignment: Alignment.topLeft,
+                          child: Material(
+                            color: Colors.white,
+                            elevation: 4.0,
+                            child: SizedBox(
+                              height: 200.0,
+                              child: ListView.builder(
+                                itemCount: options.length,
+                                itemBuilder: (BuildContext context, int index) {
+                                  final String option = options.elementAt(index);
+                                  return GestureDetector(
+                                    onTap: () {
+                                      onSelected(option);
+                                    },
+                                    child: ListTile(
+                                      title: Text(option),
+                                    ),
+                                  );
+                                },
+                              ),
+                            ),
+                          ),
+                        );
+                      },
+                    ),
+                  ),
+                ),
+              ),
+              // PopupMenuButton<String>(
+              //   onSelected: (value) {
+              //     // Ajoutez ici la logique pour les options sélectionnées
+              //     setState(() {
+              //       selectedOption = value;
+              //       isDropdownOpen = false;
+              //     });
+              //   },
+              //   itemBuilder: (context) => [
+              //     PopupMenuItem(
+              //       child: Container(
+              //         width: 150, // Largeur du menu déroulant
+              //         child: Column(
+              //           children: options.map((option) {
+              //             return ListTile(
+              //               title: Text(option),
+              //               onTap: () {
+              //                 // Gérer la sélection de l'option
+              //                 setState(() {
+              //                   selectedOption = option;
+              //                   isDropdownOpen = false;
+              //                 });
+              //               },
+              //             );
+              //           }).toList(),
+              //         ),
+              //       ),
+              //     ),
+              //   ],
+              //   icon: Icon(Icons.arrow_drop_down, color: Colors.black),
+              // ),
+              Spacer(),
+              ElevatedButton.icon(
+                onPressed: () {
+                  // Ajoutez ici la logique pour le bouton "Exporter le code"
+                },
+                icon: Icon(Icons.crop_square,
+                    color: Colors.white), // Remplacez par l'icône "rect"
+                label: Text("Exporter le code",
+                    style: TextStyle(color: Colors.white)),
+                style: ElevatedButton.styleFrom(
+                  primary: Colors.blue, // Couleur du bouton
+                  shape: RoundedRectangleBorder(
+                    borderRadius: BorderRadius.circular(8.0),
+                  ),
+                  padding: EdgeInsets.symmetric(vertical: 14, horizontal: 18),
+                ),
+              ),
+            ],
+          ),
+        ),
+        // Contenu de la liste
+        Expanded(
+          child: ListView(
+            children: [
+              Container(
+                width: double.infinity,
+                child: CustomImage(),
+              ),
+            ],
+          ),
+        ),
+      ],
+    );
+  }
 }
