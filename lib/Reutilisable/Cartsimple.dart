@@ -16,38 +16,73 @@ class Cartsimple extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return 
-    
-    Container(
-      
-      decoration: BoxDecoration(
-        color: Colors.white,
-        borderRadius: BorderRadius.circular(
-            8), // Ajustez la valeur du radius selon vos besoins
-        border: Border.all(
-           color: Colors.red,
-          width: 2,
-        ),
-      ),
-      width: 230,
-      height: 150,
-      child: Padding(
-        padding: const EdgeInsets.all(10),
-        child: Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
-          Icon(
-            icon,
-            color: iconColor, // Utilisez la couleur de l'icône spécifiée
-          ),
-          SizedBox(
-            height: 15,
-          ),
-          Text(title),
-          SizedBox(
-            height: 15,
-          ),
-          Text(subTitle)
-        ]),
-      ),
-    );
+    var Screen = MediaQuery.of(context).size;
+    return Screen.width > 768
+        ? Container(
+            decoration: BoxDecoration(
+              color: Colors.white,
+              borderRadius: BorderRadius.circular(
+                  8), // Ajustez la valeur du radius selon vos besoins
+              border: Border.all(
+                color: Colors.red,
+                width: 2,
+              ),
+            ),
+            width: 230,
+            height: 150,
+            child: Padding(
+              padding: const EdgeInsets.all(10),
+              child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    Icon(
+                      icon,
+                      color:
+                          iconColor, // Utilisez la couleur de l'icône spécifiée
+                    ),
+                    SizedBox(
+                      height: 15,
+                    ),
+                    Text(title),
+                    SizedBox(
+                      height: 15,
+                    ),
+                    Text(subTitle)
+                  ]),
+            ),
+          )
+        : Container(
+            decoration: BoxDecoration(
+              color: Colors.white,
+              borderRadius: BorderRadius.circular(
+                  8), // Ajustez la valeur du radius selon vos besoins
+              border: Border.all(
+                color: Colors.red,
+                width: 2,
+              ),
+            ),
+            width: 390,
+            height: 150,
+            child: Padding(
+              padding: const EdgeInsets.all(10),
+              child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    Icon(
+                      icon,
+                      color:
+                          iconColor, // Utilisez la couleur de l'icône spécifiée
+                    ),
+                    SizedBox(
+                      height: 15,
+                    ),
+                    Text(title),
+                    SizedBox(
+                      height: 15,
+                    ),
+                    Text(subTitle)
+                  ]),
+            ),
+          );
   }
 }

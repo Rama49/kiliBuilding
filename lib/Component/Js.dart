@@ -5,10 +5,12 @@ class Js extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return
-      SingleChildScrollView(
-        child: Text('''  
-   import React, { Component } from 'react'
+    return SingleChildScrollView(
+      child: Align(
+        alignment: Alignment.centerRight, // Aligner à droite
+        child: Text(
+          '''  
+import React, { Component } from 'react'
 import Axios from 'axios'
  
 export default class Hello extends Component {
@@ -32,8 +34,9 @@ export default class Hello extends Component {
             </div>
         )
     }
-} '''),
-      
+} ''',
+        ),
+      ),
     );
   }
 }
