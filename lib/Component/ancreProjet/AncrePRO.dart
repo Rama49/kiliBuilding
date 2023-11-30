@@ -13,7 +13,8 @@ class AncrePRO extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     var screen = MediaQuery.of(context).size;
-    return screen.width > 768
+   
+    return  screen.width > 768 
     ? Scaffold(
       body:  SingleChildScrollView(
         child: Center(
@@ -36,66 +37,71 @@ class AncrePRO extends StatelessWidget {
         ),
       ),
     )
-    :  Column (
-      crossAxisAlignment: CrossAxisAlignment.start,
-      children: [
-        Column(
+    :  Scaffold(
+      body: SingleChildScrollView(
+        child: Column (
+          
+          crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            CardReutilisable(
-              image: Image.asset(
-                "securite.png",
-              ),
-              title: "lorem ipsum",
-              paragraph: "Developpeur React Native",
-               texte: "Lorem ipsum dolor sit amet consectetur.\nArcu consectetur fringilla gravida mauris.",
+            Column(
+              children: [
+                CardReutilisable(
+                  image: Image.asset(
+                    "securite.png",
+                  ),
+                  title: "lorem ipsum",
+                  paragraph: "Developpeur React Native",
+                   texte: "Lorem ipsum dolor sit amet consectetur.\nArcu consectetur fringilla gravida mauris.",
+                ),
+                CardReutilisable(
+                  image: Image.asset(
+                    "securite.png",
+                  ),
+                  title: "lorem ipsum",
+                  paragraph: "Developpeur React Native",
+                   texte: "Lorem ipsum dolor sit amet consectetur.\nArcu consectetur fringilla gravida mauris.",
+                ),
+                CardReutilisable(
+                  image: Image.asset(
+                    "securite.png",
+                  ),
+                  title: "lorem ipsum",
+                  paragraph: "Developpeur React Native",
+                   texte: "Lorem ipsum dolor sit amet consectetur.\nArcu consectetur fringilla gravida mauris.",
+                ),
+              ],
             ),
-            CardReutilisable(
-              image: Image.asset(
-                "securite.png",
-              ),
-              title: "lorem ipsum",
-              paragraph: "Developpeur React Native",
-               texte: "Lorem ipsum dolor sit amet consectetur.\nArcu consectetur fringilla gravida mauris.",
-            ),
-            CardReutilisable(
-              image: Image.asset(
-                "securite.png",
-              ),
-              title: "lorem ipsum",
-              paragraph: "Developpeur React Native",
-               texte: "Lorem ipsum dolor sit amet consectetur.\nArcu consectetur fringilla gravida mauris.",
+             Column(
+              children: [
+                CardReutilisable(
+                  image: Image.asset(
+                    "securite.png",
+                  ),
+                  title: "lorem ipsum",
+                  paragraph: "Developpeur React Native",
+                   texte: "Lorem ipsum dolor sit amet consectetur.\nArcu consectetur fringilla gravida mauris.",
+                ),
+                CardReutilisable(
+                  image: Image.asset(
+                    "securite.png",
+                  ),
+                  title: "lorem ipsum",
+                  paragraph: "Developpeur React Native",
+                  texte: "Lorem ipsum dolor sit amet consectetur.\nArcu consectetur fringilla gravida mauris.",
+                ),
+                CardReutilisable(
+                  image: Image.asset(
+                    "securite.png",
+                  ),
+                  title: "lorem ipsum",
+                  paragraph: "Developpeur React Native",
+                   texte: "Lorem ipsum dolor sit amet consectetur.\nArcu consectetur fringilla gravida mauris.",
+                ),
+              ],
             ),
           ],
         ),
-         Column(
-          children: [
-            CardReutilisable(
-              image: Image.asset(
-                "securite.png",
-              ),
-              title: "lorem ipsum",
-              paragraph: "Developpeur React Native",
-               texte: "Lorem ipsum dolor sit amet consectetur.\nArcu consectetur fringilla gravida mauris.",
-            ),
-            CardReutilisable(
-              image: Image.asset(
-                "securite.png",
-              ),
-              title: "lorem ipsum",
-              paragraph: "Developpeur React Native",
-              texte: "Lorem ipsum dolor sit amet consectetur.\nArcu consectetur fringilla gravida mauris.",
-            ),
-            CardReutilisable(
-              image: Image.asset(
-                "securite.png",
-              ),
-              title: "lorem ipsum",
-              paragraph: "Developpeur React Native",
-               texte: "Lorem ipsum dolor sit amet consectetur.\nArcu consectetur fringilla gravida mauris.",
-            ),
-          ],
-        ),
-      ],
+      ),
     );
   }
 }
