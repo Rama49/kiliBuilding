@@ -8,18 +8,21 @@ class InputForm extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Column(
-      children: [
-          TextFormField(
-            decoration: new InputDecoration(
-          labelText: placeholder,
-          fillColor: Colors.white,
-          //       border: new OutlineInputBorder(
-          // borderRadius: new BorderRadius.circular(25.0),
-          // borderSide: new BorderSide(),
-          //       ),
-        ))
-      ],
+    return Container(
+       width: 50,
+      child: Column(
+        children: [
+            TextFormField(
+              decoration: new InputDecoration(
+            labelText: placeholder,
+            fillColor: Colors.white,
+            //       border: new OutlineInputBorder(
+            // borderRadius: new BorderRadius.circular(25.0),
+            // borderSide: new BorderSide(),
+            //       ),
+          ))
+        ],
+      ),
     );
   }
 }

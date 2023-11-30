@@ -5,45 +5,44 @@ class Html extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Column(
-      crossAxisAlignment: CrossAxisAlignment.start,
-      mainAxisAlignment: MainAxisAlignment.start,
+    return const  Column(
+      // crossAxisAlignment: CrossAxisAlignment.start,
       children: [
         SingleChildScrollView(
           child: Text(
             '''  
-            <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN">
-            <html>
-            <head>
-            <title>Ma première page avec du style</title>
-            </head>
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN">
+  <html>
+    <head>
+        <title>Ma première page avec du style</title>
+    </head>
                       
-            <body>
+      <body>
                       
-            <!-- Menu de navigation du site -->
-            <ul class="navbar">
-            <li><a href="index.html">Home page</a>
-            <li><a href="reflexions.html">Réflexions</a>
-            <li><a href="ville.html">Ma ville</a>
-            <li><a href="liens.html">Liens</a>
-            </ul>
+        <!-- Menu de navigation du site -->
+        <ul class="navbar">
+        <li><a href="index.html">Home page</a>
+        <li><a href="reflexions.html">Réflexions</a>
+        <li><a href="ville.html">Ma ville</a>
+        <li><a href="liens.html">Liens</a>
+        </ul>
                       
-            <!-- Contenu principal -->
-            <h1>Ma première page avec du style</h1>
+        <!-- Contenu principal -->
+        <h1>Ma première page avec du style</h1>
                       
-            <p>Bienvenue sur ma page avec du style! 
+        <p>Bienvenue sur ma page avec du style! 
                       
-            <p>Il lui manque des images, mais au moins, elle a du style. Et elle a des liens, même s'ils ne mènent nulle part...
-            &hellip;
+        <p>Il lui manque des images, mais au moins, elle a du style. Et elle a des liens, même s'ils ne mènent nulle part...
+        &hellip;
                       
-            <p>Je devrais étayer, mais je ne sais comment encore.
+        <p>Je devrais étayer, mais je ne sais comment encore.
                       
-            <!-- Signer et dater la page, c'est une question de politesse! -->
-            <address>Fait le 5 avril 2004<br>
-            par moi.</address>
+        <!-- Signer et dater la page, c'est une question de politesse! -->
+        <address>Fait le 5 avril 2004<br>
+        par moi.</address>
                       
-            </body>
-            </html> 
+      </body>
+  </html> 
             ''',
             textAlign: TextAlign.left,
           ),
