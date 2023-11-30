@@ -17,31 +17,65 @@ class CardReutilisable extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Container(
-      color: Colors.white,
-      width: 300,
-      margin: EdgeInsets.all(10),
-      child: Column(
-        crossAxisAlignment: CrossAxisAlignment.start,
-        children: [
-          image,
-          SizedBox(height: 20),
-          Container(
-            padding: EdgeInsets.only(left: 20),
-            child: Text(title, style: TextStyle(fontWeight: FontWeight.w700)),
-          ),
-          Container(padding: EdgeInsets.only(left: 20), child: Text(paragraph)),
-          SizedBox(height: 20),
-          Container(padding: EdgeInsets.only(left: 20), child: Text(texte)),
-          BouttonOrange(
-            title: "Voir Projet",
-            onPress: () {
-              Navigator.push(
-                  context, MaterialPageRoute(builder: (context) => Domaine()));
-            },
+    var Screen = MediaQuery.of(context).size;
+    return Screen.width > 768
+        ? Container(
+            color: Colors.white,
+            width: 300,
+            margin: EdgeInsets.all(10),
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                image,
+                SizedBox(height: 20),
+                Container(
+                  padding: EdgeInsets.only(left: 20),
+                  child: Text(title,
+                      style: TextStyle(fontWeight: FontWeight.w700)),
+                ),
+                Container(
+                    padding: EdgeInsets.only(left: 20), child: Text(paragraph)),
+                SizedBox(height: 20),
+                Container(
+                    padding: EdgeInsets.only(left: 20), child: Text(texte)),
+                BouttonOrange(
+                  title: "Voir Projet",
+                  onPress: () {
+                    Navigator.push(context,
+                        MaterialPageRoute(builder: (context) => Domaine()));
+                  },
+                )
+              ],
+            ),
           )
-        ],
-      ),
-    );
+        : Container(
+            color: Colors.white,
+            width: 390,
+            margin: EdgeInsets.all(10),
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                image,
+                SizedBox(height: 20),
+                Container(
+                  padding: EdgeInsets.only(left: 20),
+                  child: Text(title,
+                      style: TextStyle(fontWeight: FontWeight.w700)),
+                ),
+                Container(
+                    padding: EdgeInsets.only(left: 20), child: Text(paragraph)),
+                SizedBox(height: 20),
+                Container(
+                    padding: EdgeInsets.only(left: 20), child: Text(texte)),
+                BouttonOrange(
+                  title: "Voir Projet",
+                  onPress: () {
+                    Navigator.push(context,
+                        MaterialPageRoute(builder: (context) => Domaine()));
+                  },
+                )
+              ],
+            ),
+          );
   }
 }

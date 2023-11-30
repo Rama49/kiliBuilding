@@ -46,7 +46,7 @@ class HomePage extends StatelessWidget {
               Chiffres(),
               Template(),
               Component(),
-              Footers()
+              Footers(),
               // Cartsimple()
             ],
           ),

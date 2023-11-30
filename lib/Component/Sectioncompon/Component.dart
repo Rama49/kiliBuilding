@@ -13,24 +13,8 @@ class Component extends StatelessWidget {
       
       child: Column(
         children: [
-          // Première ligne
-          // Text(
-          //   'Composant',
-          //   style: TextStyle(
-          //       fontSize: 20,
-          //       fontWeight: FontWeight.bold,
-          //       color: Colors.red,
-          //       ),
-          // ),
           TitleReu(titre: "Composants", soustexte: ""),
           SizedBox(height: 50),
-          const Row(
-            children: [
-              // Ajoutez les widgets de la première ligne ici
-            ],
-          ),
-
-          // Grille de cartes
           LayoutBuilder(
             builder: (context, constraints) {
               int columnsCount = (constraints.maxWidth / 768).floor();
@@ -43,8 +27,6 @@ class Component extends StatelessWidget {
               );
             },
           ),
-
-          // Deuxième ligne
           const Row(
             children: [
               // Ajoutez les widgets de la deuxième ligne ici
@@ -62,7 +44,6 @@ class Component extends StatelessWidget {
               );
             },
           ),
-          // Troisième ligne
           const Row(
             children: [
               // Ajoutez les widgets de la troisième ligne ici
@@ -85,51 +66,35 @@ class Component extends StatelessWidget {
     );
   }
 
-  List<CardNavigationData> cardDataList = [
-    CardNavigationData(
-        'Button', '5 Components', Icons.back_hand, Colors.red, Security()),
-    CardNavigationData(
-        'Input', '2 Components', Icons.input_outlined, Colors.red, Security()),
-    CardNavigationData(
-        'Card', '4 Components', Icons.card_giftcard, Colors.red, Security()),
-    CardNavigationData('Header', '4 Components', Icons.headset_rounded,
-        Colors.red, Security()),
+  List<CardData> cardDataList = [
+    CardData('Button', '5 Components', Icons.back_hand, Colors.red),
+    CardData('Input', '2 Components', Icons.input_outlined, Colors.red),
+    CardData('Card', '4 Components', Icons.card_giftcard, Colors.red),
+    CardData('Header', '4 Components', Icons.headset_rounded, Colors.red),
     // Ajoutez d'autres éléments de votre liste ici
   ];
 
-  Widget buildCard(BuildContext context, CardNavigationData cardData) {
-    return InkWell(
-      onTap: () {
-        Navigator.push(
-          context,
-          MaterialPageRoute(builder: (context) => const DetailComposant()),
-        );
-      },
-      child: Card(
-        color: Colors.white,
-        child: Container(
-          height: 150,
-          child: Cartsimple(
-            title: cardData.title,
-            subTitle: cardData.subTitle,
-            icon: cardData.icon,
-            iconColor: cardData.iconColor,
-          ),
+  Widget buildCard(BuildContext context, CardData cardData) {
+    return Card(
+      color: Colors.white,
+      child: Container(
+        height: 150,
+        child: Cartsimple(
+          title: cardData.title,
+          subTitle: cardData.subTitle,
+          icon: cardData.icon,
+          iconColor: cardData.iconColor,
         ),
       ),
-      splashColor: Colors.blue,
-      borderRadius: BorderRadius.circular(10),
     );
   }
 }
 
-class CardNavigationData {
+class CardData {
   final String title;
   final String subTitle;
   final IconData icon;
   final Color iconColor;
-  final Widget route;
 
-  CardNavigationData(
-      this.title, this.subTitle, this.icon, this.iconColor, this.route);
+  CardData(this.title, this.subTitle, this.icon, this.iconColor);
 }

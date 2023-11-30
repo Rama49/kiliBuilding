@@ -2,9 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:kiliwebsite/Reutilisable/FooterElement.dart';
 import 'package:kiliwebsite/Reutilisable/Input.dart';
-import 'package:kiliwebsite/Reutilisable/InputForm.dart';
 import 'package:kiliwebsite/Reutilisable/Inputfooter.dart';
-import 'package:kiliwebsite/Reutilisable/Title.dart';
 
 class Footers extends StatelessWidget {
   const Footers({super.key});
@@ -14,34 +12,34 @@ class Footers extends StatelessWidget {
     var screenSize = MediaQuery.of(context).size;
     return screenSize.width > 768
         ? Container(
-            color: Color(0xFFF44336),
+            color: const Color(0xFFF44336),
             padding: const EdgeInsets.only(bottom: 50),
             margin: const EdgeInsets.only(top: 50, bottom: 10),
-            child: const Column(children: [
-              SizedBox(height: 25),
-              Text("S'abonner a notre Newsletter",
+            child: Column(children: [
+              const SizedBox(height: 25),
+              const Text("S'abonner a notre Newsletter",
                   style: TextStyle(color: Colors.white, fontSize: 25)),
-              SizedBox(height: 25),
-              Padding(
+              const SizedBox(height: 25),
+              const Padding(
                 padding: EdgeInsets.only(right: 20),
                 child: MyInput(textInput: "E-mail"),
               ),
               Row(
                 mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                 children: [
-                  FooterElement(
+                  const FooterElement(
                       titre: "Entreprise",
                       text1: "A propos de nous",
                       text4: "Pourquoi nous choisir",
                       text2: "Tarification",
                       text3: "Temoignage"),
-                  FooterElement(
+                  const FooterElement(
                       titre: "Ressources",
                       text1: "Politique prive",
                       text4: "Termes & conditions",
                       text2: "Blog",
                       text3: "Contacter nous"),
-                  FooterElement(
+                  const FooterElement(
                       titre: "Produits",
                       text1: "Gestion de projet",
                       text4: "Suivi du temps",
@@ -49,13 +47,22 @@ class Footers extends StatelessWidget {
                       text3: "enerer des prospects"),
                   Column(
                     children: [
-                      Text(
+                      Image.asset('assets/Logo.png', width: 100),
+                      SizedBox(height: 10),
+                      const Text(
                         "Copyright 2022",
                         style: TextStyle(color: Colors.white),
                       ),
+                      SizedBox(height: 20),
                       Row(
                         children: [
-                          Icon(Icons.facebook),
+                          Image.asset('assets/facebook.png'),
+                          SizedBox(width: 20),
+                          Image.asset('assets/Twitter.png'),
+                           SizedBox(width: 20),
+                          Image.asset('assets/Instagram.png'),
+                           SizedBox(width: 20),
+                          Image.asset('assets/Linkedin.png'),
                         ],
                       )
                     ],
@@ -65,10 +72,10 @@ class Footers extends StatelessWidget {
             ]),
           )
         : Container(
-            color: Color(0xFFF44336),
+            color: const Color(0xFFF44336),
             padding: const EdgeInsets.only(bottom: 20),
             margin: const EdgeInsets.only(top: 50, bottom: 10),
-            child: const Column(children: [
+            child:  Column(children: [
               SizedBox(height: 25),
               Text("S'abonner a notre Newsletter",
                   style: TextStyle(color: Colors.white, fontSize: 18)),
@@ -111,16 +118,25 @@ class Footers extends StatelessWidget {
                   Text("generer des prospects",
                       style: TextStyle(color: Colors.white, fontSize: 17)),
                       SizedBox(height: 30),
-                  Column(
+                 Column(
                     children: [
-                      Text(
+                      Image.asset('assets/Logo.png', width: 100),
+                      SizedBox(height: 10),
+                      const Text(
                         "Copyright 2022",
                         style: TextStyle(color: Colors.white),
                       ),
+                      SizedBox(height: 20),
                       Row(
                         mainAxisAlignment: MainAxisAlignment.center,
                         children: [
-                          Icon(Icons.facebook),
+                          Image.asset('assets/facebook.png'),
+                          SizedBox(width: 20),
+                          Image.asset('assets/Twitter.png'),
+                           SizedBox(width: 20),
+                          Image.asset('assets/Instagram.png'),
+                           SizedBox(width: 20),
+                          Image.asset('assets/Linkedin.png'),
                         ],
                       )
                     ],
