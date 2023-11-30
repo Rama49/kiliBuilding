@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:url_launcher/url_launcher.dart';
+import 'package:flutter_inappwebview/flutter_inappwebview.dart';
 
 class Webview extends StatefulWidget {
   @override
@@ -7,34 +7,54 @@ class Webview extends StatefulWidget {
 }
 
 class _WebviewState extends State<Webview> {
+  InAppWebViewController? webViewController;
   String selectedOption = "Home";
   TextEditingController searchController = TextEditingController();
   List<String> options = ["Home", "Contact", "Galerie", "Nos activités"];
-
-  Future<void> _launchURL(String url) async {
-    if (await canLaunch(url)) {
-      await launch(url);
-    } else {
-      throw 'Impossible d\'ouvrir l\'URL $url';
-    }
-  }
 
   @override
   Widget build(BuildContext context) {
     return Column(
       children: [
-        // ... autres widgets
-
         ElevatedButton(
           onPressed: () {
-            String url = 'https://bakeli-tech.euleukcommunication.sn/'; // Remplacez par votre URL
-            _launchURL(url);
+            Navigator.of(context).push(MaterialPageRoute(
+              builder: (context) => WebViewContainer(),
+            ));
           },
           child: Text('Ouvrir URL'),
         ),
-
-        // ... autres widgets
       ],
+    );
+  }
+}
+
+class WebViewContainer extends StatefulWidget {
+  @override
+  _WebViewContainerState createState() => _WebViewContainerState();
+}
+
+class _WebViewContainerState extends State<WebViewContainer> {
+  InAppWebViewController? _webViewController;
+  String url = 'https://bakeli-tech.euleukcommunication.sn/';
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(
+        title: Text(url),
+      ),
+      body: InAppWebView(
+        initialUrlRequest: URLRequest(url: Uri.parse(url)),
+        onWebViewCreated: (controller) {
+          _webViewController = controller;
+        },
+        initialOptions: InAppWebViewGroupOptions(
+          crossPlatform: InAppWebViewOptions(
+            cacheEnabled: true,
+          ),
+        ),
+      ),
     );
   }
 }

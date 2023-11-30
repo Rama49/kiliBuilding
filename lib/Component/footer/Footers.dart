@@ -117,6 +117,7 @@ class Footers extends StatelessWidget {
                       style: TextStyle(color: Colors.white, fontSize: 17)),
                   Text("generer des prospects",
                       style: TextStyle(color: Colors.white, fontSize: 17)),
+                      SizedBox(height: 30),
                  Column(
                     children: [
                       Image.asset('assets/Logo.png', width: 100),
