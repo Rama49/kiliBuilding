@@ -7,10 +7,8 @@ import 'package:kiliwebsite/Reutilisable/Title.dart';
 class Component extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-   
     return Padding(
       padding: EdgeInsets.all(10),
-      
       child: Column(
         children: [
           // Première ligne
@@ -131,5 +129,6 @@ class CardNavigationData {
   final Widget route;
 
   CardNavigationData(
-      this.title, this.subTitle, this.icon, this.iconColor, this.route);
+    this.title, this.subTitle, this.icon, this.iconColor, this.route
+    );
 }

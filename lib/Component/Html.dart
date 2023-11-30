@@ -5,9 +5,8 @@ class Html extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return
-      SingleChildScrollView(
-        child: Text('''  
+    return const SingleChildScrollView(
+      child: Text('''  
       <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN">
     <html>
     <head>
@@ -40,7 +39,6 @@ class Html extends StatelessWidget {
     
     </body>
     </html> '''),
-      
     );
   }
 }
