@@ -7,7 +7,7 @@ class CustomImage extends StatelessWidget {
     return SingleChildScrollView(
       scrollDirection: Axis.horizontal,
       child: 
-      Webview()
+      Webview(),
       // Image.network(
       //   '../../../assets/details.png',
       //   width: 800, // Ajustez la largeur selon vos besoins
