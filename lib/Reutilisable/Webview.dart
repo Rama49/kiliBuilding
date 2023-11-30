@@ -1,74 +1,90 @@
+// Copyright 2013 The Flutter Authors. All rights reserved.
+// Use of this source code is governed by a BSD-style license that can be
+// found in the LICENSE file.
+
+// ignore_for_file: public_member_api_docs
+
+import 'dart:async';
+import 'dart:typed_data';
 import 'package:flutter/material.dart';
-import 'package:webview_flutter/webview_flutter.dart';
+import 'package:webview_flutter_platform_interface/webview_flutter_platform_interface.dart';
+import 'package:webview_flutter_web/webview_flutter_web.dart';
 
 void main() {
-  runApp(MyApp());
+  WebViewPlatform.instance = WebWebViewPlatform();
+  runApp(const MaterialApp(home: Webview()));
 }
 
-class MyApp extends StatelessWidget {
+class Webview extends StatefulWidget {
+  const Webview();
+
+  @override
+  WebviewState createState() => WebviewState();
+}
+
+class WebviewState extends State<Webview> {
+  final PlatformWebViewController _controller = PlatformWebViewController(
+    const PlatformWebViewControllerCreationParams(),
+  )..loadRequest(
+      LoadRequestParams(
+        uri: Uri.parse('https://bakeli-tech.euleukcommunication.sn/'),
+      ),
+    );
+
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      home: Scaffold(
-        appBar: AppBar(
-          title: Text('Navigateur Flutter'),
-        ),
-        body: Browser(),
+    return Scaffold(
+      appBar: AppBar(
+        title: const Text('myyyyyihnjdjhcb'),
+        actions: <Widget>[
+          _SampleMenu(_controller),
+        ],
       ),
+      body: PlatformWebViewWidget(
+        PlatformWebViewWidgetCreationParams(controller: _controller),
+      ).build(context),
     );
   }
 }
 
-class Browser extends StatefulWidget {
-  @override
-  _BrowserState createState() => _BrowserState();
+enum _MenuOptions {
+  doPostRequest,
 }
 
-class _BrowserState extends State<Browser> {
-  late WebViewController _webViewController;
-  TextEditingController _urlController = TextEditingController();
+class _SampleMenu extends StatelessWidget {
+  const _SampleMenu(this.controller);
+
+  final PlatformWebViewController controller;
 
   @override
   Widget build(BuildContext context) {
-    return Column(
-      children: [
-        Row(
-          children: [
-            Expanded(
-              child: TextField(
-                controller: _urlController,
-                decoration: InputDecoration(
-                  hintText: 'Entrez l\'URL',
-                ),
-              ),
-            ),
-            IconButton(
-              icon: Icon(Icons.search),
-              onPressed: () {
-                loadUrl();
-              },
-            ),
-          ],
-        ),
-        Expanded(
-          child: WebViewWidget(
-            initialUrl: 'https://www.google.com', // URL initial
-            onWebViewCreated: (WebViewController webViewController) {
-              _webViewController = webViewController;
-            },
-          ),
+    return PopupMenuButton<_MenuOptions>(
+      onSelected: (_MenuOptions value) {
+        switch (value) {
+          case _MenuOptions.doPostRequest:
+            _onDoPostRequest(controller);
+            break;
+        }
+      },
+      itemBuilder: (BuildContext context) => <PopupMenuItem<_MenuOptions>>[
+        const PopupMenuItem<_MenuOptions>(
+          value: _MenuOptions.doPostRequest,
+          child: Text('Post Request'),
         ),
       ],
     );
   }
 
-  void loadUrl() {
-    String url = _urlController.text;
-    if (url.isNotEmpty) {
-      if (!url.startsWith('http://') && !url.startsWith('https://')) {
-        url = 'http://$url'; // Ajoute le préfixe http:// s'il est manquant
-      }
-      _webViewController.loadUrl(url);
-    }
+  Future<void> _onDoPostRequest(PlatformWebViewController controller) async {
+    final LoadRequestParams params = LoadRequestParams(
+      uri: Uri.parse('https://bakeli-tech.euleukcommunication.sn/'),
+      method: LoadRequestMethod.post,
+      headers: const <String, String>{
+        'foo': 'bar',
+        'Content-Type': 'text/plain'
+      },
+      body: Uint8List.fromList('Test Body'.codeUnits),
+    );
+    await controller.loadRequest(params);
   }
 }
