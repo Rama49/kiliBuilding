@@ -12,7 +12,6 @@ class SidebarMenu extends StatelessWidget {
 
     return Drawer(
     
-      backgroundColor: Colors.red,
       child: Container(
       color: Color.fromRGBO(244, 67, 54, 1),
       child: Padding(
@@ -21,14 +20,17 @@ class SidebarMenu extends StatelessWidget {
           crossAxisAlignment: CrossAxisAlignment.start,
           // mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            // Image.asset(
-            //   "../../../assets/Logo.png", // Remplacez par le chemin de votre logo
-            //   width: 100, // Ajustez la hauteur du logo selon vos besoins
-            // ),
+             Image.asset(
+               "../../../assets/Logo.png", // Remplacez par le chemin de votre logo
+               width: 200, // Ajustez la hauteur du logo selon vos besoins
+             ),
+             SizedBox(height: 25),
             Column(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+
               children: [
                 Padding(
-                  padding: const EdgeInsets.all(10),
+                  padding: const EdgeInsets.only(left: 18),
                   child: InkWell(
                     onTap: () {
                       Navigator.pushNamed(context, '/AncrePRO');
@@ -37,17 +39,14 @@ class SidebarMenu extends StatelessWidget {
                       'Projets',
                       style: TextStyle(
                         color: Colors.white,
-                        fontSize: 15,
+                        fontSize: 25,
                         fontWeight: FontWeight.w600,
                       ),
                     ),
                   ),
                 ),
                 SizedBox(
-                  width: 20,
-                ),
-                SizedBox(
-                  width: 20,
+                  height: 25,
                 ),
                 Padding(
                   padding: const EdgeInsets.all(10),
@@ -59,17 +58,17 @@ class SidebarMenu extends StatelessWidget {
                       'Templates',
                       style: TextStyle(
                         color: Colors.white,
-                        fontSize: 15,
+                        fontSize: 25,
                         fontWeight: FontWeight.w600,
                       ),
                     ),
                   ),
                 ),
                 SizedBox(
-                  width: 20,
+                  height: 25,
                 ),
                 Padding(
-                  padding: const EdgeInsets.all(10),
+                  padding: const EdgeInsets.only(left: 18),
                   child: InkWell(
                     onTap: () {
                       Navigator.pushNamed(context, '/AncreCompo');
@@ -78,20 +77,22 @@ class SidebarMenu extends StatelessWidget {
                       'Composants',
                       style: TextStyle(
                         color: Colors.white,
-                        fontSize: 15,
+                        fontSize: 25,
                         fontWeight: FontWeight.w600,
                       ),
                     ),
                   ),
                 ),
                 SizedBox(
-                  width: 30,
+                  height: 30,
                 ),
               ],
             ),
             Padding(
-              padding: const EdgeInsets.only(left: 0),
+              padding: const EdgeInsets.only(left: 18),
               child: Column(
+                          crossAxisAlignment: CrossAxisAlignment.start,
+
                 children: [
                   Container(
                     margin: const EdgeInsets.all(20),
@@ -136,12 +137,12 @@ class SidebarMenu extends StatelessWidget {
                       child: Container(
                         
                         width: 166,
-                        margin: const EdgeInsets.only(left: 0),
+                        margin: const EdgeInsets.only(left: 8),
                         decoration: BoxDecoration(
                           borderRadius: BorderRadius.circular(8.0),
                           border: Border.all(color: Colors.white),
                         ),
-                        padding: const EdgeInsets.all(9.0),
+                        padding: const EdgeInsets.all(10),
                         child: Container(
                           alignment: Alignment.center,
                           child: const Text(
