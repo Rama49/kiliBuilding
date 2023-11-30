@@ -226,11 +226,11 @@ class _MyListState extends State<MyList> {
                 label: Text("Exporter le code",
                     style: TextStyle(color: Colors.white)),
                 style: ElevatedButton.styleFrom(
-                  primary: Colors.blue, // Couleur du bouton
+                  backgroundColor: Colors.blue, // Couleur du bouton
                   shape: RoundedRectangleBorder(
                     borderRadius: BorderRadius.circular(8.0),
                   ),
-                  padding: EdgeInsets.symmetric(vertical: 14, horizontal: 18),
+                  padding: EdgeInsets.symmetric(vertical: 8, horizontal: 12),
                 ),
               ),
             ],
@@ -238,15 +238,9 @@ class _MyListState extends State<MyList> {
         ),
         // Contenu de la liste
         Expanded(
-          child: ListView(
-            children: [
-              Container(
-                width: double.infinity,
-                child: Webview(),
-              ),
-            ],
-          ),
-        ),
+  child: Webview(),
+),
+
       ],
     );
   }
