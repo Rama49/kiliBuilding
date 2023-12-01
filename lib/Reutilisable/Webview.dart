@@ -28,14 +28,10 @@ class WebviewState extends State<Webview> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: const Text('myyyyyihnjdjhcb'),
-        actions: <Widget>[
-          _SampleMenu(_controller),
-        ],
-      ),
+      
       body: PlatformWebViewWidget(
         PlatformWebViewWidgetCreationParams(controller: _controller),
+        
       ).build(context),
     );
   }
