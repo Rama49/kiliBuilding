@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:cloud_firestore/cloud_firestore.dart';
+import 'package:flutter/services.dart';
 
 class LeftComponent extends StatefulWidget {
   @override
@@ -6,159 +8,64 @@ class LeftComponent extends StatefulWidget {
 }
 
 class _LeftComponentState extends State<LeftComponent> {
-  List<String> componentNames = ["NavBar", "HeroSection", "About"];
-  Map<String, String> componentCodes = {
-    "NavBar": '''
-  import logo from './logo.svg';
-import './App.css';
-import Navbar from './components/Navbar/Navbar';
+  List<String> componentNames = [];
+  Map<String, String> componentCodes = {};
+  String selectedCode = "Cliquez sur l'un des composants";
 
+  @override
+  void initState() {
+    super.initState();
+    // Chargez les données depuis Firestore pour le projet "Online Academy"
+    loadComponentData("Online Academy");
+  }
 
-function App() {
-  return (
-    <div className='App'>
-      <Navbar />
-    </div>
-  );
-}
+  void loadComponentData(String selectedProject) async {
+    try {
+      // Récupérez le document du projet sélectionné
+      QuerySnapshot projectsSnapshot = await FirebaseFirestore.instance
+          .collection('Projets')
+          .where('NomProjet', isEqualTo: selectedProject)
+          .get();
 
-export default App;
+      // Assurez-vous qu'il y a au moins un projet correspondant
+      if (projectsSnapshot.size > 0) {
+        QueryDocumentSnapshot selectedProjectDoc = projectsSnapshot.docs.first;
 
-''',
-    "HeroSection": '''
-import React from 'react';
-import { Breadcrumb, Layout, Menu, theme } from 'antd';
-import Infos from './Infos';
-import Barre from './Menu';
-import Hero from '../Hero';
-import Donation from "../Donation";
+        // Récupérez directement les données de la sous-collection "composants"
+        QuerySnapshot componentsSnapshot =
+            await selectedProjectDoc.reference.collection('composants').get();
 
-const { Header, Content, Footer } = Layout;
+        // Effacez les données précédentes
+        componentNames.clear();
+        componentCodes.clear();
 
-function Navbar() {
-  return (
-    <div>
-      <Infos />
-      <Barre />
-      {/* <Hero /> */}
-      <Donation />
+        // Parcourez chaque document dans la sous-collection "composants"
+        for (QueryDocumentSnapshot component in componentsSnapshot.docs) {
+          // print('${component.id} => ${component.data()}');
 
-    </div>
-  )
-}
+          // Utilisez le champ 'NomComposant' ou le nom de votre champ approprié
+          String componentName = component.get('NomComposant') as String;
+          componentNames.add(componentName);
 
-export default Navbar
-''',
-    "About": '''
-import React from 'react';
-import { BiLogoFacebook } from 'react-icons/bi';
-import { BiLogoTwitter } from 'react-icons/bi';
-import { BiLogoGooglePlus } from 'react-icons/bi';
-import { IoLogoDribbble } from 'react-icons/io';
-import { FaWifi } from 'react-icons/fa';
-import { TiSocialLinkedin } from 'react-icons/ti';
-import { HiMail } from 'react-icons/hi';
-import { FaPhoneAlt } from 'react-icons/fa';
-import { BiChevronDown } from 'react-icons/bi';
-import { Col, Row } from 'antd';
-import styled from 'styled-components';
+          String code = component.get('Code') as String;
+          componentCodes[componentName] = formatCode(code);
+        }
 
-const Tete = styled.div`
-    background-color: #FF0390;
-    color: #fff;
-    
-    .media{
-        display: flex;
-        flex-direction: row;
-        font-family: 'Roboto';
-        font-size: 14px;
-        padding: 10px;
+        setState(() {
+          // Mettez à jour l'interface utilisateur avec les nouvelles données
+        });
+      } else {
+        print('Aucun projet trouvé avec le nom: $selectedProject');
+      }
+    } catch (e) {
+      print('Erreur lors du chargement des données depuis Firestore: $e');
     }
-    .contact{
-        display: flex;
-        flex-direction: row;
-        justify-content: center;
-        padding: 10px;
+  }
 
-        padding-right: 20px;
-        font-family: 'Roboto';
-        font-size: 14px;
-    }
-    .infos{
-        display: flex;
-        width: 90%;
-        align-items: center;
-        width: 90%;
-        margin: 0 auto;
-    }
-`
-
-const Social = styled.div`
-    .icons{
-        width: 18px;
-        height: 18px;
-        padding-left: 5px;
-    }
-`
-
-const Info = styled.div`
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-
-    .icon{
-        padding-right: 7px;
-        width: 18px;
-        height: 18px;
-    }
-
-    .phone{
-        padding-right: 7px;
-    }
-
-    span{
-        padding-inline-end: 10px;
-    }
-`
-
-function Infos() {
-  return (
-    <Tete>
-        <Row justify="center" align="middle" className='infos'>
-            <Col span={14} className='media'>
-                <span>Suivez-nous sur :</span>
-                <Social>
-                    <BiLogoFacebook className='icons' />
-                    <BiLogoTwitter className='icons' />
-                    <BiLogoGooglePlus className='icons' />
-                    <IoLogoDribbble className='icons' />
-                    <FaWifi className='icons' />
-                    <TiSocialLinkedin className='icons' />
-                </Social>
-            </Col>
-            <Col span={10} className='contact'>
-                <Info>
-                    <HiMail className='icon' />
-                    <span>E-mail : demo@example.com</span>
-                </Info>
-                <Info>
-                    <FaPhoneAlt className='phone' />
-                    <span>Téléphone : 0123456789</span>
-                </Info>
-                <Info>
-                    <span>FR</span>
-                    <BiChevronDown className='icon' />
-                </Info>
-            </Col>
-        </Row>
-    </Tete>
-  )
-}
-
-export default Infos
-''',
-  };
-  String selectedCode = "Cliquez sur l'un des composant";
+  String formatCode(String code) {
+    // Remplacez "\n" par un retour à la ligne
+    return code.replaceAll(r"\n", "\n");
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -314,15 +221,17 @@ export default Infos
                     onPressed: () {
                       // Ajoutez ici la logique pour le bouton "save"
                     },
-                    child: Text("Cancel",
-                    style: TextStyle(color: Colors.black),),
+                    child: Text(
+                      "Cancel",
+                      style: TextStyle(color: Colors.black),
+                    ),
                     style: ElevatedButton.styleFrom(
                       backgroundColor: Colors.white,
                       shape: RoundedRectangleBorder(
                         borderRadius: BorderRadius.circular(8.0),
                       ),
-                      padding: EdgeInsets.symmetric(
-                          vertical: 8, horizontal: 12),
+                      padding:
+                          EdgeInsets.symmetric(vertical: 8, horizontal: 12),
                     ),
                   ),
                   SizedBox(width: 16),
@@ -330,15 +239,17 @@ export default Infos
                     onPressed: () {
                       // Ajoutez ici la logique pour le bouton "save"
                     },
-                    child: Text("Save",
-                    style: TextStyle(color: Colors.white),),
+                    child: Text(
+                      "Save",
+                      style: TextStyle(color: Colors.white),
+                    ),
                     style: ElevatedButton.styleFrom(
                       backgroundColor: Colors.purple,
                       shape: RoundedRectangleBorder(
                         borderRadius: BorderRadius.circular(8.0),
                       ),
-                      padding: EdgeInsets.symmetric(
-                          vertical: 8, horizontal: 12),
+                      padding:
+                          EdgeInsets.symmetric(vertical: 8, horizontal: 12),
                     ),
                   ),
                 ],

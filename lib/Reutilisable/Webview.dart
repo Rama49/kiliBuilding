@@ -1,60 +1,84 @@
+import 'dart:async';
+import 'dart:typed_data';
 import 'package:flutter/material.dart';
-import 'package:flutter_inappwebview/flutter_inappwebview.dart';
+import 'package:webview_flutter_platform_interface/webview_flutter_platform_interface.dart';
+import 'package:webview_flutter_web/webview_flutter_web.dart';
+
+void main() {
+  WebViewPlatform.instance = WebWebViewPlatform();
+  runApp(const MaterialApp(home: Webview()));
+}
 
 class Webview extends StatefulWidget {
+  const Webview();
+
   @override
-  _WebviewState createState() => _WebviewState();
+  WebviewState createState() => WebviewState();
 }
 
-class _WebviewState extends State<Webview> {
-  InAppWebViewController? webViewController;
-  String selectedOption = "Home";
-  TextEditingController searchController = TextEditingController();
-  List<String> options = ["Home", "Contact", "Galerie", "Nos activités"];
-
-  @override
-  Widget build(BuildContext context) {
-    return Column(
-      children: [
-        ElevatedButton(
-          onPressed: () {
-            Navigator.of(context).push(MaterialPageRoute(
-              builder: (context) => WebViewContainer(),
-            ));
-          },
-          child: Text('Ouvrir URL'),
-        ),
-      ],
+class WebviewState extends State<Webview> {
+  final PlatformWebViewController _controller = PlatformWebViewController(
+    const PlatformWebViewControllerCreationParams(),
+  )..loadRequest(
+      LoadRequestParams(
+        uri: Uri.parse('https://bakeli-tech.euleukcommunication.sn/'),
+      ),
     );
-  }
-}
-
-class WebViewContainer extends StatefulWidget {
-  @override
-  _WebViewContainerState createState() => _WebViewContainerState();
-}
-
-class _WebViewContainerState extends State<WebViewContainer> {
-  InAppWebViewController? _webViewController;
-  String url = 'https://bakeli-tech.euleukcommunication.sn/';
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text(url),
+        title: const Text('myyyyyihnjdjhcb'),
+        actions: <Widget>[
+          _SampleMenu(_controller),
+        ],
       ),
-      body: InAppWebView(
-        initialUrlRequest: URLRequest(url: Uri.parse(url)),
-        onWebViewCreated: (controller) {
-          _webViewController = controller;
-        },
-        initialOptions: InAppWebViewGroupOptions(
-          crossPlatform: InAppWebViewOptions(
-            cacheEnabled: true,
-          ),
-        ),
-      ),
+      body: PlatformWebViewWidget(
+        PlatformWebViewWidgetCreationParams(controller: _controller),
+      ).build(context),
     );
+  }
+}
+
+enum _MenuOptions {
+  doPostRequest,
+}
+
+class _SampleMenu extends StatelessWidget {
+  const _SampleMenu(this.controller);
+
+  final PlatformWebViewController controller;
+
+  @override
+  Widget build(BuildContext context) {
+    return PopupMenuButton<_MenuOptions>(
+      onSelected: (_MenuOptions value) {
+        switch (value) {
+          case _MenuOptions.doPostRequest:
+            _onDoPostRequest(controller);
+            break;
+        }
+      },
+      itemBuilder: (BuildContext context) => <PopupMenuItem<_MenuOptions>>[
+        const PopupMenuItem<_MenuOptions>(
+          value: _MenuOptions.doPostRequest,
+          child: Text('Post Request'),
+        ),
+      ],
+    );
+  }
+
+  Future<void> _onDoPostRequest(PlatformWebViewController controller) async {
+    final LoadRequestParams params = LoadRequestParams(
+      uri: Uri.parse('https://bakeli-tech.euleukcommunication.sn/'),
+      method: LoadRequestMethod.post,
+      headers: const <String, String>{
+        'foo': 'bar',
+        'Content-Type': 'text/plain'
+      },
+      body: Uint8List.fromList('Test Body'.codeUnits),
+    );
+    await controller.loadRequest(params);
   }
 }

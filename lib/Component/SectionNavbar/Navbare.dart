@@ -15,14 +15,14 @@ class SidebarMenu extends StatelessWidget {
       child: Container(
       color: Color.fromRGBO(244, 67, 54, 1),
       child: Padding(
-        padding: const EdgeInsets.all(0),
+        padding: const EdgeInsets.all(10),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           // mainAxisAlignment: MainAxisAlignment.center,
           children: [
              Image.asset(
                "../../../assets/Logo.png", // Remplacez par le chemin de votre logo
-               width: 200, // Ajustez la hauteur du logo selon vos besoins
+               width: 150, // Ajustez la hauteur du logo selon vos besoins
              ),
              SizedBox(height: 25),
             Column(
@@ -30,7 +30,7 @@ class SidebarMenu extends StatelessWidget {
 
               children: [
                 Padding(
-                  padding: const EdgeInsets.only(left: 18),
+                  padding: const EdgeInsets.only(left: 12),
                   child: InkWell(
                     onTap: () {
                       Navigator.pushNamed(context, '/AncrePRO');
@@ -39,14 +39,14 @@ class SidebarMenu extends StatelessWidget {
                       'Projets',
                       style: TextStyle(
                         color: Colors.white,
-                        fontSize: 25,
+                        fontSize: 20,
                         fontWeight: FontWeight.w600,
                       ),
                     ),
                   ),
                 ),
                 SizedBox(
-                  height: 25,
+                  height: 10,
                 ),
                 Padding(
                   padding: const EdgeInsets.all(10),
@@ -58,17 +58,17 @@ class SidebarMenu extends StatelessWidget {
                       'Templates',
                       style: TextStyle(
                         color: Colors.white,
-                        fontSize: 25,
+                        fontSize: 20,
                         fontWeight: FontWeight.w600,
                       ),
                     ),
                   ),
                 ),
                 SizedBox(
-                  height: 25,
+                  height: 10,
                 ),
                 Padding(
-                  padding: const EdgeInsets.only(left: 18),
+                  padding: const EdgeInsets.only(left: 12),
                   child: InkWell(
                     onTap: () {
                       Navigator.pushNamed(context, '/AncreCompo');
@@ -77,25 +77,25 @@ class SidebarMenu extends StatelessWidget {
                       'Composants',
                       style: TextStyle(
                         color: Colors.white,
-                        fontSize: 25,
+                        fontSize: 20,
                         fontWeight: FontWeight.w600,
                       ),
                     ),
                   ),
                 ),
                 SizedBox(
-                  height: 30,
+                  height: 20,
                 ),
               ],
             ),
             Padding(
-              padding: const EdgeInsets.only(left: 18),
+              padding: const EdgeInsets.only(left: 0),
               child: Column(
                           crossAxisAlignment: CrossAxisAlignment.start,
 
                 children: [
                   Container(
-                    margin: const EdgeInsets.all(20),
+                    margin: const EdgeInsets.all(15),
                     child: InkWell(
                       onTap: () {
                         Navigator.pushNamed(context, '/Conexion');
@@ -103,7 +103,7 @@ class SidebarMenu extends StatelessWidget {
                       
                       child: Container(
                         
-                        width: 166,
+                        width: 130,
                         decoration: BoxDecoration(
                           color: Colors.white,
                           
@@ -133,11 +133,11 @@ class SidebarMenu extends StatelessWidget {
                       Navigator.pushNamed(context, '/Inscription');
                     },
                     child: Padding(
-                      padding: const EdgeInsets.all(10),
+                      padding: const EdgeInsets.all(15),
                       child: Container(
                         
-                        width: 166,
-                        margin: const EdgeInsets.only(left: 8),
+                        width: 130,
+                        margin: const EdgeInsets.only(left: 0),
                         decoration: BoxDecoration(
                           borderRadius: BorderRadius.circular(8.0),
                           border: Border.all(color: Colors.white),

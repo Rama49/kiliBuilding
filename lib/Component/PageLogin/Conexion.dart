@@ -17,7 +17,7 @@ class Conexion extends StatelessWidget {
         body: Container(
       color: Color(0xFFf1f1f1),
       child: Column(
-        mainAxisAlignment: MainAxisAlignment.center,
+        // mainAxisAlignment: MainAxisAlignment.center,
         children: [
           Container(
             color: const Color(0xFFF44336),
@@ -33,15 +33,20 @@ class Conexion extends StatelessWidget {
           ),
           Container(
             width: 700,
+            height: 515,
             color: Colors.white,
             child: Column(children: [
               Container(
                 // margin: EdgeInsets.only(bottom: 5),
-                child: Text(
-                  "Inscrire avec",
-                  style: TextStyle(
-                    fontWeight: FontWeight.w600,
-                    fontSize: 14,
+
+                child: Padding(
+                  padding: const EdgeInsets.only(top: 20),
+                  child: Text(
+                    "Se connecter avec",
+                    style: TextStyle(
+                      fontWeight: FontWeight.w600,
+                      fontSize: 14,
+                    ),
                   ),
                 ),
               ),
@@ -49,11 +54,18 @@ class Conexion extends StatelessWidget {
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
                   Image.asset(
-                    "assets/google.png", // Assurez-vous que le chemin est correct
+                    "assets/Group.png", // Assurez-vous que le chemin est correct
                     width: 100, // Ajustez la largeur selon vos besoins
                     height: 40, // Ajustez la hauteur selon vos besoins
                   ),
-                  Icon(Icons.facebook),
+                  Padding(
+                    padding: const EdgeInsets.all(8),
+                    child: Image.asset(
+                      "assets/Group5.png", // Assurez-vous que le chemin est correct
+                      width: 100, // Ajustez la largeur selon vos besoins
+                      height: 40, // Ajustez la hauteur selon vos besoins
+                    ),
+                  ),
                   SizedBox(
                       width:
                           16.0), // Espace entre les icônes, ajustez selon vos besoins
@@ -61,24 +73,36 @@ class Conexion extends StatelessWidget {
               ),
               SizedBox(height: 10),
               const Text("Ou"),
-              SizedBox(
-                width: 400,
-                child: Column(
-                  children: [
-                    InputForm(placeholder: "Email"),
-                    InputForm(placeholder: "Mot de Passe"),
-                  ],
+              Container(
+                // height: 50,
+                child: SizedBox(
+                  width: 400,
+                  child: Column(
+                    children: [
+                      InputForm(placeholder: "Email",
+                      ),
+                      InputForm(placeholder: "Mot de Passe"),
+                    ],
+                  ),
                 ),
               ),
-              Row(mainAxisAlignment: MainAxisAlignment.spaceEvenly, children: [
+              Padding(
+                padding: const EdgeInsets.only(left: 250),
+                child: Text(
+                  "Mot de passe oublié?",
+                  style: TextStyle(
+                    color: Colors.red, // Change the color to your desired color
+                  ),
+                ),
+              ),
+              const Row(mainAxisAlignment: MainAxisAlignment.center, children: [
                 const Bouton(Title: "Se connecter"),
-                Text("Mot de passe oublier?")
               ]),
               Row(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
                   Text(
-                    "Vous n'a ver pas de compte?",
+                    "Voulais-vous S'inscrit?",
                     style: TextStyle(
                       fontWeight: FontWeight.w600,
                       fontSize: 14,
@@ -97,6 +121,7 @@ class Conexion extends StatelessWidget {
               ),
             ]),
           ),
+          Spacer(),
           Container(
             color: const Color(0xFFF44336),
             child: const Row(
