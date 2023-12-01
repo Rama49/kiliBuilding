@@ -5,19 +5,19 @@ import 'package:cloud_firestore/cloud_firestore.dart';
 
 void main() {
   WebViewPlatform.instance = WebWebViewPlatform();
-  runApp(const MaterialApp(home: Webview()));
+  runApp(const MaterialApp(home: Webview2()));
 }
 
-class Webview extends StatefulWidget {
-  const Webview();
+class Webview2 extends StatefulWidget {
+  const Webview2();
 
   @override
-  WebviewState createState() => WebviewState();
+  Webview2State createState() => Webview2State();
 }
 
-class WebviewState extends State<Webview> {
+class Webview2State extends State<Webview2> {
   PlatformWebViewController? _controller;
-  String id = '4CKI2uYyVQTJGbgbNhZ0'; // Remplacez avec votre ID réel
+  String id = 'nevgP7CzYDlrZym2Vjel'; // Remplacez avec votre ID réel
 
   @override
   void initState() {

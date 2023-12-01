@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:kiliwebsite/Component/SectionBuilding/Building.dart';
+import 'package:kiliwebsite/Reutilisable/BouttonOrang.dart';
 import 'package:kiliwebsite/Reutilisable/CardTemplate.dart';
 import 'package:kiliwebsite/Reutilisable/Title.dart';
 
@@ -24,75 +26,131 @@ class Ancretempl extends StatelessWidget {
             children: [
               Container(
                 child: CardTemplate(
-                  image: Image.asset(
-                    "template.png"
-                  ),
-                  title: "lorem ipsum",
-                  paragraph: "Developpeur React Native",
-                   texte: "Lorem ipsum dolor sit amet consectetur.\nArcu consectetur fringilla gravida mauris.",
-                ),
+  image: Image.asset("template.png"),
+  title: "lorem ipsum",
+  paragraph: "Developpeur React Native",
+  texte: "Lorem ipsum dolor sit amet consectetur.\nArcu consectetur fringilla gravida mauris.",
+  child: BouttonOrange(
+    title: "Voir template",
+    onPress: () {
+      Navigator.push(
+        context,
+        MaterialPageRoute(builder: (context) => BuildingComponent()),
+      );
+    },
+  ),
+),
               ),
             CardTemplate(
-                image: Image.asset(
-                  "template.png",
-                ),
-                title: "lorem ipsum",
-                paragraph: "Developpeur React Native",
-                 texte: "Lorem ipsum dolor sit amet consectetur.\nArcu consectetur fringilla gravida mauris.",
-              ),
+  image: Image.asset("template.png"),
+  title: "lorem ipsum",
+  paragraph: "Developpeur React Native",
+  texte: "Lorem ipsum dolor sit amet consectetur.\nArcu consectetur fringilla gravida mauris.",
+  child: BouttonOrange(
+    title: "Voir template",
+    onPress: () {
+      Navigator.push(
+        context,
+        MaterialPageRoute(builder: (context) => BuildingComponent()),
+      );
+    },
+  ),
+),
               CardTemplate(
-                image: Image.asset(
-                  "template.png",
-                ),
-                title: "lorem ipsum",
-                paragraph: "Developpeur React Native",
-                 texte: "Lorem ipsum dolor sit amet consectetur.\nArcu consectetur fringilla gravida mauris.",
-              ),
+  image: Image.asset("template.png"),
+  title: "lorem ipsum",
+  paragraph: "Developpeur React Native",
+  texte: "Lorem ipsum dolor sit amet consectetur.\nArcu consectetur fringilla gravida mauris.",
+  child: BouttonOrange(
+    title: "Voir template",
+    onPress: () {
+      Navigator.push(
+        context,
+        MaterialPageRoute(builder: (context) => BuildingComponent()),
+      );
+    },
+  ),
+),
               CardTemplate(
-                image: Image.asset(
-                  "template.png"
-                ),
-                title: "lorem ipsum",
-                paragraph: "Developpeur React Native",
-                 texte: "Lorem ipsum dolor sit amet consectetur.\nArcu consectetur fringilla gravida mauris.",
-              ),
+  image: Image.asset("template.png"),
+  title: "lorem ipsum",
+  paragraph: "Developpeur React Native",
+  texte: "Lorem ipsum dolor sit amet consectetur.\nArcu consectetur fringilla gravida mauris.",
+  child: BouttonOrange(
+    title: "Voir template",
+    onPress: () {
+      Navigator.push(
+        context,
+        MaterialPageRoute(builder: (context) => BuildingComponent()),
+      );
+    },
+  ),
+),
             ],
           ),
            Row(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
               CardTemplate(
-                image: Image.asset(
-                  "template.png",
-                ),
-                title: "lorem ipsum",
-                paragraph: "Developpeur React Native",
-                 texte: "Lorem ipsum dolor sit amet consectetur.\nArcu consectetur fringilla gravida mauris.",
-              ),
+  image: Image.asset("template.png"),
+  title: "lorem ipsum",
+  paragraph: "Developpeur React Native",
+  texte: "Lorem ipsum dolor sit amet consectetur.\nArcu consectetur fringilla gravida mauris.",
+  child: BouttonOrange(
+    title: "Voir template",
+    onPress: () {
+      Navigator.push(
+        context,
+        MaterialPageRoute(builder: (context) => BuildingComponent()),
+      );
+    },
+  ),
+),
+             CardTemplate(
+  image: Image.asset("template.png"),
+  title: "lorem ipsum",
+  paragraph: "Developpeur React Native",
+  texte: "Lorem ipsum dolor sit amet consectetur.\nArcu consectetur fringilla gravida mauris.",
+  child: BouttonOrange(
+    title: "Voir template",
+    onPress: () {
+      Navigator.push(
+        context,
+        MaterialPageRoute(builder: (context) => BuildingComponent()),
+      );
+    },
+  ),
+),
               CardTemplate(
-                image: Image.asset(
-                  "template.png",
-                ),
-                title: "lorem ipsum",
-                paragraph: "Developpeur React Native",
-                texte: "Lorem ipsum dolor sit amet consectetur.\nArcu consectetur fringilla gravida mauris.",
-              ),
+  image: Image.asset("template.png"),
+  title: "lorem ipsum",
+  paragraph: "Developpeur React Native",
+  texte: "Lorem ipsum dolor sit amet consectetur.\nArcu consectetur fringilla gravida mauris.",
+  child: BouttonOrange(
+    title: "Voir template",
+    onPress: () {
+      Navigator.push(
+        context,
+        MaterialPageRoute(builder: (context) => BuildingComponent()),
+      );
+    },
+  ),
+),
               CardTemplate(
-                image: Image.asset(
-                  "template.png",
-                ),
-                title: "lorem ipsum",
-                paragraph: "Developpeur React Native",
-                 texte: "Lorem ipsum dolor sit amet consectetur.\nArcu consectetur fringilla gravida mauris.",
-              ),
-              CardTemplate(
-                image: Image.asset(
-                  "template.png",
-                ),
-                title: "lorem ipsum",
-                paragraph: "Developpeur React Native",
-                 texte: "Lorem ipsum dolor sit amet consectetur.\nArcu consectetur fringilla gravida mauris.",
-              ),
+  image: Image.asset("template.png"),
+  title: "lorem ipsum",
+  paragraph: "Developpeur React Native",
+  texte: "Lorem ipsum dolor sit amet consectetur.\nArcu consectetur fringilla gravida mauris.",
+  child: BouttonOrange(
+    title: "Voir template",
+    onPress: () {
+      Navigator.push(
+        context,
+        MaterialPageRoute(builder: (context) => BuildingComponent()),
+      );
+    },
+  ),
+),
             ],
           ),
         ],
@@ -113,75 +171,131 @@ class Ancretempl extends StatelessWidget {
             Column(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
-                CardTemplate(
-                  image: Image.asset(
-                    "template.png"
-                  ),
-                  title: "lorem ipsum",
-                  paragraph: "Developpeur React Native",
-                   texte: "Lorem ipsum dolor sit amet consectetur.\nArcu consectetur fringilla gravida mauris.",
-                ),
               CardTemplate(
-                  image: Image.asset(
-                    "template.png",
-                  ),
-                  title: "lorem ipsum",
-                  paragraph: "Developpeur React Native",
-                   texte: "Lorem ipsum dolor sit amet consectetur.\nArcu consectetur fringilla gravida mauris.",
-                ),
+  image: Image.asset("template.png"),
+  title: "lorem ipsum",
+  paragraph: "Developpeur React Native",
+  texte: "Lorem ipsum dolor sit amet consectetur.\nArcu consectetur fringilla gravida mauris.",
+  child: BouttonOrange(
+    title: "Voir template",
+    onPress: () {
+      Navigator.push(
+        context,
+        MaterialPageRoute(builder: (context) => BuildingComponent()),
+      );
+    },
+  ),
+),
+              CardTemplate(
+  image: Image.asset("template.png"),
+  title: "lorem ipsum",
+  paragraph: "Developpeur React Native",
+  texte: "Lorem ipsum dolor sit amet consectetur.\nArcu consectetur fringilla gravida mauris.",
+  child: BouttonOrange(
+    title: "Voir template",
+    onPress: () {
+      Navigator.push(
+        context,
+        MaterialPageRoute(builder: (context) => BuildingComponent()),
+      );
+    },
+  ),
+),
                 CardTemplate(
-                  image: Image.asset(
-                    "template.png",
-                  ),
-                  title: "lorem ipsum",
-                  paragraph: "Developpeur React Native",
-                   texte: "Lorem ipsum dolor sit amet consectetur.\nArcu consectetur fringilla gravida mauris.",
-                ),
+  image: Image.asset("template.png"),
+  title: "lorem ipsum",
+  paragraph: "Developpeur React Native",
+  texte: "Lorem ipsum dolor sit amet consectetur.\nArcu consectetur fringilla gravida mauris.",
+  child: BouttonOrange(
+    title: "Voir template",
+    onPress: () {
+      Navigator.push(
+        context,
+        MaterialPageRoute(builder: (context) => BuildingComponent()),
+      );
+    },
+  ),
+),
                 CardTemplate(
-                  image: Image.asset(
-                    "template.png",
-                  ),
-                  title: "lorem ipsum",
-                  paragraph: "Developpeur React Native",
-                   texte: "Lorem ipsum dolor sit amet consectetur.\nArcu consectetur fringilla gravida mauris.",
-                ),
+  image: Image.asset("template.png"),
+  title: "lorem ipsum",
+  paragraph: "Developpeur React Native",
+  texte: "Lorem ipsum dolor sit amet consectetur.\nArcu consectetur fringilla gravida mauris.",
+  child: BouttonOrange(
+    title: "Voir template",
+    onPress: () {
+      Navigator.push(
+        context,
+        MaterialPageRoute(builder: (context) => BuildingComponent()),
+      );
+    },
+  ),
+),
               ],
             ),
              Column(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
+               CardTemplate(
+  image: Image.asset("template.png"),
+  title: "lorem ipsum",
+  paragraph: "Developpeur React Native",
+  texte: "Lorem ipsum dolor sit amet consectetur.\nArcu consectetur fringilla gravida mauris.",
+  child: BouttonOrange(
+    title: "Voir template",
+    onPress: () {
+      Navigator.push(
+        context,
+        MaterialPageRoute(builder: (context) => BuildingComponent()),
+      );
+    },
+  ),
+),
                 CardTemplate(
-                  image: Image.asset(
-                    "template.png",
-                  ),
-                  title: "lorem ipsum",
-                  paragraph: "Developpeur React Native",
-                   texte: "Lorem ipsum dolor sit amet consectetur.\nArcu consectetur fringilla gravida mauris.",
-                ),
+  image: Image.asset("template.png"),
+  title: "lorem ipsum",
+  paragraph: "Developpeur React Native",
+  texte: "Lorem ipsum dolor sit amet consectetur.\nArcu consectetur fringilla gravida mauris.",
+  child: BouttonOrange(
+    title: "Voir template",
+    onPress: () {
+      Navigator.push(
+        context,
+        MaterialPageRoute(builder: (context) => BuildingComponent()),
+      );
+    },
+  ),
+),
+               CardTemplate(
+  image: Image.asset("template.png"),
+  title: "lorem ipsum",
+  paragraph: "Developpeur React Native",
+  texte: "Lorem ipsum dolor sit amet consectetur.\nArcu consectetur fringilla gravida mauris.",
+  child: BouttonOrange(
+    title: "Voir template",
+    onPress: () {
+      Navigator.push(
+        context,
+        MaterialPageRoute(builder: (context) => BuildingComponent()),
+      );
+    },
+  ),
+),
                 CardTemplate(
-                  image: Image.asset(
-                    "template.png",
-                  ),
-                  title: "lorem ipsum",
-                  paragraph: "Developpeur React Native",
-                  texte: "Lorem ipsum dolor sit amet consectetur.\nArcu consectetur fringilla gravida mauris.",
-                ),
-                CardTemplate(
-                  image: Image.asset(
-                    "template.png",
-                  ),
-                  title: "lorem ipsum",
-                  paragraph: "Developpeur React Native",
-                   texte: "Lorem ipsum dolor sit amet consectetur.\nArcu consectetur fringilla gravida mauris.",
-                ),
-                CardTemplate(
-                  image: Image.asset(
-                    "template.png",
-                  ),
-                  title: "lorem ipsum",
-                  paragraph: "Developpeur React Native",
-                   texte: "Lorem ipsum dolor sit amet consectetur.\nArcu consectetur fringilla gravida mauris.",
-                ),
+  image: Image.asset("template.png"),
+  title: "lorem ipsum",
+  paragraph: "Developpeur React Native",
+  texte: "Lorem ipsum dolor sit amet consectetur.\nArcu consectetur fringilla gravida mauris.",
+  child: BouttonOrange(
+    title: "Voir template",
+    onPress: () {
+      Navigator.push(
+        context,
+        MaterialPageRoute(builder: (context) => BuildingComponent()),
+      );
+    },
+  ),
+),
               ],
                      ),
           ],
