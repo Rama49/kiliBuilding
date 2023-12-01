@@ -19,6 +19,7 @@ class _LeftComponentState extends State<LeftComponent> {
     loadComponentData("Online Academy");
   }
 
+
   void loadComponentData(String selectedProject) async {
     try {
       // Récupérez le document du projet sélectionné
@@ -61,6 +62,7 @@ class _LeftComponentState extends State<LeftComponent> {
       print('Erreur lors du chargement des données depuis Firestore: $e');
     }
   }
+
 
   String formatCode(String code) {
     // Remplacez "\n" par un retour à la ligne

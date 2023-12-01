@@ -7,10 +7,8 @@ import 'package:kiliwebsite/Reutilisable/Title.dart';
 class Component extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-   
     return Padding(
       padding: EdgeInsets.all(10),
-      
       child: Column(
         children: [
           TitleReu(titre: "Composants", soustexte: ""),

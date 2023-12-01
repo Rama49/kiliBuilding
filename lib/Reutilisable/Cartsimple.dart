@@ -11,7 +11,7 @@ class Cartsimple extends StatelessWidget {
     required this.title,
     required this.subTitle,
     required this.icon,
-    this.iconColor = Colors.red, required Widget route,
+    this.iconColor = Colors.red,
   });
 
   @override
