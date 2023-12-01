@@ -19,7 +19,8 @@ Future main() async {
             apiKey: "AIzaSyAVqcTR9BQwLNf3PNc1Z_RBtHFycVPTGYk",
             appId: "1:472122855308:web:456b03650d040f63e650a9",
             messagingSenderId: "472122855308",
-            projectId: "kili-app-builder-d24ef"));
+            projectId: "kili-app-builder-d24ef"),
+          );
   }
   runApp(const MyApp());
 }

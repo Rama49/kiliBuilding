@@ -1,50 +1,31 @@
 import 'package:flutter/material.dart';
+import 'package:cloud_firestore/cloud_firestore.dart';
 
 class Css extends StatelessWidget {
-  const Css({super.key});
+  const Css({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
-    return
-      SingleChildScrollView(
-        child: Text('''  
-      html, body {
- margin: 0;
- padding: 0;
- }
-body {
- background-color: white; 
- font-family: Verdana, sans-serif; 
- font-size: 100%;
- }
-h1 {
- font-size: 200%; 
- color: navy; 
- text-align: center;
- }
-h2 {
- font-size: 150%; 
- color: red; 
- padding-left: 15px;
- }
-p,ul,li,td {
- color: black; 
- }
-a:link {
- color: green;
- text-decoration: underline;
- }
-a:visited {
- color: gray;
- }
-a:hover {
- color: red;
- text-decoration: none;
-}
-a:active, a:focus {
- color: red;
-} '''),
-      
+    return FutureBuilder(
+      future: FirebaseFirestore.instance.collection('composants').doc('6YahlKgqpo3VSFBGkXL6').get(),
+      builder: (context, snapshot) {
+        if (snapshot.connectionState == ConnectionState.waiting) {
+          return CircularProgressIndicator();
+        }
+
+        if (!snapshot.hasData || !snapshot.data!.exists) {
+          return Text("Aucune donnée trouvée");
+        }
+
+        var cssCode = snapshot.data?['css'];
+
+        return SingleChildScrollView(
+          child: Text(
+            cssCode,
+            textAlign: TextAlign.left,
+          ),
+        );
+      },
     );
   }
 }
