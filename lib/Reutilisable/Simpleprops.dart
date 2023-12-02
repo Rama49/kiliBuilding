@@ -7,6 +7,8 @@ import 'package:kiliwebsite/Component/SectionNavbar/NavbarMenu.dart';
 import 'package:kiliwebsite/Component/SectionSecurite/Securite.dart';
 import 'package:kiliwebsite/Reutilisable/Cartsimple.dart';
 
+
+
 class Simpleprop extends StatelessWidget {
   const Simpleprop({Key? key});
 

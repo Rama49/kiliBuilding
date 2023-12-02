@@ -10,13 +10,15 @@ class CardTemplate extends StatelessWidget {
   final String title;
   final String paragraph;
   final String texte;
+   final Widget child;
 
   const CardTemplate(
       {super.key,
       required this.image,
       required this.title,
       required this.paragraph,
-      required this.texte});
+      required this.texte,
+      required this.child});
 
   @override
   Widget build(BuildContext context) {
@@ -41,14 +43,10 @@ class CardTemplate extends StatelessWidget {
           SizedBox(height: 20),
           Align(
             alignment: Alignment.center, // Aligner le bouton au centre
-            child: Padding(
-              padding: EdgeInsets.only(bottom: 16.0), // Ajouter un padding en bas du bouton
-              child: BouttonOrange(
-                title: "Voir template",
-                onPress: () {    Navigator.push(
-                  context, MaterialPageRoute(builder: (context) => BuildingComponent())); },
-              ),
-            ),
+             child: Padding(
+                    padding: EdgeInsets.only(bottom: 16.0),
+                    child: child, // Ajouter votre bouton réutilisable ici
+                  ),
           ),
         ],
       ),

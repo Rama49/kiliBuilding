@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:kiliwebsite/Reutilisable/Webview.dart';
+import 'package:kiliwebsite/Reutilisable/Webview2.dart';
 
 class CustomImage extends StatelessWidget {
   @override
@@ -7,7 +7,7 @@ class CustomImage extends StatelessWidget {
     return SingleChildScrollView(
       scrollDirection: Axis.horizontal,
       child: 
-      Webview()
+      Webview2()
       // Image.network(
       //   '../../../assets/details.png',
       //   width: 800, // Ajustez la largeur selon vos besoins
@@ -19,12 +19,12 @@ class CustomImage extends StatelessWidget {
 
 }
 
-class MyList extends StatefulWidget{
+class MyList2 extends StatefulWidget{
   @override
-  _MyListState createState() => _MyListState();
+  _MyList2State createState() => _MyList2State();
 }
 
-class _MyListState extends State<MyList> {
+class _MyList2State extends State<MyList2> {
   String selectedOption = "Home";
   TextEditingController searchController = TextEditingController();
   List<String> options = ["Home", "Contact", "Galerie", "Nos activtes"];
@@ -45,7 +45,8 @@ class _MyListState extends State<MyList> {
               ),
             ),
           ),
-          child: Row(
+          child: 
+          Row(
             crossAxisAlignment: CrossAxisAlignment.center,
             children: [
               Container(
@@ -175,7 +176,7 @@ class _MyListState extends State<MyList> {
         ),
         // Contenu de la liste
         Expanded(
-  child: Webview(),
+  child: Webview2(),
 ),
 
       ],
