@@ -16,6 +16,7 @@ class MyInput extends StatelessWidget {
         child: Container(
           color: Colors.white,
           margin: EdgeInsets.only(right:155, left: 155, bottom: 25),
+          padding: EdgeInsets.only(left: 20),
           child: TextFormField(
               decoration: new InputDecoration(
                 labelText: textInput,

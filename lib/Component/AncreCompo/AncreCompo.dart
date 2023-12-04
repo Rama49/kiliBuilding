@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:kiliwebsite/Component/DetailComposant/DetailComposant.dart';
+import 'package:kiliwebsite/Component/DetailComposant/Htmlcssjs.dart';
 import 'package:kiliwebsite/Component/SectionSecurite/Securite.dart';
 import 'package:kiliwebsite/Reutilisable/Cartsimple.dart';
 
@@ -110,7 +111,7 @@ class AncreCompo extends StatelessWidget {
       onTap: () {
         Navigator.push(
           context,
-          MaterialPageRoute(builder: (context) => const DetailComposant()),
+          MaterialPageRoute(builder: (context) => const htmlcssjs()),
         );
       },
       child: Card(

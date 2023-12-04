@@ -24,51 +24,49 @@ class Domaine extends StatelessWidget {
                       return Row(
                         mainAxisAlignment: MainAxisAlignment.center,
                         children: [
-                             Column(
-                            
-                              children: [
-                                Text(
-                                  'React jS',
-                                  style: TextStyle(
-                                    color: Colors.red,
-                                    fontSize: 35,
-                                    fontWeight: FontWeight.w700,
-                                  ),
-                                  textAlign: TextAlign
-                                      .center, // Aligner le texte au centre horizontalement
-                                  softWrap: true,
-                                  overflow: TextOverflow.visible,
+                          Column(
+                            children: [
+                              Text(
+                                'React jS',
+                                style: TextStyle(
+                                  color: Colors.red,
+                                  fontSize: 35,
+                                  fontWeight: FontWeight.w700,
                                 ),
-                                SizedBox(height: 10),
-                                Text(
-                                  'React jS est un framework de développeurs',
-                                  style: TextStyle(
-                                    color: Colors.black,
-                                    fontSize: 16,
-                                    fontWeight: FontWeight.normal,
-                                  ),
-                                
+                                textAlign: TextAlign
+                                    .center, // Aligner le texte au centre horizontalement
+                                softWrap: true,
+                                overflow: TextOverflow.visible,
+                              ),
+                              SizedBox(height: 10),
+                              Text(
+                                'React jS est un framework de développeurs',
+                                style: TextStyle(
+                                  color: Colors.black,
+                                  fontSize: 16,
+                                  fontWeight: FontWeight.normal,
                                 ),
-                                SizedBox(height: 10),
-                                Text(
-                                  'À mesure que vous progressez en tant que développeur, vous êtes plus\n susceptible d’utiliser des technologies qui vous aident à faire plus \nen écrivant moins de code. Un framework frontend solide comme\n Tailwind CSS est un moyen d’y parvenir.',
-                                  style: TextStyle(
-                                    fontSize: 16,
-                                    fontWeight: FontWeight.normal,
-                                  ),
-                                  textAlign: TextAlign.center,
+                              ),
+                              SizedBox(height: 10),
+                              Text(
+                                'À mesure que vous progressez en tant que développeur, vous êtes plus\n susceptible d’utiliser des technologies qui vous aident à faire plus \nen écrivant moins de code. Un framework frontend solide comme\n React est un moyen d’y parvenir.',
+                                style: TextStyle(
+                                  fontSize: 16,
+                                  fontWeight: FontWeight.normal,
                                 ),
-                              ],
-                            ),
+                                textAlign: TextAlign.center,
+                              ),
+                            ],
+                          ),
                           SizedBox(width: 20),
-                             SizedBox(
-                              height: 300,
-                                width: 400, 
-                               child: Image.asset(
-                                'assets/MacBook.png',
-                                // Ajustez la valeur selon vos besoins
-                                                           ),
-                             ),
+                          SizedBox(
+                            height: 300,
+                            width: 400,
+                            child: Image.asset(
+                              'assets/MacBook.png',
+                              // Ajustez la valeur selon vos besoins
+                            ),
+                          ),
                         ],
                       );
                     } else {

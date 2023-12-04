@@ -172,8 +172,8 @@ class Template extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
       CardTemplate(
-  image: Image.asset("template.png"),
-  title: "lorem ipsum",
+  image: Image.asset("tontine.png"),
+  title: "Bakeli Tontine",
   paragraph: "Developpeur React Native",
   texte: "Lorem ipsum dolor sit amet consectetur.\nArcu consectetur fringilla gravida mauris.",
   child: BouttonOrange(
@@ -188,8 +188,8 @@ class Template extends StatelessWidget {
 ),
             
          CardTemplate(
-  image: Image.asset("template.png"),
-  title: "lorem ipsum",
+  image: Image.asset("bakeliTech.png"),
+  title: "bakeli Tech",
   paragraph: "Developpeur React Native",
   texte: "Lorem ipsum dolor sit amet consectetur.\nArcu consectetur fringilla gravida mauris.",
   child: BouttonOrange(
@@ -197,14 +197,14 @@ class Template extends StatelessWidget {
     onPress: () {
       Navigator.push(
         context,
-        MaterialPageRoute(builder: (context) => BuildingComponent()),
+        MaterialPageRoute(builder: (context) => BuildingComponent1()),
       );
     },
   ),
 ),
            CardTemplate(
-  image: Image.asset("template.png"),
-  title: "lorem ipsum",
+  image: Image.asset("easymembership.png"),
+  title: "Easy Membership",
   paragraph: "Developpeur React Native",
   texte: "Lorem ipsum dolor sit amet consectetur.\nArcu consectetur fringilla gravida mauris.",
   child: BouttonOrange(
@@ -212,14 +212,14 @@ class Template extends StatelessWidget {
     onPress: () {
       Navigator.push(
         context,
-        MaterialPageRoute(builder: (context) => BuildingComponent()),
+        MaterialPageRoute(builder: (context) => BuildingComponent2()),
       );
     },
   ),
            ),
            CardTemplate(
-  image: Image.asset("template.png"),
-  title: "lorem ipsum",
+  image: Image.asset("keurYeurmande.png"),
+  title: "keur Yeurmande",
   paragraph: "Developpeur React Native",
   texte: "Lorem ipsum dolor sit amet consectetur.\nArcu consectetur fringilla gravida mauris.",
   child: BouttonOrange(
@@ -227,7 +227,7 @@ class Template extends StatelessWidget {
     onPress: () {
       Navigator.push(
         context,
-        MaterialPageRoute(builder: (context) => BuildingComponent()),
+        MaterialPageRoute(builder: (context) => BuildingComponent3()),
       );
     },
   ),
@@ -238,7 +238,7 @@ class Template extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
            CardTemplate(
-  image: Image.asset("template.png"),
+  image: Image.asset("kiliappbuilder.png"),
   title: "lorem ipsum",
   paragraph: "Developpeur React Native",
   texte: "Lorem ipsum dolor sit amet consectetur.\nArcu consectetur fringilla gravida mauris.",
@@ -253,7 +253,7 @@ class Template extends StatelessWidget {
   ),
 ),
             CardTemplate(
-  image: Image.asset("template.png"),
+  image: Image.asset("keurYeurmande.png"),
   title: "lorem ipsum",
   paragraph: "Developpeur React Native",
   texte: "Lorem ipsum dolor sit amet consectetur.\nArcu consectetur fringilla gravida mauris.",
@@ -262,14 +262,14 @@ class Template extends StatelessWidget {
     onPress: () {
       Navigator.push(
         context,
-        MaterialPageRoute(builder: (context) => BuildingComponent()),
+        MaterialPageRoute(builder: (context) => BuildingComponent3()),
       );
     },
   ),
 ),
             CardTemplate(
-  image: Image.asset("template.png"),
-  title: "lorem ipsum",
+  image: Image.asset("easymembership.png"),
+  title: "Easy Membership",
   paragraph: "Developpeur React Native",
   texte: "Lorem ipsum dolor sit amet consectetur.\nArcu consectetur fringilla gravida mauris.",
   child: BouttonOrange(
@@ -277,13 +277,13 @@ class Template extends StatelessWidget {
     onPress: () {
       Navigator.push(
         context,
-        MaterialPageRoute(builder: (context) => BuildingComponent()),
+        MaterialPageRoute(builder: (context) => BuildingComponent2()),
       );
     },
   ),
 ),
             CardTemplate(
-  image: Image.asset("template.png"),
+  image: Image.asset("tontine.png"),
   title: "lorem ipsum",
   paragraph: "Developpeur React Native",
   texte: "Lorem ipsum dolor sit amet consectetur.\nArcu consectetur fringilla gravida mauris.",

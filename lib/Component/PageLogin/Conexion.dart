@@ -102,7 +102,7 @@ class Conexion extends StatelessWidget {
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
                   Text(
-                    "Voulais-vous S'inscrit?",
+                    "Vous n'avez pas de compte?",
                     style: TextStyle(
                       fontWeight: FontWeight.w600,
                       fontSize: 14,

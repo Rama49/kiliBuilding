@@ -1,5 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:kiliwebsite/Component/SectionBuilding/Building.dart';
+import 'package:kiliwebsite/Component/SectionBuilding/Building1.dart';
+import 'package:kiliwebsite/Component/SectionBuilding/Building2.dart';
+import 'package:kiliwebsite/Component/SectionBuilding/Building3.dart';
 import 'package:kiliwebsite/Reutilisable/BouttonOrang.dart';
 import 'package:kiliwebsite/Reutilisable/CardTemplate.dart';
 import 'package:kiliwebsite/Reutilisable/Title.dart';
@@ -26,8 +29,8 @@ class Ancretempl extends StatelessWidget {
             children: [
               Container(
                 child: CardTemplate(
-  image: Image.asset("template.png"),
-  title: "lorem ipsum",
+  image: Image.asset("tontine.png"),
+  title: "Fewnu Tontine",
   paragraph: "Developpeur React Native",
   texte: "Lorem ipsum dolor sit amet consectetur.\nArcu consectetur fringilla gravida mauris.",
   child: BouttonOrange(
@@ -42,8 +45,8 @@ class Ancretempl extends StatelessWidget {
 ),
               ),
             CardTemplate(
-  image: Image.asset("template.png"),
-  title: "lorem ipsum",
+  image: Image.asset("bakelitech.png"),
+  title: "Bakeli Tech",
   paragraph: "Developpeur React Native",
   texte: "Lorem ipsum dolor sit amet consectetur.\nArcu consectetur fringilla gravida mauris.",
   child: BouttonOrange(
@@ -51,14 +54,14 @@ class Ancretempl extends StatelessWidget {
     onPress: () {
       Navigator.push(
         context,
-        MaterialPageRoute(builder: (context) => BuildingComponent()),
+        MaterialPageRoute(builder: (context) => BuildingComponent1()),
       );
     },
   ),
 ),
               CardTemplate(
-  image: Image.asset("template.png"),
-  title: "lorem ipsum",
+  image: Image.asset("easymembership.png"),
+  title: "Easy Membership",
   paragraph: "Developpeur React Native",
   texte: "Lorem ipsum dolor sit amet consectetur.\nArcu consectetur fringilla gravida mauris.",
   child: BouttonOrange(
@@ -66,14 +69,14 @@ class Ancretempl extends StatelessWidget {
     onPress: () {
       Navigator.push(
         context,
-        MaterialPageRoute(builder: (context) => BuildingComponent()),
+        MaterialPageRoute(builder: (context) => BuildingComponent2()),
       );
     },
   ),
 ),
               CardTemplate(
-  image: Image.asset("template.png"),
-  title: "lorem ipsum",
+  image: Image.asset("keuryeurmande.png"),
+  title: "Keur Yeurmande",
   paragraph: "Developpeur React Native",
   texte: "Lorem ipsum dolor sit amet consectetur.\nArcu consectetur fringilla gravida mauris.",
   child: BouttonOrange(
@@ -81,7 +84,7 @@ class Ancretempl extends StatelessWidget {
     onPress: () {
       Navigator.push(
         context,
-        MaterialPageRoute(builder: (context) => BuildingComponent()),
+        MaterialPageRoute(builder: (context) => BuildingComponent3()),
       );
     },
   ),
@@ -92,8 +95,8 @@ class Ancretempl extends StatelessWidget {
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
               CardTemplate(
-  image: Image.asset("template.png"),
-  title: "lorem ipsum",
+  image: Image.asset("keuryeurmande.png"),
+  title: "Keur Yeurmande",
   paragraph: "Developpeur React Native",
   texte: "Lorem ipsum dolor sit amet consectetur.\nArcu consectetur fringilla gravida mauris.",
   child: BouttonOrange(
@@ -101,14 +104,14 @@ class Ancretempl extends StatelessWidget {
     onPress: () {
       Navigator.push(
         context,
-        MaterialPageRoute(builder: (context) => BuildingComponent()),
+        MaterialPageRoute(builder: (context) => BuildingComponent3()),
       );
     },
   ),
 ),
              CardTemplate(
-  image: Image.asset("template.png"),
-  title: "lorem ipsum",
+  image: Image.asset("easymembership.png"),
+  title: "Easy Membership",
   paragraph: "Developpeur React Native",
   texte: "Lorem ipsum dolor sit amet consectetur.\nArcu consectetur fringilla gravida mauris.",
   child: BouttonOrange(
@@ -116,14 +119,14 @@ class Ancretempl extends StatelessWidget {
     onPress: () {
       Navigator.push(
         context,
-        MaterialPageRoute(builder: (context) => BuildingComponent()),
+        MaterialPageRoute(builder: (context) => BuildingComponent2()),
       );
     },
   ),
 ),
               CardTemplate(
-  image: Image.asset("template.png"),
-  title: "lorem ipsum",
+  image: Image.asset("bakelitech.png"),
+  title: "Bakeli Tech",
   paragraph: "Developpeur React Native",
   texte: "Lorem ipsum dolor sit amet consectetur.\nArcu consectetur fringilla gravida mauris.",
   child: BouttonOrange(
@@ -131,14 +134,14 @@ class Ancretempl extends StatelessWidget {
     onPress: () {
       Navigator.push(
         context,
-        MaterialPageRoute(builder: (context) => BuildingComponent()),
+        MaterialPageRoute(builder: (context) => BuildingComponent1()),
       );
     },
   ),
 ),
               CardTemplate(
-  image: Image.asset("template.png"),
-  title: "lorem ipsum",
+  image: Image.asset("tontine.png"),
+  title: "Bakeli Tontine",
   paragraph: "Developpeur React Native",
   texte: "Lorem ipsum dolor sit amet consectetur.\nArcu consectetur fringilla gravida mauris.",
   child: BouttonOrange(
@@ -172,8 +175,8 @@ class Ancretempl extends StatelessWidget {
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
               CardTemplate(
-  image: Image.asset("template.png"),
-  title: "lorem ipsum",
+  image: Image.asset("tontine.png"),
+  title: "Bakeli Tontine",
   paragraph: "Developpeur React Native",
   texte: "Lorem ipsum dolor sit amet consectetur.\nArcu consectetur fringilla gravida mauris.",
   child: BouttonOrange(
@@ -187,8 +190,8 @@ class Ancretempl extends StatelessWidget {
   ),
 ),
               CardTemplate(
-  image: Image.asset("template.png"),
-  title: "lorem ipsum",
+  image: Image.asset("bakelitech.png"),
+  title: "Bakeli Tech",
   paragraph: "Developpeur React Native",
   texte: "Lorem ipsum dolor sit amet consectetur.\nArcu consectetur fringilla gravida mauris.",
   child: BouttonOrange(
@@ -196,14 +199,14 @@ class Ancretempl extends StatelessWidget {
     onPress: () {
       Navigator.push(
         context,
-        MaterialPageRoute(builder: (context) => BuildingComponent()),
+        MaterialPageRoute(builder: (context) => BuildingComponent1()),
       );
     },
   ),
 ),
                 CardTemplate(
-  image: Image.asset("template.png"),
-  title: "lorem ipsum",
+  image: Image.asset("easymembership.png"),
+  title: "Easy Membership",
   paragraph: "Developpeur React Native",
   texte: "Lorem ipsum dolor sit amet consectetur.\nArcu consectetur fringilla gravida mauris.",
   child: BouttonOrange(
@@ -211,14 +214,14 @@ class Ancretempl extends StatelessWidget {
     onPress: () {
       Navigator.push(
         context,
-        MaterialPageRoute(builder: (context) => BuildingComponent()),
+        MaterialPageRoute(builder: (context) => BuildingComponent2()),
       );
     },
   ),
 ),
                 CardTemplate(
-  image: Image.asset("template.png"),
-  title: "lorem ipsum",
+  image: Image.asset("keuryeurmande.png"),
+  title: "Keur Yeurmande",
   paragraph: "Developpeur React Native",
   texte: "Lorem ipsum dolor sit amet consectetur.\nArcu consectetur fringilla gravida mauris.",
   child: BouttonOrange(
@@ -226,7 +229,7 @@ class Ancretempl extends StatelessWidget {
     onPress: () {
       Navigator.push(
         context,
-        MaterialPageRoute(builder: (context) => BuildingComponent()),
+        MaterialPageRoute(builder: (context) => BuildingComponent3()),
       );
     },
   ),
@@ -237,8 +240,8 @@ class Ancretempl extends StatelessWidget {
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
                CardTemplate(
-  image: Image.asset("template.png"),
-  title: "lorem ipsum",
+  image: Image.asset("keuryeurmande.png"),
+  title: "Keur Yeurmande",
   paragraph: "Developpeur React Native",
   texte: "Lorem ipsum dolor sit amet consectetur.\nArcu consectetur fringilla gravida mauris.",
   child: BouttonOrange(
@@ -246,14 +249,14 @@ class Ancretempl extends StatelessWidget {
     onPress: () {
       Navigator.push(
         context,
-        MaterialPageRoute(builder: (context) => BuildingComponent()),
+        MaterialPageRoute(builder: (context) => BuildingComponent3()),
       );
     },
   ),
 ),
                 CardTemplate(
-  image: Image.asset("template.png"),
-  title: "lorem ipsum",
+  image: Image.asset("easymembership.png"),
+  title: "Easy Membership",
   paragraph: "Developpeur React Native",
   texte: "Lorem ipsum dolor sit amet consectetur.\nArcu consectetur fringilla gravida mauris.",
   child: BouttonOrange(
@@ -261,14 +264,14 @@ class Ancretempl extends StatelessWidget {
     onPress: () {
       Navigator.push(
         context,
-        MaterialPageRoute(builder: (context) => BuildingComponent()),
+        MaterialPageRoute(builder: (context) => BuildingComponent2()),
       );
     },
   ),
 ),
                CardTemplate(
-  image: Image.asset("template.png"),
-  title: "lorem ipsum",
+  image: Image.asset("bakelitech.png"),
+  title: "Bakeli Tech",
   paragraph: "Developpeur React Native",
   texte: "Lorem ipsum dolor sit amet consectetur.\nArcu consectetur fringilla gravida mauris.",
   child: BouttonOrange(
@@ -276,14 +279,14 @@ class Ancretempl extends StatelessWidget {
     onPress: () {
       Navigator.push(
         context,
-        MaterialPageRoute(builder: (context) => BuildingComponent()),
+        MaterialPageRoute(builder: (context) => BuildingComponent1()),
       );
     },
   ),
 ),
                 CardTemplate(
-  image: Image.asset("template.png"),
-  title: "lorem ipsum",
+  image: Image.asset("tontine.png"),
+  title: "Bakeli Tontine",
   paragraph: "Developpeur React Native",
   texte: "Lorem ipsum dolor sit amet consectetur.\nArcu consectetur fringilla gravida mauris.",
   child: BouttonOrange(
