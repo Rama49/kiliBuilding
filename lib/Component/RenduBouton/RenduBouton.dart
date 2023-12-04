@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
-class Rendu extends StatelessWidget {
-  const Rendu({Key? key});
+class RenduBouton extends StatelessWidget {
+  const RenduBouton({Key? key});
 
   @override
   Widget build(BuildContext context) {
@@ -22,7 +22,7 @@ class Rendu extends StatelessWidget {
                     ),
                   ),
                 ),
-                Image.asset('assets/navbar.png', width: double.infinity, height: 400),
+                Image.asset('assets/bouton.png', width: double.infinity, height: 400),
               ],
             ),
           )
@@ -40,7 +40,7 @@ class Rendu extends StatelessWidget {
                     ),
                   ),
                 ),
-                Image.asset('assets/navbar.png', height: 225),
+                Image.asset('assets/bouton.png', height: 225),
               ],
             ),
           );

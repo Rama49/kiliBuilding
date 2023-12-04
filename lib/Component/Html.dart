@@ -1,53 +1,34 @@
 import 'package:flutter/material.dart';
+import 'package:cloud_firestore/cloud_firestore.dart';
+import 'package:flutter_highlight/flutter_highlight.dart';
+import 'package:flutter_highlight/themes/github.dart';
 
 class Html extends StatelessWidget {
+  // ignore: use_super_parameters
   const Html({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
-    return const  Column(
-      // crossAxisAlignment: CrossAxisAlignment.start,
-      children: [
-        SingleChildScrollView(
-          child: Text(
-            '''  
-<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN">
-  <html>
-    <head>
-        <title>Ma première page avec du style</title>
-    </head>
-                      
-      <body>
-                      
-        <!-- Menu de navigation du site -->
-        <ul class="navbar">
-        <li><a href="index.html">Home page</a>
-        <li><a href="reflexions.html">Réflexions</a>
-        <li><a href="ville.html">Ma ville</a>
-        <li><a href="liens.html">Liens</a>
-        </ul>
-                      
-        <!-- Contenu principal -->
-        <h1>Ma première page avec du style</h1>
-                      
-        <p>Bienvenue sur ma page avec du style! 
-                      
-        <p>Il lui manque des images, mais au moins, elle a du style. Et elle a des liens, même s'ils ne mènent nulle part...
-        &hellip;
-                      
-        <p>Je devrais étayer, mais je ne sais comment encore.
-                      
-        <!-- Signer et dater la page, c'est une question de politesse! -->
-        <address>Fait le 5 avril 2004<br>
-        par moi.</address>
-                      
-      </body>
-  </html> 
-            ''',
-            textAlign: TextAlign.left,
+    return FutureBuilder(
+      future: FirebaseFirestore.instance.collection('composants').doc('6YahlKgqpo3VSFBGkXL6').get(),
+      builder: (context, snapshot) {
+        if (snapshot.connectionState == ConnectionState.waiting) {
+          return const CircularProgressIndicator();
+        }
+        if (!snapshot.hasData || !snapshot.data!.exists) {
+          return const Text("Aucune donnée trouvée");
+        }
+        var htmlCode = snapshot.data?['html'];
+        // Ajoutez ces deux lignes pour remplacer les sauts de ligne codés "\n" par de vrais sauts de ligne
+        htmlCode = htmlCode.replaceAll(r'\n', '\n');
+        return SingleChildScrollView(
+          child: HighlightView(
+            htmlCode,
+            language: 'html',
+            theme: githubTheme,
           ),
-        ),
-      ],
+        );
+      },
     );
   }
 }
