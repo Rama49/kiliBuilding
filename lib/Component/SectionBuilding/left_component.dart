@@ -205,7 +205,7 @@ class _LeftComponentState extends State<LeftComponent> {
             children: [
               MaterialButton(
                 onPressed: () {
-                  // Ajoutez ici la logique pour le bouton "delete"
+                  // Ajoutez ici la logique pour le bouto                     n "delete"
                 },
                 child: Container(
                   decoration: BoxDecoration(
