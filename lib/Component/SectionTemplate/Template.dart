@@ -3,6 +3,10 @@ import 'package:kiliwebsite/Component/SectionBuilding/Building.dart';
 import 'package:kiliwebsite/Component/SectionBuilding/Building1.dart';
 import 'package:kiliwebsite/Component/SectionBuilding/Building2.dart';
 import 'package:kiliwebsite/Component/SectionBuilding/Building3.dart';
+import 'package:kiliwebsite/Component/SectionBuilding/Building4.dart';
+import 'package:kiliwebsite/Component/SectionBuilding/Building5.dart';
+import 'package:kiliwebsite/Component/SectionBuilding/Building6.dart';
+import 'package:kiliwebsite/Component/SectionBuilding/Building7.dart';
 import 'package:kiliwebsite/Reutilisable/BouttonOrang.dart';
 import 'package:kiliwebsite/Reutilisable/CardTemplate.dart';
 import 'package:kiliwebsite/Reutilisable/Title.dart';
@@ -95,8 +99,8 @@ class Template extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
            CardTemplate(
-  image: Image.asset("kiliappbuilder.png"),
-  title: "kili App Builder",
+  image: Image.asset("nike.png"),
+  title: "Nike Sneakers",
   paragraph: "Developpeur React Native",
   texte: "Lorem ipsum dolor sit amet consectetur.\nArcu consectetur fringilla gravida mauris.",
   child: BouttonOrange(
@@ -104,14 +108,14 @@ class Template extends StatelessWidget {
     onPress: () {
       Navigator.push(
         context,
-        MaterialPageRoute(builder: (context) => BuildingComponent()),
+        MaterialPageRoute(builder: (context) => BuildingComponent4()),
       );
     },
   ),
 ),
            CardTemplate(
-  image: Image.asset("keurYeurmande.png"),
-  title: "lorem ipsum",
+  image: Image.asset("paymentmethod.png"),
+  title: "Payment Method",
   paragraph: "Developpeur React Native",
   texte: "Lorem ipsum dolor sit amet consectetur.\nArcu consectetur fringilla gravida mauris.",
   child: BouttonOrange(
@@ -119,14 +123,14 @@ class Template extends StatelessWidget {
     onPress: () {
       Navigator.push(
         context,
-        MaterialPageRoute(builder: (context) => BuildingComponent()),
+        MaterialPageRoute(builder: (context) => BuildingComponent5()),
       );
     },
   ),
 ),
            CardTemplate(
-  image: Image.asset("easymembership.png"),
-  title: "lorem ipsum",
+  image: Image.asset("travelholiday.png"),
+  title: "Travel Holiday",
   paragraph: "Developpeur React Native",
   texte: "Lorem ipsum dolor sit amet consectetur.\nArcu consectetur fringilla gravida mauris.",
   child: BouttonOrange(
@@ -134,14 +138,14 @@ class Template extends StatelessWidget {
     onPress: () {
       Navigator.push(
         context,
-        MaterialPageRoute(builder: (context) => BuildingComponent()),
+        MaterialPageRoute(builder: (context) => BuildingComponent6()),
       );
     },
   ),
 ),
             CardTemplate(
-  image: Image.asset("tontine.png"),
-  title: "lorem ipsum",
+  image: Image.asset("dashboard.png"),
+  title: "Dashboard",
   paragraph: "Developpeur React Native",
   texte: "Lorem ipsum dolor sit amet consectetur.\nArcu consectetur fringilla gravida mauris.",
   child: BouttonOrange(
@@ -149,7 +153,7 @@ class Template extends StatelessWidget {
     onPress: () {
       Navigator.push(
         context,
-        MaterialPageRoute(builder: (context) => BuildingComponent()),
+        MaterialPageRoute(builder: (context) => BuildingComponent7()),
       );
     },
   ),
@@ -254,7 +258,7 @@ class Template extends StatelessWidget {
 ),
             CardTemplate(
   image: Image.asset("keurYeurmande.png"),
-  title: "lorem ipsum",
+  title: "keur Yeurmande",
   paragraph: "Developpeur React Native",
   texte: "Lorem ipsum dolor sit amet consectetur.\nArcu consectetur fringilla gravida mauris.",
   child: BouttonOrange(
