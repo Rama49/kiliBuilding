@@ -72,7 +72,7 @@ class LoginSignUp extends StatelessWidget {
                   ],
                 ),
               ),
-              const Bouton(Title: "S'inscrire"),
+              const Bouton(Title: "S'inscrire",),
               Row(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
@@ -87,7 +87,7 @@ class LoginSignUp extends StatelessWidget {
                     title: "S'inscrire",
                    onPress: () {
               Navigator.push(
-                  context, MaterialPageRoute(builder: (context) => Conexion()));
+                  context, MaterialPageRoute(builder: (context) => Connexion()));
             },
                   )
                 ],

@@ -38,7 +38,7 @@ class MyApp extends StatelessWidget {
       ),
       home: HomePage(),
       routes: {
-        '/Conexion': (context) => Conexion(),
+        '/Conexion': (context) => Connexion(),
         '/Inscription': (context) => Inscription(),
         '/DetailComposant': (context) => DetailComposant(),
         '/AncrePRO': (context) => AncrePRO(),

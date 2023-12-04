@@ -10,7 +10,7 @@ import 'package:kiliwebsite/Component/footer/Footers.dart';
 import 'package:kiliwebsite/screen/responsive.dart';
 
 // ignore: unused_import
-class HomePage extends StatelessWidget {
+class  HomePage extends StatelessWidget {
   HomePage({Key? key}) : super(key: key);
 
   @override

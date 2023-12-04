@@ -105,6 +105,30 @@ packages:
       url: "https://pub.dev"
     source: hosted
     version: "2.1.0"
+  firebase_auth:
+    dependency: "direct main"
+    description:
+      name: firebase_auth
+      sha256: "869ff488c7b467e273d7be223f52d3d026576b6e1da92dcd136ff627ae0a8c67"
+      url: "https://pub.dev"
+    source: hosted
+    version: "4.15.0"
+  firebase_auth_platform_interface:
+    dependency: transitive
+    description:
+      name: firebase_auth_platform_interface
+      sha256: ecf9f78ae1a7a1297de01ec975e9e2cfe5b543589b27cc5969849d9a8dc46999
+      url: "https://pub.dev"
+    source: hosted
+    version: "7.0.6"
+  firebase_auth_web:
+    dependency: transitive
+    description:
+      name: firebase_auth_web
+      sha256: "96f89e2340cdf373109cb29afec401c170aa2d98fb0833687793c8017e36f435"
+      url: "https://pub.dev"
+    source: hosted
+    version: "5.8.9"
   firebase_core:
     dependency: "direct main"
     description:
@@ -156,18 +180,18 @@ packages:
     dependency: "direct main"
     description:
       name: google_fonts
-      sha256: e70521755a6b08c6bde14ddae27dff5bf21010033888fc61da6c595f8a9f58c1
+      sha256: f0b8d115a13ecf827013ec9fc883390ccc0e87a96ed5347a3114cac177ef18e8
       url: "https://pub.dev"
     source: hosted
-    version: "2.3.3"
+    version: "6.1.0"
   http:
     dependency: transitive
     description:
       name: http
-      sha256: "5895291c13fa8a3bd82e76d5627f69e0d85ca6a30dcac95c4ea19a5d555879c2"
+      sha256: d4872660c46d929f6b8a9ef4e7a7eff7e49bbf0c4ec3f385ee32df5119175139
       url: "https://pub.dev"
     source: hosted
-    version: "0.13.6"
+    version: "1.1.2"
   http_parser:
     dependency: transitive
     description:
@@ -216,6 +240,14 @@ packages:
       url: "https://pub.dev"
     source: hosted
     version: "1.10.0"
+  nested:
+    dependency: transitive
+    description:
+      name: nested
+      sha256: "03bac4c528c64c95c722ec99280375a6f2fc708eec17c7b3f07253b626cd2a20"
+      url: "https://pub.dev"
+    source: hosted
+    version: "1.0.0"
   path:
     dependency: transitive
     description:
@@ -288,6 +320,14 @@ packages:
       url: "https://pub.dev"
     source: hosted
     version: "2.1.7"
+  provider:
+    dependency: "direct main"
+    description:
+      name: provider
+      sha256: "9a96a0a19b594dbc5bf0f1f27d2bc67d5f95957359b461cd9feb44ed6ae75096"
+      url: "https://pub.dev"
+    source: hosted
+    version: "6.1.1"
   sky_engine:
     dependency: transitive
     description: flutter
