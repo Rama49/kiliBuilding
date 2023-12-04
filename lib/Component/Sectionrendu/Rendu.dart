@@ -1,38 +1,14 @@
 import 'package:flutter/material.dart';
-import 'package:firebase_storage/firebase_storage.dart' as firebase_storage;
 
 class Rendu extends StatelessWidget {
   const Rendu({Key? key});
 
   @override
   Widget build(BuildContext context) {
-    return FutureBuilder(
-      future: getImageUrl(),
-      builder: (context, snapshot) {
-        if (snapshot.connectionState == ConnectionState.waiting) {
-          return CircularProgressIndicator();
-        }
-
-        if (snapshot.hasError) {
-          return Text('Erreur: ${snapshot.error}');
-        }
-
-        if (!snapshot.hasData || snapshot.data == null) {
-          return Text('Aucune donnée trouvée');
-        }
-
-        String imageUrl = snapshot.data.toString();
-
-        return buildImageContainer(context, imageUrl);
-      },
-    );
-  }
-
-  Widget buildImageContainer(BuildContext context, String imageUrl) {
-    var screen = MediaQuery.of(context).size;
-
-    return Container(
-      child: Column(
+    var Screen = MediaQuery.of(context).size;
+    return Screen.width > 768
+     ? Container(
+       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           Padding(
@@ -41,35 +17,37 @@ class Rendu extends StatelessWidget {
               'Rendu',
               style: TextStyle(
                 color: Colors.red,
-                fontSize: 18,
-                fontWeight: FontWeight.bold,
+                fontSize: 18, // Changer la taille du texte du titre si nécessaire
+                fontWeight: FontWeight.bold, // Changer le style du texte du titre si nécessaire
               ),
             ),
           ),
+          // SizedBox(height: 20),
           Container(
-            child: Image.network(
-              imageUrl,
-              width: double.infinity,
-              height: screen.width > 768 ? 400 : 225,
+            child: Image.asset('assets/navbar.png',width: double.infinity,height: 400,)),
+        ],
+           ),
+      )
+     :Container(
+       child: Column(
+        // crossAxisAlignment: CrossAxisAlignment.start,
+        children: [
+          Padding(
+            padding: const EdgeInsets.all(25),
+            child: Text(
+              'Rendu',
+              style: TextStyle(
+                color: Colors.red,
+                fontSize: 18, // Changer la taille du texte du titre si nécessaire
+                fontWeight: FontWeight.bold, // Changer le style du texte du titre si nécessaire
+              ),
             ),
           ),
+          // SizedBox(height: ),
+          
+           Image.asset('assets/navbar.png',  height: 225,),
         ],
-      ),
-    );
-  }
-
-  Future<String> getImageUrl() async {
-    String imageName = 'navbar.png';
-
-    try {
-      var imageUrl = await firebase_storage.FirebaseStorage.instance
-          .ref('composants/$imageName')
-          .getDownloadURL();
-
-      return imageUrl;
-    } catch (e) {
-      print('Erreur lors du chargement de l\'image depuis Firebase Storage: $e');
-      return '';
-    }
+           ),
+     );
   }
 }
