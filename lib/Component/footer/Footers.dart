@@ -3,6 +3,7 @@ import 'package:flutter/services.dart';
 import 'package:kiliwebsite/Reutilisable/FooterElement.dart';
 import 'package:kiliwebsite/Reutilisable/Input.dart';
 import 'package:kiliwebsite/Reutilisable/Inputfooter.dart';
+import 'package:url_launcher/url_launcher.dart';
 
 class Footers extends StatelessWidget {
   const Footers({super.key});
@@ -56,13 +57,31 @@ class Footers extends StatelessWidget {
                       SizedBox(height: 20),
                       Row(
                         children: [
-                          Image.asset('assets/facebook.png'),
+                          InkWell(
+                            onTap: () {
+                              _lancerURLFacebook(
+                                  'https://www.facebook.com/bakeli.tech/?locale=fr_FR');
+                            },
+                            child: Image.asset('assets/facebook.png', width: 20, height: 20),
+                          ),
                           SizedBox(width: 20),
-                          Image.asset('assets/Twitter.png'),
-                           SizedBox(width: 20),
-                          Image.asset('assets/Instagram.png'),
-                           SizedBox(width: 20),
-                          Image.asset('assets/Linkedin.png'),
+                           InkWell(
+                            onTap: () {
+                              _lancerURLTwitter(
+                                  'https://www.linkedin.com/company/bakeli-school-of-technology/?originalSubdomain=sn');
+                            },
+                            child:  Image.asset('assets/Twitter.png'),
+                          ),
+                          SizedBox(width: 20),
+                          InkWell(
+                            onTap: () {
+                              _lancerURLInstagram(
+                                  'https://www.instagram.com/bakelischool/');
+                            },
+                            child: Image.asset('assets/Instagram.png'),
+                          ),
+                          SizedBox(width: 20),
+                          Image.asset('assets/LinkedIn.png', width: 50, height: 50),
                         ],
                       )
                     ],
@@ -75,7 +94,7 @@ class Footers extends StatelessWidget {
             color: const Color(0xFFF44336),
             padding: const EdgeInsets.only(bottom: 20),
             margin: const EdgeInsets.only(top: 50, bottom: 10),
-            child:  Column(children: [
+            child: Column(children: [
               SizedBox(height: 25),
               Text("S'abonner a notre Newsletter",
                   style: TextStyle(color: Colors.white, fontSize: 18)),
@@ -117,8 +136,8 @@ class Footers extends StatelessWidget {
                       style: TextStyle(color: Colors.white, fontSize: 17)),
                   Text("generer des prospects",
                       style: TextStyle(color: Colors.white, fontSize: 17)),
-                      SizedBox(height: 30),
-                 Column(
+                  SizedBox(height: 30),
+                  Column(
                     children: [
                       Image.asset('assets/Logo.png', width: 100),
                       SizedBox(height: 10),
@@ -130,13 +149,38 @@ class Footers extends StatelessWidget {
                       Row(
                         mainAxisAlignment: MainAxisAlignment.center,
                         children: [
-                          Image.asset('assets/facebook.png'),
+                          InkWell(
+                            onTap: () {
+                              _lancerURLFacebook(
+                                  'https://www.facebook.com/bakeli.tech/?locale=fr_FR');
+                            },
+                            child: Image.asset('assets/facebook.png'),
+                          ),
                           SizedBox(width: 20),
-                          Image.asset('assets/Twitter.png'),
-                           SizedBox(width: 20),
-                          Image.asset('assets/Instagram.png'),
-                           SizedBox(width: 20),
-                          Image.asset('assets/Linkedin.png'),
+                           InkWell(
+                            onTap: () {
+                              _lancerURLTwitter(
+                                  'https://www.linkedin.com/company/bakeli-school-of-technology/?originalSubdomain=sn');
+                            },
+                            child:  Image.asset('assets/Twitter.png'),
+                          ),
+                          SizedBox(width: 20),
+                           InkWell(
+                            onTap: () {
+                              _lancerURLInstagram(
+                                  'https://www.instagram.com/bakelischool/');
+                            },
+                            child: Image.asset('assets/Instagram.png'),
+                          ),
+                          SizedBox(width: 20),
+                           InkWell(
+                            onTap: () {
+                              _lancerURLLinkdin(
+                                  'https://www.linkedin.com/company/bakeli-school-of-technology/?originalSubdomain=sn');
+                            },
+                            child: Image.asset('assets/Linkedin.png'),
+
+                          )
                         ],
                       )
                     ],
@@ -146,4 +190,38 @@ class Footers extends StatelessWidget {
             ]),
           );
   }
+
+ _lancerURLFacebook(String url) async {
+  if (await canLaunch(url)) {
+    await launch(url);
+  } else {
+    print('Impossible de lancer $url');
+  }
+}
+
+_lancerURLTwitter(String url) async {
+  if (await canLaunch(url)) {
+    await launch(url);
+  } else {
+    print('Impossible de lancer $url');
+  }
+}
+
+_lancerURLInstagram
+(String url) async {
+  if (await canLaunch(url)) {
+    await launch(url);
+  } else {
+    print('Impossible de lancer $url');
+  }
+}
+
+_lancerURLLinkdin
+(String url) async {
+  if (await canLaunch(url)) {
+    await launch(url);
+  } else {
+    print('Impossible de lancer $url');
+  }
+}
 }

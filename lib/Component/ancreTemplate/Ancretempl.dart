@@ -31,7 +31,7 @@ class Ancretempl extends StatelessWidget {
                 child: CardTemplate(
   image: Image.asset("tontine.png"),
   title: "Fewnu Tontine",
-  paragraph: "Developpeur React Native",
+  paragraph: "Créativité en mouvement",
   texte: "Lorem ipsum dolor sit amet consectetur.\nArcu consectetur fringilla gravida mauris.",
   child: BouttonOrange(
     title: "Voir template",
@@ -47,7 +47,7 @@ class Ancretempl extends StatelessWidget {
             CardTemplate(
   image: Image.asset("bakelitech.png"),
   title: "Bakeli Tech",
-  paragraph: "Developpeur React Native",
+  paragraph: "Créativité en mouvement",
   texte: "Lorem ipsum dolor sit amet consectetur.\nArcu consectetur fringilla gravida mauris.",
   child: BouttonOrange(
     title: "Voir template",
@@ -62,7 +62,7 @@ class Ancretempl extends StatelessWidget {
               CardTemplate(
   image: Image.asset("easymembership.png"),
   title: "Easy Membership",
-  paragraph: "Developpeur React Native",
+  paragraph: "Créativité en mouvement",
   texte: "Lorem ipsum dolor sit amet consectetur.\nArcu consectetur fringilla gravida mauris.",
   child: BouttonOrange(
     title: "Voir template",
@@ -77,7 +77,7 @@ class Ancretempl extends StatelessWidget {
               CardTemplate(
   image: Image.asset("keuryeurmande.png"),
   title: "Keur Yeurmande",
-  paragraph: "Developpeur React Native",
+  paragraph: "Créativité en mouvement",
   texte: "Lorem ipsum dolor sit amet consectetur.\nArcu consectetur fringilla gravida mauris.",
   child: BouttonOrange(
     title: "Voir template",
@@ -97,7 +97,7 @@ class Ancretempl extends StatelessWidget {
               CardTemplate(
   image: Image.asset("keuryeurmande.png"),
   title: "Keur Yeurmande",
-  paragraph: "Developpeur React Native",
+  paragraph: "Créativité en mouvement",
   texte: "Lorem ipsum dolor sit amet consectetur.\nArcu consectetur fringilla gravida mauris.",
   child: BouttonOrange(
     title: "Voir template",
@@ -112,7 +112,7 @@ class Ancretempl extends StatelessWidget {
              CardTemplate(
   image: Image.asset("easymembership.png"),
   title: "Easy Membership",
-  paragraph: "Developpeur React Native",
+  paragraph: "Créativité en mouvement",
   texte: "Lorem ipsum dolor sit amet consectetur.\nArcu consectetur fringilla gravida mauris.",
   child: BouttonOrange(
     title: "Voir template",
@@ -127,7 +127,7 @@ class Ancretempl extends StatelessWidget {
               CardTemplate(
   image: Image.asset("bakelitech.png"),
   title: "Bakeli Tech",
-  paragraph: "Developpeur React Native",
+  paragraph: "Créativité en mouvement",
   texte: "Lorem ipsum dolor sit amet consectetur.\nArcu consectetur fringilla gravida mauris.",
   child: BouttonOrange(
     title: "Voir template",
@@ -142,7 +142,7 @@ class Ancretempl extends StatelessWidget {
               CardTemplate(
   image: Image.asset("tontine.png"),
   title: "Bakeli Tontine",
-  paragraph: "Developpeur React Native",
+  paragraph: "Créativité en mouvement",
   texte: "Lorem ipsum dolor sit amet consectetur.\nArcu consectetur fringilla gravida mauris.",
   child: BouttonOrange(
     title: "Voir template",
@@ -177,7 +177,7 @@ class Ancretempl extends StatelessWidget {
               CardTemplate(
   image: Image.asset("tontine.png"),
   title: "Bakeli Tontine",
-  paragraph: "Developpeur React Native",
+  paragraph: "Créativité en mouvement",
   texte: "Lorem ipsum dolor sit amet consectetur.\nArcu consectetur fringilla gravida mauris.",
   child: BouttonOrange(
     title: "Voir template",
@@ -192,7 +192,7 @@ class Ancretempl extends StatelessWidget {
               CardTemplate(
   image: Image.asset("bakelitech.png"),
   title: "Bakeli Tech",
-  paragraph: "Developpeur React Native",
+  paragraph: "Créativité en mouvement",
   texte: "Lorem ipsum dolor sit amet consectetur.\nArcu consectetur fringilla gravida mauris.",
   child: BouttonOrange(
     title: "Voir template",
@@ -207,7 +207,7 @@ class Ancretempl extends StatelessWidget {
                 CardTemplate(
   image: Image.asset("easymembership.png"),
   title: "Easy Membership",
-  paragraph: "Developpeur React Native",
+  paragraph: "Créativité en mouvement",
   texte: "Lorem ipsum dolor sit amet consectetur.\nArcu consectetur fringilla gravida mauris.",
   child: BouttonOrange(
     title: "Voir template",
@@ -222,7 +222,7 @@ class Ancretempl extends StatelessWidget {
                 CardTemplate(
   image: Image.asset("keuryeurmande.png"),
   title: "Keur Yeurmande",
-  paragraph: "Developpeur React Native",
+  paragraph: "Créativité en mouvement",
   texte: "Lorem ipsum dolor sit amet consectetur.\nArcu consectetur fringilla gravida mauris.",
   child: BouttonOrange(
     title: "Voir template",
@@ -242,7 +242,7 @@ class Ancretempl extends StatelessWidget {
                CardTemplate(
   image: Image.asset("keuryeurmande.png"),
   title: "Keur Yeurmande",
-  paragraph: "Developpeur React Native",
+  paragraph: "Créativité en mouvement",
   texte: "Lorem ipsum dolor sit amet consectetur.\nArcu consectetur fringilla gravida mauris.",
   child: BouttonOrange(
     title: "Voir template",
@@ -257,7 +257,7 @@ class Ancretempl extends StatelessWidget {
                 CardTemplate(
   image: Image.asset("easymembership.png"),
   title: "Easy Membership",
-  paragraph: "Developpeur React Native",
+  paragraph: "Créativité en mouvement",
   texte: "Lorem ipsum dolor sit amet consectetur.\nArcu consectetur fringilla gravida mauris.",
   child: BouttonOrange(
     title: "Voir template",
@@ -272,7 +272,7 @@ class Ancretempl extends StatelessWidget {
                CardTemplate(
   image: Image.asset("bakelitech.png"),
   title: "Bakeli Tech",
-  paragraph: "Developpeur React Native",
+  paragraph: "Créativité en mouvement",
   texte: "Lorem ipsum dolor sit amet consectetur.\nArcu consectetur fringilla gravida mauris.",
   child: BouttonOrange(
     title: "Voir template",
@@ -287,7 +287,7 @@ class Ancretempl extends StatelessWidget {
                 CardTemplate(
   image: Image.asset("tontine.png"),
   title: "Bakeli Tontine",
-  paragraph: "Developpeur React Native",
+  paragraph: "Créativité en mouvement",
   texte: "Lorem ipsum dolor sit amet consectetur.\nArcu consectetur fringilla gravida mauris.",
   child: BouttonOrange(
     title: "Voir template",

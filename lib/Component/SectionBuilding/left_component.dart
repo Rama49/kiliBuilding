@@ -93,67 +93,67 @@ class _LeftComponentState extends State<LeftComponent> {
                       width:
                           8), // Espacement entre l'icône et le premier bouton
 
-                  ElevatedButton(
-                    onPressed: () {
-                      // Ajoutez ici la logique pour le premier bouton
-                    },
-                    child: Text(
-                      "Component Library",
-                      style: TextStyle(color: Colors.white),
-                    ),
-                    style: ElevatedButton.styleFrom(
-                      backgroundColor: Colors.blue, // Couleur du bouton
-                      shape: RoundedRectangleBorder(
-                        borderRadius:
-                            BorderRadius.circular(8.0), // Border radius réduit
-                      ),
-                      padding: EdgeInsets.symmetric(
-                          vertical: 8, horizontal: 12), // Ajustez le padding
-                    ),
-                  ),
+                  // ElevatedButton(
+                  //   onPressed: () {
+                  //     // Ajoutez ici la logique pour le premier bouton
+                  //   },
+                  //   child: Text(
+                  //     "Component Library",
+                  //     style: TextStyle(color: Colors.white),
+                  //   ),
+                  //   style: ElevatedButton.styleFrom(
+                  //     backgroundColor: Colors.blue, // Couleur du bouton
+                  //     shape: RoundedRectangleBorder(
+                  //       borderRadius:
+                  //           BorderRadius.circular(8.0), // Border radius réduit
+                  //     ),
+                  //     padding: EdgeInsets.symmetric(
+                  //         vertical: 8, horizontal: 12), // Ajustez le padding
+                  //   ),
+                  // ),
                   SizedBox(width: 8), // Espacement entre les deux boutons
-                  ElevatedButton(
-                    onPressed: () {
-                      // Ajoutez ici la logique pour le deuxième bouton
-                    },
-                    child: Text(
-                      "Add Page",
-                      style: TextStyle(color: Colors.white),
-                    ),
-                    style: ElevatedButton.styleFrom(
-                      backgroundColor: Color.fromARGB(
-                          255, 227, 226, 226), // Couleur du bouton
-                      shape: RoundedRectangleBorder(
-                        borderRadius:
-                            BorderRadius.circular(8.0), // Border radius réduit
-                      ),
-                      padding: EdgeInsets.symmetric(
-                          vertical: 8, horizontal: 12), // Ajustez le padding
-                    ),
-                  ),
+                  // ElevatedButton(
+                  //   onPressed: () {
+                  //     // Ajoutez ici la logique pour le deuxième bouton
+                  //   },
+                  //   child: Text(
+                  //     "Add Page",
+                  //     style: TextStyle(color: Colors.white),
+                  //   ),
+                  //   style: ElevatedButton.styleFrom(
+                  //     backgroundColor: Color.fromARGB(
+                  //         255, 227, 226, 226), // Couleur du bouton
+                  //     shape: RoundedRectangleBorder(
+                  //       borderRadius:
+                  //           BorderRadius.circular(8.0), // Border radius réduit
+                  //     ),
+                  //     padding: EdgeInsets.symmetric(
+                  //         vertical: 8, horizontal: 12), // Ajustez le padding
+                  //   ),
+                  // ),
                 ],
               ),
-              PopupMenuButton(
-                itemBuilder: (context) => [
-                  PopupMenuItem(
-                    child: Text("Import Projet"),
-                    value: "Import",
-                  ),
-                  PopupMenuItem(
-                    child: Text("Backup Projet"),
-                    value: "Backup",
-                  ),
-                  PopupMenuItem(
-                    child: Text("Clear Projet"),
-                    value: "Clear",
-                  ),
-                ],
-                onSelected: (value) {
-                  // Ajoutez ici la logique pour le menu déroulant
-                  print("Selected: $value");
-                },
-                icon: Icon(Icons.arrow_drop_down, color: Colors.black),
-              ),
+              // PopupMenuButton(
+              //   itemBuilder: (context) => [
+              //     PopupMenuItem(
+              //       child: Text("Import Projet"),
+              //       value: "Import",
+              //     ),
+              //     PopupMenuItem(
+              //       child: Text("Backup Projet"),
+              //       value: "Backup",
+              //     ),
+              //     PopupMenuItem(
+              //       child: Text("Clear Projet"),
+              //       value: "Clear",
+              //     ),
+              //   ],
+              //   onSelected: (value) {
+              //     // Ajoutez ici la logique pour le menu déroulant
+              //     print("Selected: $value");
+              //   },
+              //   icon: Icon(Icons.arrow_drop_down, color: Colors.black),
+              // ),
             ],
           ),
         ),
@@ -203,46 +203,46 @@ class _LeftComponentState extends State<LeftComponent> {
           child: Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
-              MaterialButton(
-                onPressed: () {
-                  // Ajoutez ici la logique pour le bouto                     n "delete"
-                },
-                child: Container(
-                  decoration: BoxDecoration(
-                    border: Border.all(color: Colors.black, width: 1.0),
-                    borderRadius: BorderRadius.all(Radius.circular(8.0)),
-                  ),
-                  padding: EdgeInsets.all(8.0),
-                  child: Icon(Icons.delete_sweep_rounded, color: Colors.black),
-                ),
-                shape: CircleBorder(),
-              ),
+              // MaterialButton(
+              //   onPressed: () {
+              //     // Ajoutez ici la logique pour le bouton "delete"
+              //   },
+              //   child: Container(
+              //     decoration: BoxDecoration(
+              //       border: Border.all(color: Colors.black, width: 1.0),
+              //       borderRadius: BorderRadius.all(Radius.circular(8.0)),
+              //     ),
+              //     padding: EdgeInsets.all(8.0),
+              //     child: Icon(Icons.delete_sweep_rounded, color: Colors.black),
+              //   ),
+              //   shape: CircleBorder(),
+              // ),
               Row(
                 children: [
-                  ElevatedButton(
-                    onPressed: () {
-                      // Ajoutez ici la logique pour le bouton "save"
-                    },
-                    child: Text(
-                      "Cancel",
-                      style: TextStyle(color: Colors.black),
-                    ),
-                    style: ElevatedButton.styleFrom(
-                      backgroundColor: Colors.white,
-                      shape: RoundedRectangleBorder(
-                        borderRadius: BorderRadius.circular(8.0),
-                      ),
-                      padding:
-                          EdgeInsets.symmetric(vertical: 8, horizontal: 12),
-                    ),
-                  ),
+                  // ElevatedButton(
+                  //   onPressed: () {
+                  //     // Ajoutez ici la logique pour le bouton "save"
+                  //   },
+                  //   child: Text(
+                  //     "Cancel",
+                  //     style: TextStyle(color: Colors.black),
+                  //   ),
+                  //   style: ElevatedButton.styleFrom(
+                  //     backgroundColor: Colors.white,
+                  //     shape: RoundedRectangleBorder(
+                  //       borderRadius: BorderRadius.circular(8.0),
+                  //     ),
+                  //     padding:
+                  //         EdgeInsets.symmetric(vertical: 8, horizontal: 12),
+                  //   ),
+                  // ),
                   SizedBox(width: 16),
                   ElevatedButton(
                     onPressed: () {
                       // Ajoutez ici la logique pour le bouton "save"
                     },
                     child: Text(
-                      "Save",
+                      "Copier",
                       style: TextStyle(color: Colors.white),
                     ),
                     style: ElevatedButton.styleFrom(
