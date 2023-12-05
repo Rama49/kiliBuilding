@@ -20,13 +20,13 @@ class Simpleprop extends StatelessWidget {
                 child: buildRow(
                   context,
                   [
-                    CardNavigationData('Navbar', '4 Components',
+                    CardNavigationData('Navbar', '1 Components',
                         Icons.headset_rounded, Colors.red, htmlcssjs()),
-                    CardNavigationData('Card', '4 Components',
+                    CardNavigationData('Card', '1 Components',
                         Icons.card_giftcard, Colors.red, HtmlcssjsCard()),
-                    CardNavigationData('Input', '4 Components',
+                    CardNavigationData('Input', '1 Components',
                         Icons.card_giftcard, Colors.red, HtmlcssjsInput()),
-                    CardNavigationData('Bouton', '4 Components',
+                    CardNavigationData('Bouton', '1 Components',
                         Icons.card_giftcard, Colors.red, htmlcssjsBouton()),
                   ],
                 ),
